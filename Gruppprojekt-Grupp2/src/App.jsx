@@ -1,5 +1,6 @@
 import NavigationBar from './components/NavigationBar.jsx'
 import Card from './components/Card.jsx'
+import ProductPage from './pages/ProductPage.jsx'
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <div>
             <Card title="Garn" price={89} priceUnit="SEK" />
             </div>
+
         </div>
     )
 }

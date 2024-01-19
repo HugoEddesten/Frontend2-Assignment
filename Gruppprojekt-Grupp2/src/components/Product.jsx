@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import React from "react"
+import Temporary2 from '../assets/Temporary2.webp'
+import Temporary1 from '../assets/Temporary1.webp'
 
 const ProductDiv = styled.a`
     border: solid 1px;
@@ -28,12 +31,13 @@ const ProductText = styled.p`
 
 
 
-function Product({props}) {
+function Product({name, price, imgName}) {
+    
     return (
         <ProductDiv>
-            <ProductImg src={`../../public/${props.imgName}`}/>
-            <ProductText>{props.name}</ProductText>
-            <ProductText>{props.price} SEK</ProductText>
+            <ProductImg src={imgName}/>
+            <ProductText>{name}</ProductText>
+            <ProductText>{price} SEK</ProductText>
         </ProductDiv>
     )
 }
