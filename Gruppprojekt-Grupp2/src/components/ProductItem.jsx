@@ -19,8 +19,8 @@ const ProductItemDiv = styled.a`
 `
 
 const ProductItemImg = styled.img`
-    width: 10em;
-    height: 10em;
+    width: 15em;
+    height: 15em;
 `
 
 const ProductItemText = styled.p`
@@ -31,13 +31,13 @@ const ProductItemText = styled.p`
 
 
 
-function ProductItem({name, price, imgName, handler}) {
-    
+function ProductItem({product, handler}) {
+
     return (
-        <ProductItemDiv onClick={() => handler(name)}>
-            <ProductItemImg src={imgName}/>
-            <ProductItemText>{name}</ProductItemText>
-            <ProductItemText>{price} SEK</ProductItemText>
+        <ProductItemDiv onClick={() => handler(product)}>
+            <ProductItemImg src={product.imgName}/>
+            <ProductItemText>{product.name}</ProductItemText>
+            <ProductItemText>{product.price} SEK</ProductItemText>
         </ProductItemDiv>
     )
 }

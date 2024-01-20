@@ -38,15 +38,15 @@ const Filter = (props) => {
                     
                 </FilterButton>
             ))}
-            <h3>Price</h3>
+            <h3>Pris</h3>
 
             
 
-            <h3>Color</h3>
-            <FilterButton>Blue</FilterButton>
-            <FilterButton>Red</FilterButton>
-            <FilterButton>White</FilterButton>
-            <FilterButton>Black</FilterButton>
+            <h3>Färg</h3>
+            <FilterButton>Blå</FilterButton>
+            <FilterButton>Röd</FilterButton>
+            <FilterButton>Vit</FilterButton>
+            <FilterButton>Svart</FilterButton>
         </FilterDiv>
     )
     

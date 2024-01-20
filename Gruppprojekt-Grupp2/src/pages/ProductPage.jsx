@@ -11,10 +11,31 @@ export const items = [
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
     {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
     {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
+    {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
+    {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
+    {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
+    {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
+    {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
+    {name: "Bomull, Ull, Alpacka Kit", price: 79, materials: ["Bomull", "Ull", "Alpacka"], imgName: Temporary1},
+    {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
+    {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
+    {name: "Ull, Alpacka Tunn Kit", price: 99, materials: ["Ull", "Alpacka"], imgName: Temporary2},
+    {name: "Bomull, Ull Kit", price: 79, materials: ["Bomull", "Ull"], imgName: Temporary1},
+    {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
+    {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
+    {name: "Alpacka, Ull Tunn Kit", price: 59, materials: ["Alpacka", "Ull"], imgName: Temporary2},
+    {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
+    {name: "Bomull, Ull Kit", price: 79, materials: ["Bomull", "Ull"], imgName: Temporary1},
+    {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
+    {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
+    {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
+    {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
+    {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
     {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
     {name: "Bomull, Ull, Alpacka Kit", price: 79, materials: ["Bomull", "Ull", "Alpacka"], imgName: Temporary1},
+    {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
     {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
     {name: "Ull, Alpacka Tunn Kit", price: 99, materials: ["Ull", "Alpacka"], imgName: Temporary2},
@@ -31,18 +52,34 @@ const ProductPageDiv = styled.div`
     flex-direction: row;
     background-color: rgb(30, 29, 32);
     
-    height: fit-content;
     padding: 1em;
+    width: -moz-fit-content;
     width: fit-content;
 `
 
+const Overlay = styled.div`
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 45%;
+    top: 0;
+    bottom: 0;
+    background-color: #202127bc;
+    
+    z-index: 1;
 
+    &.isVisible {
+        display: flex;
+    }
+    
+`
 
 
 
 
 function ProductPage() {
     const [filteredItems, setFilteredItems] = useState(items);
+    const [selectedFilters, setSelectedFilters] = useState([]);
     const filters = []
      items.forEach((item) => {
         item.materials.forEach((material) => {
@@ -51,35 +88,33 @@ function ProductPage() {
             }
         })
     });
+    
+    
+    let [clickedProduct, setClickedProduct] = useState();
+    let [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
 
-    console.log(filters);
-    let [selectedFilters, setSelectedFilters] = useState([]);
-    
     const filterButtonClicked = (category) => {
-        
-    
         if (selectedFilters.includes(category)){
-            
             let tempFilters = selectedFilters.filter((filter) => {
                 return filter !== category  
             });
             setSelectedFilters(tempFilters);
-            
-            
         } else {
             setSelectedFilters([...selectedFilters, category]);
-            
         } 
     }
 
     useEffect(() => {
         filterItems();
-        //console.log(selectedFilters); 
     }, [selectedFilters])
-    
 
-    const productClicked = (name) => {
-        console.log(name);
+    const productClicked = (product) => {
+        setClickedProduct(product);
+        toggleProductSectionVisibility()
+    }
+
+    const toggleProductSectionVisibility = () => {
+        setProductSectionIsVisible(!productSectionIsVisible);
     }
 
     const filterItems = () => {
@@ -102,11 +137,13 @@ function ProductPage() {
     
     return (
         <ProductPageDiv>
-            <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters}/>
+            <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters} />
             <Products products={filteredItems} handler={productClicked} />
 
-            
+            <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
+            <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>
         </ProductPageDiv>
+
 
     );
     

@@ -9,6 +9,9 @@ const ProductList = styled.div`
     background-color: rgb(30, 29, 32);
     grid-gap: 1em;
     padding-left: 1em;
+    width: -moz-fit-content;
+    width: fit-content;
+
     max-width: 90%;
 `
 
@@ -18,7 +21,7 @@ function Products(props) {
     return (
         <ProductList>
             {props.products.map((product, index) => (
-                <ProductItem key={index} name={product.name} price={product.price} material={product.material} imgName={product.imgName} handler={props.handler}/>
+                <ProductItem key={index} product={product} handler={props.handler}/>
             ))}
         </ProductList>
     )
