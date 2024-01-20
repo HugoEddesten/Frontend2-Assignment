@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Product from "./Product"
+import ProductItem from "./ProductItem"
 import React from 'react';
 
 const ProductList = styled.div`
@@ -13,15 +13,12 @@ const ProductList = styled.div`
 `
 
 
-function Products({ products }) {
-
+function Products(props) {
     
-
     return (
         <ProductList>
-            {
-            products.map((product, index) => (
-                <Product key={index} name={product.name} price={product.price} material={product.material} imgName={product.imgName}/>
+            {props.products.map((product, index) => (
+                <ProductItem key={index} name={product.name} price={product.price} material={product.material} imgName={product.imgName} handler={props.handler}/>
             ))}
         </ProductList>
     )

@@ -4,6 +4,7 @@ import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import React, {useEffect, useState} from 'react'
 import Filter from "../components/Filter" 
+import ProductSection from "../components/ProductSection"
 
 export const items = [
     {name: "Bomull, Ull Kit", price: 79, materials: ["Bomull", "Ull"], imgName: Temporary1},
@@ -76,6 +77,11 @@ function ProductPage() {
         //console.log(selectedFilters); 
     }, [selectedFilters])
     
+
+    const productClicked = (name) => {
+        console.log(name);
+    }
+
     const filterItems = () => {
         if (selectedFilters.length > 0) {
             setFilteredItems(items.filter((product) => {
@@ -93,11 +99,13 @@ function ProductPage() {
             setFilteredItems(items);
         }
     }
-
+    
     return (
         <ProductPageDiv>
             <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters}/>
-            <Products products={filteredItems}/>
+            <Products products={filteredItems} handler={productClicked} />
+
+            
         </ProductPageDiv>
 
     );
