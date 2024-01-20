@@ -3,7 +3,7 @@ import Products from "../components/ProductList"
 import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import React, {useEffect, useState} from 'react'
-
+import Filter from "../components/Filter" 
 
 export const items = [
     {name: "Bomull Tunn Kit", price: 99, material: "Ull", imgName: Temporary2},
@@ -84,7 +84,7 @@ const ProductPageDiv = styled.div`
 
 
 function ProductPage() {
-    let selectedFilter = useState();
+    let [selectedFilters, setSelectedFilters]= useState([]);
     
     let [filteredItems, setFilteredItems] = useState(items);
     const filters = [...new Set(items.map((val) => val.material))];
@@ -94,9 +94,10 @@ function ProductPage() {
     const filterButtonClicked = (category) => {
         filteredItems = items
         
-        selectedFilter = category;
+        
+        selectedFilters = category;
         setFilteredItems(filteredItems.filter((product) => {
-            return product.material === selectedFilter;
+            return selectedFilters.includes(product.material);
         }))
         
     }
@@ -104,7 +105,7 @@ function ProductPage() {
     return (
         <ProductPageDiv>
             <Filter handler={filterButtonClicked} filters={filters}/>
-            <Products products={items}/>
+            <Products products={filteredItems}/>
         </ProductPageDiv>
 
     );

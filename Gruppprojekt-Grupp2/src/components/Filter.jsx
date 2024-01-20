@@ -1,19 +1,32 @@
 import React, {useEffect, useState} from 'react';
+import styled from 'styled-components';
+
+const FilterDiv = styled.div`
+    border: solid 1px;
+    border-color: rgb(53, 53, 53);
+    background-color: rgb(81, 81, 90);
+
+    min-width: 20%;
+
+`
+
+const FilterButton = styled.button `
+
+`
 
 
 function Filter(props) {
     return (
-        <div className={styles.filterDiv}>
+        <FilterDiv>
             <h3>Material</h3>
             {props.filters.map((category, index) => (
-                <button 
-                    className={styles.button}
+                <FilterButton
                     key={`filters-${index}`} 
                     onClick={() => props.handler(category)}
-                    >
+                >
                     {category}
                     
-                </button>
+                </FilterButton>
             ))}
             <h3>Price</h3>
 
@@ -24,7 +37,7 @@ function Filter(props) {
             <button>Red</button>
             <button>White</button>
             <button>Black</button>
-        </div>
+        </FilterDiv>
     )
     
 }

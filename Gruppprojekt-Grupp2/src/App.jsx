@@ -13,7 +13,7 @@ function App() {
             <div>
             <Card title="Garn" price={89} priceUnit="SEK" />
             </div>
-            <ProductPage />
+           
         </div>
     )
 }
