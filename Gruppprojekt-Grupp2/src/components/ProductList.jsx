@@ -8,7 +8,8 @@ const ProductList = styled.div`
     flex-wrap: wrap;
     background-color: rgb(30, 29, 32);
     grid-gap: 1em;
-    min-width: 100%;
+    padding-left: 1em;
+    max-width: 90%;
 `
 
 
