@@ -1,19 +1,27 @@
 import styled from 'styled-components'
-
-const Nav = styled.nav`
-    display: flex;
-    justify-content: space-between;
-    background-color: red;
-`
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 function NavigationBar() {
-return (
-    <nav>
-        <a href="">Super Yarn Company</a>
-        <a href="">Super Yarn Company</a>
-        <a href="">Super Yarn Company</a>
-        <a href="">Super Yarn Company</a>
-    </nav>
+    return (
+        <nav className='nav'>
+            <Link to="/" className='logo'>Super Yarn Company</Link>
+            <ul>
+                <CustomLink to="/ProductPage">Produkter</CustomLink>
+                <CustomLink to="/Contact">Kontakt</CustomLink>
+                <CustomLink to="/About">Om Oss</CustomLink>
+                <CustomLink to="/Cart">Varukorg</CustomLink>
+            </ul>
+        </nav>
+    )
+}
+
+function CustomLink({ to, children,  ...props }) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+    return (
+        <li className={isActive ? "active" : ""}>
+            <Link to={to} {...props}>{children}</Link>
+        </li>
     )
 }
 
