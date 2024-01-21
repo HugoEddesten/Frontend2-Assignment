@@ -3,7 +3,7 @@ import React from "react"
 import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 
-const ProductDiv = styled.a`
+const ProductItemDiv = styled.a`
     border: solid 1px;
     border-color: rgb(53, 53, 53);
     position: relative;
@@ -18,12 +18,12 @@ const ProductDiv = styled.a`
     }
 `
 
-const ProductImg = styled.img`
-    width: 10em;
-    height: 10em;
+const ProductItemImg = styled.img`
+    width: 15em;
+    height: 15em;
 `
 
-const ProductText = styled.p`
+const ProductItemText = styled.p`
     margin: 0.1em;
     color: rgb(211, 211, 211);
 
@@ -31,15 +31,15 @@ const ProductText = styled.p`
 
 
 
-function Product({name, price, imgName}) {
-    
+function ProductItem({product, handler}) {
+
     return (
-        <ProductDiv>
-            <ProductImg src={imgName}/>
-            <ProductText>{name}</ProductText>
-            <ProductText>{price} SEK</ProductText>
-        </ProductDiv>
+        <ProductItemDiv onClick={() => handler(product)}>
+            <ProductItemImg src={product.imgName}/>
+            <ProductItemText>{product.name}</ProductItemText>
+            <ProductItemText>{product.price} SEK</ProductItemText>
+        </ProductItemDiv>
     )
 }
 
-export default Product
+export default ProductItem

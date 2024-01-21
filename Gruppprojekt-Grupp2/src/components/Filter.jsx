@@ -4,18 +4,27 @@ import styled from 'styled-components';
 const FilterDiv = styled.div`
     border: solid 1px;
     border-color: rgb(53, 53, 53);
-    background-color: rgb(81, 81, 90);
-
-    min-width: 20%;
+    background-color: rgb(86, 86, 99);
+    color: rgb(15, 15, 15);
+    min-width: 10em;
+    
 
 `
 
 const FilterButton = styled.button `
+    border: none;
+    padding: 0.2em;
+    margin: 1px;
 
+    &.buttonActive {
+        background-color: black;
+        color: white;
+       
+    }
 `
 
 
-function Filter(props) {
+const Filter = (props) => {
     return (
         <FilterDiv>
             <h3>Material</h3>
@@ -23,20 +32,21 @@ function Filter(props) {
                 <FilterButton
                     key={`filters-${index}`} 
                     onClick={() => props.handler(category)}
-                >
+                    className={props.selectedFilters?.includes(category) ? "buttonActive" : ""}
+                >   
                     {category}
                     
                 </FilterButton>
             ))}
-            <h3>Price</h3>
+            <h3>Pris</h3>
 
             
 
-            <h3>Color</h3>
-            <button>Blue</button>
-            <button>Red</button>
-            <button>White</button>
-            <button>Black</button>
+            <h3>Färg</h3>
+            <FilterButton>Blå</FilterButton>
+            <FilterButton>Röd</FilterButton>
+            <FilterButton>Vit</FilterButton>
+            <FilterButton>Svart</FilterButton>
         </FilterDiv>
     )
     
