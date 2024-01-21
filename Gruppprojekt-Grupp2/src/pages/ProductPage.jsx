@@ -61,7 +61,7 @@ const Overlay = styled.div`
     display: none;
     position: fixed;
     left: 0;
-    right: 45%;
+    right: 0;
     top: 0;
     bottom: 0;
     background-color: #202127bc;
