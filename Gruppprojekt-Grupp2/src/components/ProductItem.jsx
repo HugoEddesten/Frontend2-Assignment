@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import React from "react"
-import Temporary2 from '../assets/Temporary2.webp'
-import Temporary1 from '../assets/Temporary1.webp'
+
 
 const ProductItemDiv = styled.a`
     border: solid 1px;
