@@ -1,5 +1,5 @@
 export default function Cart() {
     return (
-        <h1>Varukorg</h1>
+        <h1>Välkommen till Super Yarn Company!</h1>
     )
 }
