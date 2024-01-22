@@ -12,7 +12,7 @@ function NavigationBar() {
                 <CustomLink to="/Cart">Varukorg</CustomLink>
             </ul>
         </nav>
-    )
+    )   
 }
 
 function CustomLink({ to, children,  ...props }) {
