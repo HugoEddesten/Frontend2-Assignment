@@ -1,19 +1,25 @@
 import './global.css'
 import NavigationBar from './components/NavigationBar.jsx'
-import Card from './components/Card.jsx'
+import Home from './pages/Home.jsx'
 import ProductPage from './pages/ProductPage.jsx'
+import Contact from './pages/Contact.jsx'
+import About from './pages/About.jsx'
+import Cart from './pages/Cart.jsx'
+import { Route, Routes } from "react-router-dom"
 
 function App() {
     return (
         <div>
             <div>
-            <NavigationBar />
+                <NavigationBar />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/ProductPage' element={<ProductPage />} />
+                    <Route path='/Contact' element={<Contact />} />
+                    <Route path='/About' element={<About />} />
+                    <Route path='/Cart' element={<Cart />} />
+                </Routes>
             </div>
-            
-            <div>
-            <Card title="Garn" price={89} priceUnit="SEK" />
-            </div>
-            <ProductPage />
         </div>
     )
 }
