@@ -7,7 +7,7 @@ import Filter from "../components/Filter"
 import ProductSection from "../components/ProductSection"
 
 export const items = [
-    {name: "Bomull, Ull Kit", price: 79, materials: ["Bomull", "Ull"], imgName: Temporary1},
+    {name: "Bomull, Ull Kit", price: 79, materials: ["Akryl"], imgName: Temporary1},
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
     {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
     {name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2},
@@ -90,8 +90,8 @@ function ProductPage() {
     });
     
     
-    let [clickedProduct, setClickedProduct] = useState();
-    let [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
+    const [clickedProduct, setClickedProduct] = useState();
+    const [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
 
     const filterButtonClicked = (category) => {
         if (selectedFilters.includes(category)){

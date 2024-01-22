@@ -32,7 +32,7 @@ const Filter = (props) => {
                 <FilterButton
                     key={`filters-${index}`} 
                     onClick={() => props.handler(category)}
-                    className={props.selectedFilters?.includes(category) ? "buttonActive" : ""}
+                    className={props.selectedFilters.includes(category) ? "buttonActive" : ""}
                 >   
                     {category}
                     
