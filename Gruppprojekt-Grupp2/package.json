@@ -15,6 +15,7 @@
     "react-router-dom": "^6.21.3",
     "styled-components": "^6.1.8",
     "typeface-dm-serif-display": "^1.1.13",
+    "typeface-inter": "^3.18.1",
     "typeface-sevillana": "^1.1.13",
     "vite-plugin-require": "^0.0.3"
   },

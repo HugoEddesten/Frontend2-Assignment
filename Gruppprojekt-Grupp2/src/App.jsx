@@ -1,4 +1,7 @@
 import './global.css'
+import "typeface-inter"
+import "typeface-sevillana"
+import "typeface-dm-serif-display"
 import NavigationBar from './components/NavigationBar.jsx'
 import Home from './pages/Home.jsx'
 import ProductPage from './pages/ProductPage.jsx'

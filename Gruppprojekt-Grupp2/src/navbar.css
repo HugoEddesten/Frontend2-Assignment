@@ -11,10 +11,10 @@
     padding: 0 1rem;
 }
 
-.logo {
+.nav .logo {
     font-family: 'Sevillana', cursive;
     font-size: 2rem;
-}
+}   
 
 nav ul {
     list-style: none;
@@ -29,13 +29,15 @@ nav ul {
     display: flex;
     align-items: center;
     padding: .4rem;
+    font-family: 'DM Serif Display', serif;
 }
 
 .nav li.active {
-    background-color: #9f9fb4;
+    background-color: #d2dae2;
 }
 
 
 .nav li:hover {
-    background-color: #c4c4d6;
+    background-color: #7f93a6;
+    transition: 0.2s;
 }
