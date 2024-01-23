@@ -1,10 +1,17 @@
 import './global.css'
+import "typeface-inter"
+import "typeface-sevillana"
+import "typeface-dm-serif-display"
 import NavigationBar from './components/NavigationBar.jsx'
 import Home from './pages/Home.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import Contact from './pages/Contact.jsx'
 import About from './pages/About.jsx'
 import Cart from './pages/Cart.jsx'
+import Footer from './components/Footer.jsx'
+import Delivery from './pages/Delivery.jsx'
+import TermsAndConditions from './pages/TermsAndConditions.jsx'
+import Returns from './pages/Returns.jsx'
 import { Route, Routes } from "react-router-dom"
 
 function App() {
@@ -13,12 +20,16 @@ function App() {
             <div>
                 <NavigationBar />
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='' element={<Home />} />
                     <Route path='/ProductPage' element={<ProductPage />} />
                     <Route path='/Contact' element={<Contact />} />
                     <Route path='/About' element={<About />} />
                     <Route path='/Cart' element={<Cart />} />
+                    <Route path='/Delivery' element={<Delivery />} />
+                    <Route path='/TermsAndConditions' element={<TermsAndConditions />} />
+                    <Route path='/Returns' element={<Returns />} />
                 </Routes>
+                <Footer />
             </div>
         </div>
     )
