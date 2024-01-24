@@ -11,17 +11,3 @@ export const items = [
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
 ]
 
-export default function Cart() {
-    return (
-        <div>
-            <h1>Välkommen till Super Yarn Company!</h1>
-<<<<<<< HEAD
-            <HorizontalProductList products={items}/>
-        </div>
-        
-=======
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui adipisci aut praesentium accusantium, recusandae non nihil rem labore, deserunt, delectus placeat quo quisquam tempore tempora ea enim ab perspiciatis.</p>
-        </div>
->>>>>>> fa10d06b2f270f7332b7d5e04b51828965fc5465
-    )
-}
