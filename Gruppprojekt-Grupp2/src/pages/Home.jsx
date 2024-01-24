@@ -11,3 +11,15 @@ export const items = [
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
 ]
 
+const Home = () => {
+    return (
+        <div>
+            
+            
+
+        </div>
+
+    )
+}
+
+export default Home

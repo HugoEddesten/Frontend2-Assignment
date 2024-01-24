@@ -56,7 +56,7 @@ const ProductSection = (props) => {
             <ProductSectionImg src={props.product?.imgName}/>
             <ProductSectionHeader>{props.product?.name}</ProductSectionHeader>
             {props.product?.materials.map((material, index) => (
-                <ProductSectionParagraph>{material}</ProductSectionParagraph>
+                <ProductSectionParagraph key={index}>{material}</ProductSectionParagraph>
             ))}
             
         
