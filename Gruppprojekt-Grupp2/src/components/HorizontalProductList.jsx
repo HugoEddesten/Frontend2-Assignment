@@ -84,7 +84,7 @@ const HorizontalProductList = ({ products }) => {
             <ProductsDiv ref={containerRef} id="container">
                 <ProductList>
                     {products.map((product, index) => (
-                        <ProductItem product={product}/>
+                        <ProductItem key={index} product={product}/>
                     ))}
                 </ProductList>
             </ProductsDiv>

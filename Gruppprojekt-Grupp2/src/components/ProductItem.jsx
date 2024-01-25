@@ -3,11 +3,17 @@ import React from "react"
 
 
 const ProductItemDiv = styled.a`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     border: solid 1px;
     border-color: rgb(53, 53, 53);
+    background-color: #60606c;
     position: relative;
     -webkit-user-select: none;
     user-select: none;
+
 
     &:hover {
         transition: all 0.2s;
@@ -18,11 +24,15 @@ const ProductItemDiv = styled.a`
 `
 
 const ProductItemImg = styled.img`
+    
     width: 15em;
-    height: 15em;
+    height: auto;
 `
 
 const ProductItemText = styled.p`
+    display: flex;
+    align-items: end;
+    max-height: 2em;
     margin: 0.1em;
     color: rgb(211, 211, 211);
 
