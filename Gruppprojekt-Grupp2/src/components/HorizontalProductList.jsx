@@ -38,14 +38,14 @@ const GoForwardButton = styled.a`
     position: absolute;
     height: 30px;
     right: 10%;
-    background-color:rgba(250, 235, 215, 0.6);
+    background-color: rgba(250, 235, 215, 0.6);
     border-radius: 2em;
     z-index: 5;
 
     &:hover {
         transition: all 0.4s;
         cursor: pointer;
-        background-color:rgba(250, 235, 215, 1);
+        background-color: rgba(250, 235, 215, 1);
     }
 `
 
@@ -53,14 +53,14 @@ const GoBackButton = styled.a`
     position: absolute;
     height: 30px;
     left: 10%;
-    background-color:rgba(250, 235, 215, 0.6);
+    background-color: rgba(250, 235, 215, 0.6);
     border-radius: 2em;  
     z-index: 5;  
 
     &:hover {
         transition: all 0.4s;
         cursor: pointer;
-        background-color:rgba(250, 235, 215, 1);
+        background-color: rgba(250, 235, 215, 1);
     }
 `
 

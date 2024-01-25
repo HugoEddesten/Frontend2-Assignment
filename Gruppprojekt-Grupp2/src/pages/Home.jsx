@@ -25,7 +25,9 @@ export const items = [
 const Home = () => {
     return (
         <div>
-            <ItemDisplay items={items}/>
+            <ItemDisplay items={items} text="Spring Sale"/>
+
+          
             
 
         </div>

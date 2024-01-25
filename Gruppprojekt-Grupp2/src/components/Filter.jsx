@@ -67,7 +67,6 @@ const Filter = (props) => {
 
     const toggleMenuButtonActive = () => {
         setMenuIsVisible(!menuIsVisible);
-        console.log("hi");
     }
 
  
