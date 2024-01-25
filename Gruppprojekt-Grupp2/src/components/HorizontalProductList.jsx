@@ -7,14 +7,16 @@ import React, { useRef } from 'react';
 const ProductScrollListDiv = styled.div`
     display: flex;
     align-items: center;
-    top: 5em;
-    background-color: rgb(70, 68, 74);
     
-    position: relative;
+    
+    
+    position: auto;
+    
     
     user-select: none;
-    padding: 2em;
+    padding: 1em;
     z-index: 0;
+
 `
 
 const ProductsDiv = styled.div`
@@ -29,12 +31,13 @@ const ProductList = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
+    gap: 1em;
 `
 
 const GoForwardButton = styled.a`
     position: absolute;
     height: 30px;
-    right: 5%;
+    right: 10%;
     background-color:rgba(250, 235, 215, 0.6);
     border-radius: 2em;
     z-index: 5;
@@ -49,7 +52,7 @@ const GoForwardButton = styled.a`
 const GoBackButton = styled.a`
     position: absolute;
     height: 30px;
-    left: 5%;
+    left: 10%;
     background-color:rgba(250, 235, 215, 0.6);
     border-radius: 2em;  
     z-index: 5;  
@@ -84,7 +87,7 @@ const HorizontalProductList = ({ products }) => {
             <ProductsDiv ref={containerRef} id="container">
                 <ProductList>
                     {products.map((product, index) => (
-                        <ProductItem product={product}/>
+                        <ProductItem key={index} product={product}/>
                     ))}
                 </ProductList>
             </ProductsDiv>

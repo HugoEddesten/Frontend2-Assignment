@@ -10,8 +10,8 @@ const ProductItemDiv = styled.a`
     user-select: none;
 
     &:hover {
-        transition: all 0.2s;
-        border-color: rgb(109, 109, 109);
+        transition: all 0.1s;
+        
         cursor: pointer;
         transform: scale(1.01);
     }
