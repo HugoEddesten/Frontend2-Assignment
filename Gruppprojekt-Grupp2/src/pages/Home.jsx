@@ -1,5 +1,5 @@
 import HorizontalProductList from "../components/HorizontalProductList"
-import Temporary2 from '../assets/garn/bomull.jpg'
+import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import ItemDisplay from "../components/ItemDisplay"
 
@@ -17,6 +17,10 @@ export const items = [
     {name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1},
     {name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2},
 ]
+
+
+
+
 
 const Home = () => {
     return (
