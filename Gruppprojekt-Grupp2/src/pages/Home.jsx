@@ -1,5 +1,5 @@
 import HorizontalProductList from "../components/HorizontalProductList"
-import Temporary2 from '../assets/garn/bomull.jpg'
+import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 
 export const items = [

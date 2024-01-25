@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Products from "../components/ProductList"
-import Temporary2 from '../assets/garn/bomull.jpg'
+import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import React, {useEffect, useState} from 'react'
 import Filter from "../components/Filter" 
