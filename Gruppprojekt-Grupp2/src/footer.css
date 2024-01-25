@@ -3,6 +3,8 @@
 }
 
 .footer {
+    border-top: 1px solid #333333;
+    bottom: 0;
     padding: 3rem 0;
 }
 
@@ -23,7 +25,6 @@
 
 .footer ul {
     text-align: center;
-   
 }
 
 .list {

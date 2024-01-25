@@ -11,6 +11,7 @@ const FilterDiv = styled.div`
     color: rgb(15, 15, 15);
     min-width: 10em;
     transition: transform 0.6s;
+    padding: .5rem;
     
     &.menuButtonActive {
         transform: translateX(-110%);
@@ -43,13 +44,19 @@ const FilterDiv = styled.div`
 
 const FilterButton = styled.button `
     border: none;
+    border-radius: .33rem;
     padding: 0.2em;
-    margin: 1px;
+    margin: .2rem 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #d4d4d4;
+        transition: .2s;
+    }
 
     &.buttonActive {
         background-color: black;
         color: white;
-       
     }
     
 `

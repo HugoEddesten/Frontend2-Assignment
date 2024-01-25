@@ -1,15 +1,15 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import '../footer.css'
-import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa"
 
 function Footer() {
     return (
         <footer className="footer">
             <div className="socials">
-                <a href="#"><FaInstagram /></a>
-                <a href="#"><FaFacebookF /></a>
-                <a href="#"><FaTwitter /></a>
-                <a href="#"><FaTiktok /></a>
+                <a href="https://instagram.com/superyarncompany" target="_blank"><FaInstagram /></a>
+                <a href="https://facebook.com/superyarncompany" target="_blank"><FaFacebook /></a>
+                <a href="https://twitter.com/superyarncompany" target="_blank"><FaTwitter /></a>
+                <a href="https://tiktok.com/superyarncompany" target="_blank"><FaTiktok /></a>
             </div>
             <ul className="list">
                 <CustomLink to="/Delivery">Leverans</CustomLink>

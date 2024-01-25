@@ -12,7 +12,6 @@ const ProductList = styled.div`
     padding-left: 1em;
     width: -moz-fit-content;
     width: fit-content;
-
     max-width: 90%;
 `
 

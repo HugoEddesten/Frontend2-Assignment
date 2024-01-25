@@ -13,6 +13,7 @@ const ProductItemDiv = styled.a`
     position: relative;
     -webkit-user-select: none;
     user-select: none;
+    padding-bottom: 0.33rem;
 
 
     &:hover {
@@ -24,16 +25,16 @@ const ProductItemDiv = styled.a`
 `
 
 const ProductItemImg = styled.img`
-    
+    padding-bottom: 0.33rem;
     width: 15em;
     height: auto;
 `
 
 const ProductItemText = styled.p`
+    padding-left: 0.33rem;
     display: flex;
     align-items: end;
     max-height: 2em;
-    margin: 0.1em;
     color: rgb(211, 211, 211);
 
 `
