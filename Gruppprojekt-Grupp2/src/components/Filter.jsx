@@ -1,13 +1,43 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
+import { HiMenuAlt2 } from "react-icons/hi";
 
 const FilterDiv = styled.div`
+    display: flex;
+    flex-direction: column;
     border: solid 1px;
     border-color: rgb(53, 53, 53);
-    background-color: rgb(86, 86, 99);
+    background-color: rgb(162, 162, 183);
     color: rgb(15, 15, 15);
     min-width: 10em;
+    transition: transform 0.6s;
     
+    &.menuButtonActive {
+        transform: translateX(-110%);
+        transition: transform 0.6s;
+    }
+
+
+    .menuIcon {
+        align-self: end;
+        font-size: 1.33em;
+        
+        transition: transform 0.6s;
+
+
+        &:hover {
+            background-color: rgb(121, 121, 137);
+            cursor: pointer;
+        }
+        &:active {
+            background-color: rgb(68, 68, 77);
+        }
+        &.menuButtonActive {
+        transform: translateX(200%) scale(1.5);
+        transition: transform 0.6s;
+    }
+        
+    }
 
 `
 
@@ -21,12 +51,22 @@ const FilterButton = styled.button `
         color: white;
        
     }
+    
 `
 
 
 const Filter = (props) => {
+    const [menuIsVisible, setMenuIsVisible] = useState(false);
+
+    const toggleMenuButtonActive = () => {
+        setMenuIsVisible(!menuIsVisible);
+        console.log("hi");
+    }
+
+ 
     return (
-        <FilterDiv>
+        <FilterDiv className={menuIsVisible === true ? "menuButtonActive" : ""}>
+            <HiMenuAlt2 className={menuIsVisible === true ? "menuButtonActive menuIcon" : "menuIcon"} onClick={() => toggleMenuButtonActive()}/>
             <h3>Material</h3>
             {props.filters.map((category, index) => (
                 <FilterButton

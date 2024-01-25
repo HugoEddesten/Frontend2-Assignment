@@ -50,7 +50,7 @@ export const items = [
 const ProductPageDiv = styled.div`
     display: flex;
     flex-direction: row;
-    background-color: rgb(30, 29, 32);
+    background-color: rgb(156, 150, 168);
     
     padding: 1em;
     width: -moz-fit-content;
