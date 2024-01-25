@@ -11,6 +11,11 @@
     padding: 0 1rem;
 }
 
+.nav img {
+    width: 4rem;
+    margin: 0 .5rem 0 0;
+}
+
 .nav .logo {
     font-family: 'Sevillana', cursive;
     font-size: 2rem;
@@ -33,11 +38,11 @@ nav ul {
 }
 
 .nav li.active {
-    background-color: #d2dae2;
+    background-color: #9c96a8;
 }
 
 
 .nav li:hover {
-    background-color: #7f93a6;
+    background-color: #d1cadc;
     transition: 0.2s;
 }
