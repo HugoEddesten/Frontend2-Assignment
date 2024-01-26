@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { IoBagAdd } from "react-icons/io5"
 import styled from "styled-components"
 
 const ProductSectionDiv = styled.div`
@@ -50,7 +51,35 @@ const ProductSectionParagraph = styled.p`
 
 `
 
+const AddToCartButton = styled.button`
+    border: none;
+    width: 3em;
+    align-self: center;
+    color: green;
+    border: solid 1px black;
+    border-radius: .33rem;
+    padding: 0.5rem;
+    
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    &:active {
+        color: white;
+        background-color: green;
+    }
+`
+
+
+
 const ProductSection = (props) => {
+    const addToCart = (e) => {
+        e.stopPropagation();
+        console.log(props.product.name);
+
+       
+    }
+    
     return (
         <ProductSectionDiv className={props.isVisible ? "isVisible" : "isInvisible"}>
             <ProductSectionImg src={props.product?.imgName}/>
@@ -58,6 +87,7 @@ const ProductSection = (props) => {
             {props.product?.materials.map((material, index) => (
                 <ProductSectionParagraph key={index}>{material}</ProductSectionParagraph>
             ))}
+            <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
             
         
         </ProductSectionDiv>

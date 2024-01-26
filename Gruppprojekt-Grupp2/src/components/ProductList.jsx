@@ -6,9 +6,7 @@ import React from 'react';
 const ProductListDiv = styled.div`
     display: flex;
     flex-direction: row;
-   
     
-
     flex-wrap: wrap;
     background-color: rgb(156, 150, 168);
     grid-gap: 1em;

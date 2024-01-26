@@ -28,7 +28,7 @@ const ProductItemDiv = styled.a`
 const ProductItemImg = styled.img`
     
     padding-bottom: 0.33rem;
-    width: 15em;
+    width: 20em;
     height: auto;
 `
 
@@ -47,7 +47,7 @@ const ProductInfoDiv = styled.div`
 `
 
 const ProductItemText = styled.p`
-    padding-left: 0.33rem;
+    padding-left: 0rem;
     display: flex;
     align-items: end;
     max-height: 2em;
@@ -69,7 +69,7 @@ const AddToCartButton = styled.button`
     color: green;
     border: solid 1px black;
     border-radius: .33rem;
-    padding: 0.5rem;
+    padding: 0.2rem;
     
     &:hover {
         cursor: pointer;
