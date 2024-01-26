@@ -1,3 +1,8 @@
+import styled from "styled-components";
+import CartList from "../components/CartList"
+import React from 'react';
+
+
 export default function Cart() {
     return (
         <div>
