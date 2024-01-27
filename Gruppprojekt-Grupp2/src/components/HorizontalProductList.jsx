@@ -15,6 +15,7 @@ const ProductScrollListDiv = styled.div`
     
     user-select: none;
     padding: 1em;
+    margin-bottom: 1rem;
     z-index: 0;
 
 `

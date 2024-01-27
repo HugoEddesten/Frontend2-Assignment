@@ -11,9 +11,7 @@ const ProductSectionDiv = styled.div`
     top: 0;
     bottom: 0;
 
-    background-color: #a4a6c2;
-    border: solid #18181b;
-    border-right: none;
+    background-color: white;
     padding: 1rem;
  
     z-index: 3;
@@ -21,7 +19,7 @@ const ProductSectionDiv = styled.div`
     &.isInvisible {
         display: flex;
         transform: translateX(100%);
-        
+
         
         transition: all ease 0.4s;
     }
@@ -31,6 +29,7 @@ const ProductSectionDiv = styled.div`
         transform: translateX(0%);
         
         transition: all ease 0.4s; 
+        box-shadow: 3rem 3rem 3rem 3rem;
     }
 `
 

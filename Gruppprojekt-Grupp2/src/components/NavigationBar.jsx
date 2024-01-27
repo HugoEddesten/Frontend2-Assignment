@@ -4,7 +4,7 @@ import '../navbar.css'
 function NavigationBar() {
     return (
         <nav className='nav'>
-            <Link to="/" className='logo'><img src="../src/assets/garnnystan.jpg"></img>Super Yarn Company</Link>
+            <Link to="/" className='logo'><img src="../src/assets/garnnystan.jpg"></img>Super Yarn Store</Link>
             <ul>
                 <CustomLink to="/ProductPage">Produkter</CustomLink>
                 <CustomLink to="/Contact">Kontakt</CustomLink>
