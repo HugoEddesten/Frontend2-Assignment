@@ -374,14 +374,13 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    Titel: Attribute.String;
     products: Attribute.Relation<
       'api::category.category',
       'manyToMany',
       'api::product.product'
     >;
     image: Attribute.Media;
-    description: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -406,22 +405,20 @@ export interface ApiProductProduct extends Schema.CollectionType {
     singularName: 'product';
     pluralName: 'products';
     displayName: 'product';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    description: Attribute.Text;
-    price: Attribute.Decimal;
-    image: Attribute.Media;
+    Beskrivning: Attribute.Text;
+    Price: Attribute.Decimal;
+    Bild: Attribute.Media;
     categories: Attribute.Relation<
       'api::product.product',
       'manyToMany',
       'api::category.category'
     >;
-    title: Attribute.String;
-    quantity: Attribute.Integer;
+    Titel: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

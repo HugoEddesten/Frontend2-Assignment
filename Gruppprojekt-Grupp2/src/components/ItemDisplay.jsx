@@ -2,7 +2,7 @@ import HorizontalProductList from "./HorizontalProductList"
 import styled from "styled-components"
 
 const ItemDisplayDiv = styled.div`
-    background-color: rgb(195, 183, 216);
+    background-color: #F0F0F0;
     margin-left: 5em;
     margin-right: 5em;
     margin-top: 3em;
@@ -12,8 +12,6 @@ const ItemDisplayDiv = styled.div`
         padding-left: 2em;
     }
 `
-
-
 
 const ItemDisplay = ({ items, text }) => {
     return (

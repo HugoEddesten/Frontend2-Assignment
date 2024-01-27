@@ -1,5 +1,5 @@
 import './global.css'
-import "typeface-inter"
+import "typeface-dm-sans"
 import "typeface-sevillana"
 import "typeface-dm-serif-display"
 import NavigationBar from './components/NavigationBar.jsx'

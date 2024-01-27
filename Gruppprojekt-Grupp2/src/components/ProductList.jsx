@@ -8,7 +8,7 @@ const ProductListDiv = styled.div`
     flex-direction: row;
     
     flex-wrap: wrap;
-    background-color: rgb(156, 150, 168);
+    background-color: white;
     grid-gap: 1em;
     padding-left: 1em;
     align-self: flex-start;

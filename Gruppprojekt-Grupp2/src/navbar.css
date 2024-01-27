@@ -38,11 +38,11 @@ nav ul {
 }
 
 .nav li.active {
-    background-color: #9c96a8;
+    background-color: #F0F0F0;
 }
 
 
 .nav li:hover {
-    background-color: #d1cadc;
+    background-color: #dddddd;
     transition: 0.2s;
 }

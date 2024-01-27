@@ -5,9 +5,8 @@ import { HiMenuAlt2 } from "react-icons/hi";
 const FilterDiv = styled.div`
     display: flex;
     flex-direction: column;
-    border: solid 1px;
-    border-color: rgb(53, 53, 53);
-    background-color: rgb(162, 162, 183);
+    
+    background-color: white;
     color: rgb(15, 15, 15);
     min-width: 10em;
     transition: transform 0.6s;
@@ -22,16 +21,17 @@ const FilterDiv = styled.div`
     .menuIcon {
         align-self: end;
         font-size: 1.33em;
-        
+        border-radius: 0.1rem;
         transition: transform 0.6s;
 
 
         &:hover {
-            background-color: rgb(121, 121, 137);
+            background-color: #dddddd;
             cursor: pointer;
+            transition: 0.2s;
         }
         &:active {
-            background-color: rgb(68, 68, 77);
+            background-color: #F0F0F0;
         }
         &.menuButtonActive {
         transform: translateX(200%) scale(1.5);
@@ -50,7 +50,7 @@ const FilterButton = styled.button `
     cursor: pointer;
 
     &:hover {
-        background-color: #d4d4d4;
+        background-color: #dddddd;
         transition: .2s;
     }
 
