@@ -3,28 +3,30 @@ import ProductItem from "./ProductItem"
 import React from 'react';
 
 
-const ProductList = styled.div`
+const ProductListDiv = styled.div`
     display: flex;
     flex-direction: row;
+   
+    
+
     flex-wrap: wrap;
     background-color: rgb(156, 150, 168);
     grid-gap: 1em;
     padding-left: 1em;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 90%;
+    align-self: flex-start;
+    
 `
 
 
-function Products(props) {
+function ProductList(props) {
     
     return (
-        <ProductList>
+        <ProductListDiv>
             {props.products.map((product, index) => (
                 <ProductItem key={index} product={product} handler={props.handler}/>
             ))}
-        </ProductList>
+        </ProductListDiv>
     )
 }
 
-export default Products
+export default ProductList

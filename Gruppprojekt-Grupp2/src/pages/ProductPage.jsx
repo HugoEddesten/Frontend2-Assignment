@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Products from "../components/ProductList"
+import ProductList from "../components/ProductList"
 import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import React, {useEffect, useState} from 'react'
@@ -50,6 +50,7 @@ export const items = [
 const ProductPageDiv = styled.div`
     display: flex;
     flex-direction: row;
+    justify-items: start;
     background-color: rgb(156, 150, 168);
     
     padding: 1em;
@@ -138,7 +139,7 @@ function ProductPage() {
     return (
         <ProductPageDiv>
             <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters} />
-            <Products products={filteredItems} handler={productClicked} />
+            <ProductList products={filteredItems} handler={productClicked} />
 
             <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
             <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>

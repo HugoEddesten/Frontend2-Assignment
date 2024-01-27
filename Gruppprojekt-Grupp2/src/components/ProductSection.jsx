@@ -36,7 +36,7 @@ const ProductSectionDiv = styled.div`
 
 const ProductSectionImg = styled.img`
     width: 20em;
-    height: 20em;
+    height: auto;
 
     background-color: #d3d5ed;
 ` 
