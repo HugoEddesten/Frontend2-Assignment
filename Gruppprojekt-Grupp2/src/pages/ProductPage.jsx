@@ -1,10 +1,11 @@
 import styled from "styled-components"
-import ProductList from "../components/ProductList"
+import Products from "../components/ProductList"
 import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import React, {useEffect, useState} from 'react'
 import Filter from "../components/Filter" 
 import ProductSection from "../components/ProductSection"
+import axios from "axios"
 
 export const items = [
     {name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1},
@@ -50,8 +51,7 @@ export const items = [
 const ProductPageDiv = styled.div`
     display: flex;
     flex-direction: row;
-    justify-items: start;
-    background-color: rgb(156, 150, 168);
+    background-color: white;
     
     padding: 1em;
     width: -moz-fit-content;
@@ -71,14 +71,11 @@ const Overlay = styled.div`
 
     &.isVisible {
         display: flex;
-    }
-    
+    }  
 `
 
-
-
-
 function ProductPage() {
+
     const [filteredItems, setFilteredItems] = useState(items);
     const [selectedFilters, setSelectedFilters] = useState([]);
     const filters = []
@@ -94,7 +91,11 @@ function ProductPage() {
     const [clickedProduct, setClickedProduct] = useState();
     const [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
 
+
+
+
     const filterButtonClicked = (category) => {
+        
         if (selectedFilters.includes(category)){
             let tempFilters = selectedFilters.filter((filter) => {
                 return filter !== category  
@@ -135,11 +136,12 @@ function ProductPage() {
             setFilteredItems(items);
         }
     }
-    
+   
     return (
+        
         <ProductPageDiv>
             <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters} />
-            <ProductList products={filteredItems} handler={productClicked} />
+            <Products products={filteredItems} handler={productClicked} />
 
             <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
             <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>

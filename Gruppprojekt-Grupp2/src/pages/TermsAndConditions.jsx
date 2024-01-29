@@ -1,8 +1,39 @@
-export default function TermsAndConditions() {
+import styled from "styled-components"
+
+const TermsAndConditionsPageDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+`
+
+const TermsAndConditionsPageContent = styled.div`
+    margin: 0 2rem 2rem 2rem;
+    background-color: #F0F0F0;
+    padding: 1rem;
+`
+
+const TermsAndConditions = () => {
     return (
         <div>
-            <h1>Köpvillkor</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolorum dolores atque iusto rem nobis magnam commodi quibusdam temporibus quia neque, a fugiat esse quae! Sed, praesentium labore! Autem, cum.</p>
+            <TermsAndConditionsPageDiv>
+                    <TermsAndConditionsPageContent>
+                        <h2>Köpvillkor</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
+                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
+                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                    </TermsAndConditionsPageContent>
+                    <TermsAndConditionsPageContent>
+                        <h2>Ok</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
+                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
+                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                    </TermsAndConditionsPageContent>
+            </TermsAndConditionsPageDiv>
         </div>
     )
 }
+
+export default TermsAndConditions

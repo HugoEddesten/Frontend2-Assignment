@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { IoBagAdd } from "react-icons/io5"
 import styled from "styled-components"
 
 const ProductSectionDiv = styled.div`
@@ -11,9 +12,7 @@ const ProductSectionDiv = styled.div`
     top: 0;
     bottom: 0;
 
-    background-color: #a4a6c2;
-    border: solid #18181b;
-    border-right: none;
+    background-color: white;
     padding: 1rem;
  
     z-index: 3;
@@ -21,7 +20,7 @@ const ProductSectionDiv = styled.div`
     &.isInvisible {
         display: flex;
         transform: translateX(100%);
-        
+
         
         transition: all ease 0.4s;
     }
@@ -31,6 +30,7 @@ const ProductSectionDiv = styled.div`
         transform: translateX(0%);
         
         transition: all ease 0.4s; 
+        box-shadow: 3rem 3rem 3rem 3rem;
     }
 `
 
@@ -50,7 +50,35 @@ const ProductSectionParagraph = styled.p`
 
 `
 
+const AddToCartButton = styled.button`
+    border: none;
+    width: 3em;
+    align-self: center;
+    color: green;
+    border: solid 1px black;
+    border-radius: .33rem;
+    padding: 0.5rem;
+    
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    &:active {
+        color: white;
+        background-color: green;
+    }
+`
+
+
+
 const ProductSection = (props) => {
+    const addToCart = (e) => {
+        e.stopPropagation();
+        console.log(props.product.name);
+
+       
+    }
+    
     return (
         <ProductSectionDiv className={props.isVisible ? "isVisible" : "isInvisible"}>
             <ProductSectionImg src={props.product?.imgName}/>
@@ -58,6 +86,7 @@ const ProductSection = (props) => {
             {props.product?.materials.map((material, index) => (
                 <ProductSectionParagraph key={index}>{material}</ProductSectionParagraph>
             ))}
+            <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
             
         
         </ProductSectionDiv>

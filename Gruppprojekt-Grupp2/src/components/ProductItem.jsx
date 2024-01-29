@@ -10,7 +10,7 @@ const ProductItemDiv = styled.a`
     
     border: solid 1px;
     border-color: rgb(53, 53, 53);
-    background-color: #60606c;
+    background-color: white;
     position: relative;
     -webkit-user-select: none;
     user-select: none;
@@ -21,14 +21,14 @@ const ProductItemDiv = styled.a`
         transition: all 0.1s;
         
         cursor: pointer;
-        transform: scale(1.01);
+        /* transform: scale(1.01); */
     }
 `
 
 const ProductItemImg = styled.img`
     
     padding-bottom: 0.33rem;
-    width: 15em;
+    width: 20em;
     height: auto;
 `
 
@@ -47,11 +47,11 @@ const ProductInfoDiv = styled.div`
 `
 
 const ProductItemText = styled.p`
-    padding-left: 0.33rem;
+    padding-left: 0rem;
     display: flex;
     align-items: end;
     max-height: 2em;
-    color: rgb(211, 211, 211);
+    color: black;
 
     &:hover {
         &.ProductItemDiv{
@@ -69,11 +69,13 @@ const AddToCartButton = styled.button`
     color: green;
     border: solid 1px black;
     border-radius: .33rem;
-    padding: 0.5rem;
+    padding: 0.2rem;
     
     &:hover {
         cursor: pointer;
-        transform: scale(1.1);
+        transform: scale(1.05);
+        transition: 0.1s;
+        background-color: #dddddd;
     }
     &:active {
         color: white;

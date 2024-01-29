@@ -1,5 +1,5 @@
 import './global.css'
-import "typeface-inter"
+import "typeface-dm-sans"
 import "typeface-sevillana"
 import "typeface-dm-serif-display"
 import NavigationBar from './components/NavigationBar.jsx'
@@ -14,12 +14,14 @@ import TermsAndConditions from './pages/TermsAndConditions.jsx'
 import Returns from './pages/Returns.jsx'
 import { Route, Routes } from "react-router-dom"
 import { useEffect } from 'react'
+import axios from 'axios'
 
 
 
 function App() {
+    /*
     const mittAnrop = async () => {
-        const data = await fetch("http://localhost:1337/api/products")
+        const data = await axios("http://localhost:1337/api/products")
         const convertedData = await data.json()
         console.log(convertedData);
     }
@@ -28,7 +30,7 @@ function App() {
     useEffect(()=>{
         mittAnrop()
     }, [])
-
+    */
     return (
         <div>
             <div>
