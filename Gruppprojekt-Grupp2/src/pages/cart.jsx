@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import CartList from "../components/CartList"
 
 const CartPageDiv = styled.div`
     display: flex;
@@ -15,6 +16,28 @@ const CartPageContent = styled.div`
     padding: 1rem;
 `
 
+const CartSum = styled.p`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: red;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 2rem;
+`
+
+const CartBox = styled.p`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: yellow;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+`
+
+
 
 
 const Cart = () => {
@@ -23,9 +46,18 @@ const Cart = () => {
             <CartPageDiv>
                     <CartPageContent>
                         <h2>Din kundvagn</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                        <CartSum>
+                            <CartBox>
+                                Bild på produkt
+                            </CartBox>
+
+                            
+
+                            <button id="minus">−</button>
+                            <input type="number" value="0" id="input"/>
+                            <button id="plus">+</button>
+                            <button id="remove">Remove</button>
+                        </CartSum>
                     </CartPageContent>
                     <CartPageContent>
                         
@@ -39,13 +71,7 @@ const Cart = () => {
                             Nåt glatt i alla fall, kanske en selfie på oss tre, för att pigga upp <br /> <br />
 
                              Har du frågor så tveka inte att kontakta oss. <br />
-                             Du kan nå oss på e-postadressen kundservice@hobbii.se eller via telefon på 08-525 03888. Alla vardagar 10.00-12.00, 12.30-16.00.
-
-                            
-                            
-                            
-                            
-                            
+                             Du kan nå oss på e-postadressen kundservice@superyarncompany.se eller via telefon på 08-123&nbsp;45&nbsp;67. Alla vardagar 10.00-12.00, 12.30-16.00.
                             
                             </p>
                     </CartPageContent>
