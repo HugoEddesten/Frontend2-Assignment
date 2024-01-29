@@ -5,7 +5,7 @@ const CartPageDiv = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 100%;
     margin: 2rem 0;
 `
 
@@ -14,6 +14,8 @@ const CartPageContent = styled.div`
     background-color: #F0F0F0;
     padding: 1rem;
 `
+
+
 
 const Cart = () => {
     return (
@@ -27,9 +29,25 @@ const Cart = () => {
                     </CartPageContent>
                     <CartPageContent>
                         
-                        <h2>Du har god smak!</h2>
-                        <p>Din beställning kommer att packas och skickas till dig snarast!<br />
-                        Tjolahopp och lite mera text</p>
+                        <h2>Du har bra smak! Lyckad beställning - på egen sida?</h2>
+                        <p>1000 tack för din beställning. <br />
+                            Du kommer höra från oss igen när dina varor har packats och skickats. <br />
+                            Ha det bra så länge! <br /><br />
+                            Gladeliga hälsningar från Super Yarn Company <br /><br />
+                            
+                            Roliga/trevliga bilder?<br />
+                            Nåt glatt i alla fall, kanske en selfie på oss tre, för att pigga upp <br /> <br />
+
+                             Har du frågor så tveka inte att kontakta oss. <br />
+                             Du kan nå oss på e-postadressen kundservice@hobbii.se eller via telefon på 08-525 03888. Alla vardagar 10.00-12.00, 12.30-16.00.
+
+                            
+                            
+                            
+                            
+                            
+                            
+                            </p>
                     </CartPageContent>
             </CartPageDiv>
         </div>
