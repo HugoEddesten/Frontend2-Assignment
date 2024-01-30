@@ -12,8 +12,10 @@ import Footer from './components/Footer.jsx'
 import Delivery from './pages/Delivery.jsx'
 import TermsAndConditions from './pages/TermsAndConditions.jsx'
 import Returns from './pages/Returns.jsx'
+import LogIn from './pages/LogIn.jsx'
+import Register from './pages/Register.jsx'
 import { Route, Routes } from "react-router-dom"
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 
@@ -31,6 +33,13 @@ function App() {
         mittAnrop()
     }, [])
     */
+
+    const [currentForm, setCurrentForm] = useState('LogIn');
+
+    const toggleForm = (formName) => {
+        setCurrentForm(formName);
+    }
+
     return (
         <div>
             <div>
@@ -44,7 +53,11 @@ function App() {
                     <Route path='/Delivery' element={<Delivery />} />
                     <Route path='/TermsAndConditions' element={<TermsAndConditions />} />
                     <Route path='/Returns' element={<Returns />} />
+                    <Route path='/LogIn' element={<LogIn />} />
+                    <Route path='/Register' element={<Register />} />
+
                 </Routes>
+
                 <Footer />
             </div>
         </div>
