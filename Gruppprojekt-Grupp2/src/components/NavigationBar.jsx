@@ -10,12 +10,13 @@ function NavigationBar() {
                 <CustomLink to="/Contact">Kontakt</CustomLink>
                 <CustomLink to="/About">Om Oss</CustomLink>
                 <CustomLink to="/Cart">Varukorg</CustomLink>
+                <CustomLink to="/LogIn">Logga In</CustomLink>
             </ul>
         </nav>
-    )   
+    )
 }
 
-function CustomLink({ to, children,  ...props }) {
+function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
     return (

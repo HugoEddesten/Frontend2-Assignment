@@ -1,12 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { HiMenuAlt2 } from "react-icons/hi";
 
 const FilterDiv = styled.div`
     display: flex;
     flex-direction: column;
-    
-    background-color: white;
     color: rgb(15, 15, 15);
     min-width: 10em;
     transition: transform 0.6s;
@@ -42,12 +40,13 @@ const FilterDiv = styled.div`
 
 `
 
-const FilterButton = styled.button `
+const FilterButton = styled.button`
     border: none;
     border-radius: .33rem;
     padding: 0.2em;
     margin: .2rem 0;
     cursor: pointer;
+    background-color: #f0f0f0;
 
     &:hover {
         background-color: #dddddd;
@@ -69,24 +68,24 @@ const Filter = (props) => {
         setMenuIsVisible(!menuIsVisible);
     }
 
- 
+
     return (
         <FilterDiv className={menuIsVisible === true ? "menuButtonActive" : ""}>
-            <HiMenuAlt2 className={menuIsVisible === true ? "menuButtonActive menuIcon" : "menuIcon"} onClick={() => toggleMenuButtonActive()}/>
+            <HiMenuAlt2 className={menuIsVisible === true ? "menuButtonActive menuIcon" : "menuIcon"} onClick={() => toggleMenuButtonActive()} />
             <h3>Material</h3>
             {props.filters.map((category, index) => (
                 <FilterButton
-                    key={`filters-${index}`} 
+                    key={`filters-${index}`}
                     onClick={() => props.handler(category)}
                     className={props.selectedFilters.includes(category) ? "buttonActive" : ""}
-                >   
+                >
                     {category}
-                    
+
                 </FilterButton>
             ))}
             <h3>Pris</h3>
 
-            
+
 
             <h3>Färg</h3>
             <FilterButton>Blå</FilterButton>
@@ -95,7 +94,7 @@ const Filter = (props) => {
             <FilterButton>Svart</FilterButton>
         </FilterDiv>
     )
-    
+
 }
 
 export default Filter
