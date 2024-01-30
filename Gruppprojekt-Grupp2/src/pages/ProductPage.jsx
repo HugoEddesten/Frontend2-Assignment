@@ -1,11 +1,14 @@
 import styled from "styled-components"
-import Products from "../components/ProductList"
+import ProductList from "../components/ProductList"
 import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import React, {useEffect, useState} from 'react'
 import Filter from "../components/Filter" 
 import ProductSection from "../components/ProductSection"
+import GetDB from "../services/FileService"
 import axios from "axios"
+
+
 
 export const items = [
     {name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1},
@@ -76,22 +79,23 @@ const Overlay = styled.div`
 
 function ProductPage() {
 
+    const [products, setProducts] = useState([])
+    const [error, setError] = useState(null); 
+    
     const [filteredItems, setFilteredItems] = useState(items);
     const [selectedFilters, setSelectedFilters] = useState([]);
-    const filters = []
-     items.forEach((item) => {
+    
+    const [clickedProduct, setClickedProduct] = useState();
+    const [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
+
+    const filters = [];
+    items.forEach((item) => {
         item.materials.forEach((material) => {
             if (!filters.includes(material)){
                 filters.push(material);
             }
         })
     });
-    
-    
-    const [clickedProduct, setClickedProduct] = useState();
-    const [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
-
-
 
 
     const filterButtonClicked = (category) => {
@@ -106,9 +110,7 @@ function ProductPage() {
         } 
     }
 
-    useEffect(() => {
-        filterItems();
-    }, [selectedFilters])
+    
 
     const productClicked = (product) => {
         setClickedProduct(product);
@@ -136,12 +138,27 @@ function ProductPage() {
             setFilteredItems(items);
         }
     }
-   
+
+    useEffect(() => {
+        axios.get("http://localhost:1300/api/Products?populate=*")
+            .then(({ data }) => setProducts(data.data))
+            .catch((error) => setError(error));
+            
+    }, []);
+
+    useEffect(() => {
+        filterItems();
+    }, [selectedFilters])
+
+    
+    console.log(products);
+    
+    
+
     return (
-        
         <ProductPageDiv>
             <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters} />
-            <Products products={filteredItems} handler={productClicked} />
+            <ProductList products={products} handler={productClicked} />
 
             <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
             <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>

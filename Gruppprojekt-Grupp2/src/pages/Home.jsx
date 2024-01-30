@@ -1,8 +1,8 @@
-import HorizontalProductList from "../components/HorizontalProductList"
 import Temporary2 from '../assets/Temporary2.webp'
 import Temporary1 from '../assets/Temporary1.webp'
 import ItemDisplay from "../components/ItemDisplay"
 import styled from "styled-components"
+import CategoryPicker from "../components/CategoryPicker"
 
 const HomePageDiv = styled.div`
     display: flex;
@@ -37,6 +37,7 @@ export const items = [
 const Home = () => {
     return (
         <div>
+            
             <ItemDisplay items={items} text="Spring Sale"/>
             <HomePageDiv>
                     <HomePageContent>
@@ -51,7 +52,10 @@ const Home = () => {
                         Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
                         Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
                     </HomePageContent>
+                
             </HomePageDiv>
+            <CategoryPicker />
+            
         </div>
 
     )
