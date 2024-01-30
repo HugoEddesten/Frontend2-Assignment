@@ -1,0 +1,32 @@
+.button{
+    margin-left: 50px;
+    margin-top: 15px;
+    height: 90px;
+    width: 90px;
+    background-color: green;
+    color: white;
+}
+
+.value_button{
+
+
+    height: 30px;
+    width: 60px;
+    background-color: lightgreen;
+
+    text-align: center;
+}
+
+.plus_minus_button{
+    height: 30px;
+    width: 30px;
+    background-color: lightgray;
+
+}
+
+.quantitys_left{
+    height: 30px;
+    width: 50px;
+    background-color: yellow;
+    margin-left: 10px;
+}
