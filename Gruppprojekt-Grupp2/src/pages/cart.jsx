@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import CartList from "../components/CartList"
-import '../footer.css'
+import '../cart.css'
 
 
 
@@ -37,8 +37,10 @@ const CartBox = styled.p`
     justify-content: space-between;
     background-color: yellow;
     align-items: center;
-    width: 100%;
+    width: 40px;
+    height: 40px;
     margin: 2rem 0;
+    margin-right: 5px;
 `
 
 
@@ -50,27 +52,28 @@ const Cart = () => {
             <CartPageDiv>
                     <CartPageContent>
                         <h2>Din kundvagn</h2>
-                        <button>Fortsätt handla</button>
-                        <CartSum>
+                        <button class="button"><a href="./ProductPage">Fortsätt handla</a></button>
                         
+                        <CartSum>                        
                             <CartBox>
-                                Bild på produkt
+                                Bild <br />
                             </CartBox>
+                            Namn på garn, pris, 
 
-                            
-
-                            <button id="minus">−</button>
-                            <input type="number" value="0" id="input"/>
-                            <button id="plus">+</button>
-                            <button id="remove">Remove</button>
+                            <button class="plus_minus_button"  id="minus">−</button>
+                            <input class="value_button"type="number" value="0" id="input"/>
+                            <button class="plus_minus_button" id="plus">+</button>
+                            <button id="remove">Ev remove</button>
+                             <p class="quantitys_left">Kvar i lager</p>
                             
                             
                             
                             
                         </CartSum>
                        
-                        <button>Till kassan - länk till Delivery.jsx</button>
+                        <button> <a href="./delivery.jsx">Till kassan</a></button>
                     </CartPageContent>
+                    
                     <CartPageContent>
                         Kanske ingenting här?<br />
                         Css till knapp-partiet ovan behövs.
