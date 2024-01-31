@@ -3,7 +3,7 @@
     margin-top: 15px;
     height: 90px;
     width: 90px;
-    background-color: green;
+    /*background-color: green;*/
     color: white;
 }
 
@@ -29,4 +29,26 @@
     width: 50px;
     background-color: yellow;
     margin-left: 10px;
+}
+
+.productbutton {
+    border: none;
+    border-radius: .33rem;
+    padding: 0.2em;
+    margin: .2rem 0;
+    cursor: pointer;
+    background-color: #f0f0f0;
+
+   
+
+}
+
+.productbutton:hover {
+    background-color: #dddddd;
+    transition: .2s;
+}
+
+.buttonActive {
+    background-color: black;
+    color: white;
 }

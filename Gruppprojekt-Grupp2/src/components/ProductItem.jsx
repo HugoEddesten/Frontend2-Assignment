@@ -26,10 +26,11 @@ const ProductItemDiv = styled.a`
 `
 
 const ProductItemImg = styled.img`
-    justify-content: center;
     padding-bottom: 0.33rem;
-    width: 20em;
+    width: 20rem;
     height: auto;
+    object-fit: cover;
+
 `
 
 const BottomContentDiv = styled.div`
@@ -49,12 +50,12 @@ const ProductInfoDiv = styled.div`
 `
 
 const ProductItemText = styled.p`
-    padding-left: 0rem;
+    margin-top: 0.33rem;
     display: flex;
     align-items: end;
-   
     max-height: 2em;
     color: black;
+    font-size: 0.8rem;
 
     &:hover {
         &.ProductItemDiv{
