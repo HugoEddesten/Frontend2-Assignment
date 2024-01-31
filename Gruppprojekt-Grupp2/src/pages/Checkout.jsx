@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const ContactPageDiv = styled.div`
+const CheckoutPageDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -9,29 +9,26 @@ const ContactPageDiv = styled.div`
     margin: 2rem 0;
 `
 
-const ContactPageContent = styled.div`
+const CheckoutPageContent = styled.div`
     margin: 0 2rem 2rem 2rem;
     background-color: #F0F0F0;
     padding: 1rem;
 `
 
-const Contact = () => {
+const Checkout = () => {
     return (
         <div>
-            <ContactPageDiv>
-                <ContactPageContent>
-                    <h2>Checkout</h2>
-                    <p>
-                        Här ska det ligga ett formulär
-                    </p>
-                </ContactPageContent>
-                <ContactPageContent>
-                    <h2>Sidomeny med kundvagnen</h2>
-                    <p>Här ligger kundvagnen</p>
-                </ContactPageContent>
-            </ContactPageDiv>
+            <CheckoutPageDiv>
+                    <CheckoutPageContent>
+                        <form action="">
+                            <label htmlFor="">Hejsan</label>
+                            <input type="text" />
+                            <button><a href="./SuccessfulCheckout">Beställ</a></button>
+                        </form>
+                    </CheckoutPageContent>
+            </CheckoutPageDiv>
         </div>
     )
 }
 
-export default Contact
+export default Checkout

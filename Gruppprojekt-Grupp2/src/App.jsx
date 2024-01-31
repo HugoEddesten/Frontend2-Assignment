@@ -14,6 +14,8 @@ import TermsAndConditions from './pages/TermsAndConditions.jsx'
 import Returns from './pages/Returns.jsx'
 import LogIn from './pages/LogIn.jsx'
 import Register from './pages/Register.jsx'
+import Checkout from './pages/Checkout.jsx'
+import SuccessfulCheckout from './pages/SuccessfulCheckout.jsx'
 import { Route, Routes } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -55,7 +57,8 @@ function App() {
                     <Route path='/Returns' element={<Returns />} />
                     <Route path='/LogIn' element={<LogIn />} />
                     <Route path='/Register' element={<Register />} />
-
+                    <Route path='/Checkout' element={<Checkout />} />
+                    <Route path='/SuccessfulCheckout' element={<SuccessfulCheckout />} />
                 </Routes>
 
                 <Footer />
