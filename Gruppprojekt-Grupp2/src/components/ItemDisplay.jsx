@@ -15,14 +15,14 @@ const ItemDisplayDiv = styled.div`
     }
 `
 
-const ItemDisplay = ({ items, text }) => {
+const ItemDisplay = ({ text, filterURL }) => {
 
     const [products, setProducts] = useState([])
     const [error, setError] = useState([])
 
 
     useEffect(() => {
-        axios.get("http://localhost:1300/api/Products?populate=*")
+        axios.get(`http://localhost:1337/api/${filterURL}`)
             .then(({ data }) => setProducts(data.data))
             .catch((error) => setError(error));
             
@@ -32,7 +32,7 @@ const ItemDisplay = ({ items, text }) => {
     return (
         <ItemDisplayDiv>
             <h2>{text}</h2>
-            <HorizontalProductList products={items} />
+            <HorizontalProductList products={products} />
         </ItemDisplayDiv>
     )
 }

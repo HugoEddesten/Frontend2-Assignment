@@ -6,8 +6,8 @@ import { IoBagAdd } from "react-icons/io5";
 const ProductItemDiv = styled.a`
     display: flex;
     flex-direction: column;
-    justify-content: end;
     
+
     border: solid 1px;
     border-color: rgb(53, 53, 53);
     background-color: white;
@@ -26,7 +26,7 @@ const ProductItemDiv = styled.a`
 `
 
 const ProductItemImg = styled.img`
-    
+    justify-content: center;
     padding-bottom: 0.33rem;
     width: 20em;
     height: auto;
@@ -36,6 +36,8 @@ const BottomContentDiv = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+
 
 `
 
@@ -50,6 +52,7 @@ const ProductItemText = styled.p`
     padding-left: 0rem;
     display: flex;
     align-items: end;
+   
     max-height: 2em;
     color: black;
 
@@ -89,21 +92,22 @@ function ProductItem({product, handler}) {
     const addToCart = (e) => {
         e.stopPropagation();
         console.log(product.attributes.title);
-
+        console.log(e);
        
     }
 
     return (
         <ProductItemDiv onClick={() => handler(product)}>
             <ProductItemImg src={"http://localhost:1337" + product?.attributes?.image.data.attributes.url}/>
-        <BottomContentDiv>
-            <ProductInfoDiv>
-                <ProductItemText>{product.attributes?.title}</ProductItemText>
-                <ProductItemText>{product.attributes?.price} SEK</ProductItemText>
-            </ProductInfoDiv>
+            <BottomContentDiv>
+                <ProductInfoDiv>
+                    <ProductItemText>{product.attributes?.title}</ProductItemText>
+                    <ProductItemText>{product.attributes?.price} SEK</ProductItemText>
+                    <ProductItemText>{product.attributes?.quantity} st</ProductItemText>
+                </ProductInfoDiv>
 
-            <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
-        </BottomContentDiv>
+                <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
+            </BottomContentDiv>
         </ProductItemDiv>
     )
 }

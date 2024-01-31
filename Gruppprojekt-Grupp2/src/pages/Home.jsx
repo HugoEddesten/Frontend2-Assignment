@@ -3,6 +3,8 @@ import Temporary1 from '../assets/Temporary1.webp'
 import ItemDisplay from "../components/ItemDisplay"
 import styled from "styled-components"
 import CategoryPicker from "../components/CategoryPicker"
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 const HomePageDiv = styled.div`
     display: flex;
@@ -34,10 +36,13 @@ export const items = [
     { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
 ]
 
+
+
+
 const Home = () => {
     return (
         <div>
-            <ItemDisplay items={items} text="Spring Sale" />
+            <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
             <HomePageDiv>
                 <HomePageContent>
                     <h2>Super Yarn Store</h2>

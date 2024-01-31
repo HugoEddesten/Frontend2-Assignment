@@ -140,7 +140,7 @@ function ProductPage() {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/Products?populate=*")
+        axios.get("http://localhost:1337/api/Products?Id=20&populate=*")
             .then(({ data }) => setProducts(data.data))
             .catch((error) => setError(error));
             

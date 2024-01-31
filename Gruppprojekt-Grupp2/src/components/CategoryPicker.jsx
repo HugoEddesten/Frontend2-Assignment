@@ -42,7 +42,7 @@ const CategoryPicker = () => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        axios.get("http://localhost:1300/api/Categories")
+        axios.get("http://localhost:1337/api/Categories")
             .then(({ data }) => setCategories(data.data))
             .catch((error) => setError(error));
     }, []);
