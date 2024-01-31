@@ -1,32 +1,26 @@
 import styled from "styled-components"
+import "../checkout.css"
 
-const CheckoutPageDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 2rem 0;
-`
-
-const CheckoutPageContent = styled.div`
-    margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
-    padding: 1rem;
-`
 
 const Checkout = () => {
     return (
-        <div>
-            <CheckoutPageDiv>
-                    <CheckoutPageContent>
-                        <form action="">
-                            <label htmlFor="">Hejsan</label>
-                            <input type="text" />
-                            <button><a href="./SuccessfulCheckout">Beställ</a></button>
-                        </form>
-                    </CheckoutPageContent>
-            </CheckoutPageDiv>
+        <div className="CheckoutPageDiv">
+            <div className="CheckoutPageContent">
+
+            <form action="">
+            <input type="text" id="email" name="email" placeholder="Epostadress" />  <br />               
+            <input type="text" id="firstName" name="username" placeholder="Förnamn" />                        
+            <input type="text" id="lastName" name="username" placeholder="Efternamn" /> <br />
+
+            <input type="text" id="streetAddress" name="streetAddress" placeholder="Gatunamn" />                        
+            <input type="text" id="postalCde" name="postalCode" placeholder="Postnummer" /> <br />
+
+            <input type="text" id="city" name="city" placeholder="Ort" />
+                
+                
+                <button><a href="./SuccessfulCheckout">Beställ</a></button>
+            </form>
+            </div>
         </div>
     )
 }

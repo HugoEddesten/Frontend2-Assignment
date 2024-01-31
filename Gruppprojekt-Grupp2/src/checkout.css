@@ -1,0 +1,15 @@
+.CheckoutPageDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+
+.CheckoutPageContent{
+    margin: 0 2rem 2rem 2rem;
+    background-color: #F0F0F0;
+    padding: 1rem;
+}
