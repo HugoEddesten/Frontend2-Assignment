@@ -88,7 +88,7 @@ function ProductItem({product, handler}) {
 
     const addToCart = (e) => {
         e.stopPropagation();
-        console.log(product.name);
+        console.log(product.attributes.title);
 
        
     }

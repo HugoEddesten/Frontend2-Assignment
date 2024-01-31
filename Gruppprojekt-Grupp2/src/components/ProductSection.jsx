@@ -14,7 +14,8 @@ const ProductSectionDiv = styled.div`
 
     background-color: white;
     padding: 1rem;
- 
+    max-width: 30em;
+
     z-index: 3;
 
     &.isInvisible {
@@ -47,7 +48,7 @@ const ProductSectionHeader = styled.h1`
 `
 
 const ProductSectionParagraph = styled.p`
-
+ 
 `
 
 const AddToCartButton = styled.button`
@@ -74,19 +75,18 @@ const AddToCartButton = styled.button`
 const ProductSection = (props) => {
     const addToCart = (e) => {
         e.stopPropagation();
-        console.log(props.product.name);
+        console.log(props.product.attributes.title);
 
        
     }
     
     return (
         <ProductSectionDiv className={props.isVisible ? "isVisible" : "isInvisible"}>
-            <ProductSectionImg src={props.product?.imgName}/>
-            <ProductSectionHeader>{props.product?.name}</ProductSectionHeader>
-            {props.product?.materials.map((material, index) => (
-                <ProductSectionParagraph key={index}>{material}</ProductSectionParagraph>
-            ))}
+            <ProductSectionImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>
+            <ProductSectionHeader>{props.product?.attributes?.title}</ProductSectionHeader>
+
             <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
+            <ProductSectionParagraph>{props.product?.attributes.description}</ProductSectionParagraph>
             
         
         </ProductSectionDiv>
