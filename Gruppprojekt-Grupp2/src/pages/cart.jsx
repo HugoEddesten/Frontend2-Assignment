@@ -74,7 +74,7 @@ const Cart = () => {
 
                     </CartSum>
 
-                    <button> <a href="./Checkout">Till kassan</a></button>
+                    <button><a href="./Checkout">Till kassan</a></button>
                 </CartPageContent>
 
                 <CartPageContent>
