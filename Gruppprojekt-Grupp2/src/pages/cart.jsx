@@ -1,7 +1,8 @@
 import styled from "styled-components"
 import CartList from "../components/CartList"
 import '../cart.css'
-
+import SuccessfulCheckout from "./SuccessfulCheckout"
+import { IoCart } from "react-icons/io5"
 
 
 
@@ -65,13 +66,15 @@ const Cart = () => {
                         <button class="plus_minus_button" id="plus">+</button>
                         <button id="remove">Ev remove</button>
                         <p class="quantitys_left">Kvar i lager</p>
+                        <a href=""><IoCart /></a>
+                        
 
 
 
 
                     </CartSum>
 
-                    <button> <a href="./Delivery.jsx">Till kassan</a></button>
+                    <button><a href="./SuccessfulCheckout">Till kassan</a></button>
                 </CartPageContent>
 
                 <CartPageContent>

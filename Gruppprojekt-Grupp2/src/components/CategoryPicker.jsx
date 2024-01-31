@@ -3,7 +3,6 @@ import styled from "styled-components"
 import GetDB from "../services/FileService"
 import axios from "axios"
 
-
 const CategoryPickerDiv = styled.div`
     display: flex;
     flex-direction: column;

@@ -26,10 +26,11 @@ const ProductItemDiv = styled.a`
 `
 
 const ProductItemImg = styled.img`
-    
     padding-bottom: 0.33rem;
-    width: 20em;
+    width: 20rem;
     height: auto;
+    object-fit: cover;
+
 `
 
 const BottomContentDiv = styled.div`
@@ -47,11 +48,12 @@ const ProductInfoDiv = styled.div`
 `
 
 const ProductItemText = styled.p`
-    padding-left: 0rem;
+    margin-top: 0.33rem;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     max-height: 2em;
     color: black;
+    font-size: 0.8rem;
 
     &:hover {
         &.ProductItemDiv{
@@ -95,7 +97,7 @@ function ProductItem({product, handler}) {
 
     return (
         <ProductItemDiv onClick={() => handler(product)}>
-            <ProductItemImg src={"http://localhost:1300" + product?.attributes?.image.data.attributes.url}/>
+            <ProductItemImg src={"http://localhost:1337" + product?.attributes?.image.data.attributes.url}/>
         <BottomContentDiv>
             <ProductInfoDiv>
                 <ProductItemText>{product.attributes?.title}</ProductItemText>
