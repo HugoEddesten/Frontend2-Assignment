@@ -27,7 +27,7 @@ const ProductItemDiv = styled.a`
 
 const ProductItemImg = styled.img`
     padding-bottom: 0.33rem;
-    width: 20rem;
+    width: 18rem;
     height: auto;
     object-fit: cover;
 
@@ -46,16 +46,16 @@ const ProductInfoDiv = styled.div`
     display: flex;
     flex-direction: column;
     width: 70%;
-
 `
 
 const ProductItemText = styled.p`
     margin-top: 0.33rem;
     display: flex;
-    align-items: end;
-    max-height: 2em;
+    align-items: flex-end;
+    max-height: .67rem;
     color: black;
     font-size: 0.8rem;
+    
 
     &:hover {
         &.ProductItemDiv{
@@ -69,7 +69,6 @@ const ProductItemText = styled.p`
 const AddToCartButton = styled.button`
     border: none;
     width: 3em;
-    align-self: center;
     color: green;
     border: solid 1px black;
     border-radius: .33rem;

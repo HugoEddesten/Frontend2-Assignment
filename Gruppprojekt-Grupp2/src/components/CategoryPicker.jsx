@@ -9,7 +9,7 @@ const CategoryPickerDiv = styled.div`
     align-items: center; 
     padding: 4rem;
     padding-top: 2rem;
-    background-color: #b6b6b6;
+    background-color: #b6b6b6;  
     
 `
 

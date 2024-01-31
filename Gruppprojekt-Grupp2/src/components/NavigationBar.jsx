@@ -1,5 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom"
 import '../navbar.css'
+import { IoCart } from "react-icons/io5"
 
 function NavigationBar() {
     return (
@@ -9,7 +10,7 @@ function NavigationBar() {
                 <CustomLink to="/ProductPage">Produkter</CustomLink>
                 <CustomLink to="/Contact">Kontakt</CustomLink>
                 <CustomLink to="/About">Om Oss</CustomLink>
-                <CustomLink to="/Cart">Varukorg</CustomLink>
+                <CustomLink to="/Cart"><IoCart className="cart-icon"/></CustomLink>
                 <CustomLink to="/LogIn">Logga In</CustomLink>
             </ul>
         </nav>
