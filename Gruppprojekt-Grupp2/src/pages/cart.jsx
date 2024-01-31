@@ -74,11 +74,7 @@ const Cart = () => {
 
                     </CartSum>
 
-<<<<<<< HEAD
-                    <button><a href="./SuccessfulCheckout">Till kassan</a></button>
-=======
-                    <button> <a href="./Delivery">Till kassan</a></button>
->>>>>>> b808eaed6577a016f17bac0c0f1c7bb70bef38a3
+                    <button> <a href="./Checkout">Till kassan</a></button>
                 </CartPageContent>
 
                 <CartPageContent>
