@@ -53,7 +53,7 @@ const Cart = () => {
             <CartPageDiv>
                 <CartPageContent>
                     <h2>Din kundvagn</h2>
-                    <button class="button"><a href="./ProductPage">Fortsätt handla</a></button>
+                    <button class="button productbutton"><a href="./ProductPage">Fortsätt handla</a></button>
 
                     <CartSum>
                         <CartBox>
@@ -61,9 +61,9 @@ const Cart = () => {
                         </CartBox>
                         Namn på garn, pris,
 
-                        <button class="plus_minus_button" id="minus">−</button>
+                        <button class="plus_minus_button productbutton" id="minus">−</button>
                         <input class="value_button" type="number" value="0" id="input" />
-                        <button class="plus_minus_button" id="plus">+</button>
+                        <button class="plus_minus_button productbutton" id="plus">+</button>
                         <button id="remove">Ev remove</button>
                         <p class="quantitys_left">Kvar i lager</p>
                         <a href=""><IoCart /></a>
@@ -74,7 +74,11 @@ const Cart = () => {
 
                     </CartSum>
 
+<<<<<<< HEAD
                     <button><a href="./SuccessfulCheckout">Till kassan</a></button>
+=======
+                    <button> <a href="./Delivery">Till kassan</a></button>
+>>>>>>> b808eaed6577a016f17bac0c0f1c7bb70bef38a3
                 </CartPageContent>
 
                 <CartPageContent>
