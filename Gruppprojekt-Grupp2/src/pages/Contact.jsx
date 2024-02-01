@@ -23,22 +23,23 @@ const Contact = () => {
                     <h2>Kontakta oss</h2>
                     <p>
                    
-Välkommen till Super Yarn Stores kontaktsida - din direktlänk till vår passion för garn och ditt kreativa uttryck! <br /><br />
-Vi strävar efter att ge dig den bästa möjliga upplevelsen när det gäller kundtjänst och support. Här finns information om hur du kan nå oss för att få svar på dina frågor eller dela dina tankar. <br /><br />
+                        Vi strävar efter att ge dig den bästa möjliga upplevelsen när det gäller kundtjänst och support. Här finns information om hur du kan nå oss för att få svar på dina frågor eller dela dina tankar. <br /><br />
 
-Behöver du hjälp med en beställning, har frågor om våra produkter eller bara vill prata garn? Vår kundtjänst är här för att hjälpa dig! <br />
-Email: kundtjanst@superyarnstore.com <br />
-Telefon: 08-123&nbsp;45&nbsp;67 <br />
-Arbetstider: Mån-Fre 9:00-18:00 <br /><br />
+                        Behöver du hjälp med en beställning, har frågor om våra produkter eller bara vill prata garn? <br />
+                        Vår kundtjänst är här för att hjälpa dig! <br /> <br />
+                        Email: kundtjanst@superyarnstore.com <br />
+                        Telefon: 08-123&nbsp;45&nbsp;67 <br />
+                        Arbetstider: Mån-Fre 9:00-18:00 <br /><br />
 
-Vi uppskattar din åsikt och strävar alltid efter att förbättra oss. Om du har feedback eller förslag, tveka inte att kontakta oss. <br />
-Email: feedback@superyarnstore.com <br />
-Följ Oss på Sociala Medier <br />
-Häng med i vårt garncommunity genom att följa oss på sociala medieplattformar. Dela dina projekt och ta del av våra senaste nyheter! <br /><br />
+                        Vi uppskattar din åsikt och strävar alltid efter att förbättra oss. Om du har feedback eller förslag, tveka inte att kontakta oss. <br /> <br />
 
-Har du andra frågor eller behöver hjälp med något specifikt? Vi ser fram emot att höra från dig och hjälpa till på alla sätt vi kan! <br /><br />
+                        Följ oss på sociala medier!<br />
+                        Häng med i vårt garncommunity genom att följa oss på sociala medieplattformar. Dela dina projekt och ta del av våra senaste nyheter! <br />
+                        Logga in via knappen längst upp till höger på sidan.<br /><br />
 
-Tack för att du väljer Super Yarn Store för ditt garnäventyr!
+                        Har du andra frågor eller behöver hjälp med något specifikt? Vi ser fram emot att höra från dig och hjälpa till på alla sätt vi kan! <br /><br />
+
+                        Tack för att du väljer Super Yarn Store för ditt garnäventyr!
                     </p>
                 </ContactPageContent>
                 
