@@ -6,7 +6,7 @@ import React from 'react';
 const ProductListDiv = styled.div`
     display: flex;
     flex-direction: row;
-    
+    max-width: max-content;
     flex-wrap: wrap;
     background-color: white;
     grid-gap: 1em;
@@ -22,6 +22,7 @@ function ProductList(props) {
         <ProductListDiv>
             {props.products.map((product, index) => (
                 <ProductItem key={index} product={product} handler={props.handler}/>
+                
             ))}
         </ProductListDiv>
     )

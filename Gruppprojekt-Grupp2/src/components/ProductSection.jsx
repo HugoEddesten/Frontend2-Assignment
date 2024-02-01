@@ -82,7 +82,7 @@ const ProductSection = (props) => {
     
     return (
         <ProductSectionDiv className={props.isVisible ? "isVisible" : "isInvisible"}>
-            <ProductSectionImg src={"http://localhost:1337" + props.product?.attributes?.image.data.attributes.url}/>
+            <ProductSectionImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>
             <ProductSectionHeader>{props.product?.attributes?.title}</ProductSectionHeader>
 
             <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>

@@ -11,7 +11,7 @@ const ProductScrollListDiv = styled.div`
     
     
     position: auto;
-    
+    max-width: max-content;
     
     user-select: none;
     padding: 1em;
@@ -36,9 +36,9 @@ const ProductList = styled.div`
 `
 
 const GoForwardButton = styled.a`
-    position: absolute;
+    position: static;
     height: 30px;
-    right: 10%;
+    
     background-color: rgba(250, 235, 215, 0.6);
     border-radius: 2em;
     z-index: 5;
@@ -51,9 +51,9 @@ const GoForwardButton = styled.a`
 `
 
 const GoBackButton = styled.a`
-    position: absolute;
+    position: static;
     height: 30px;
-    left: 10%;
+    
     background-color: rgba(250, 235, 215, 0.6);
     border-radius: 2em;  
     z-index: 5;  

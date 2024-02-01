@@ -21,43 +21,42 @@ const HomePageContent = styled.div`
     padding: 1rem;
 `
 
-export const items = [
-    { name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-]
+const ItemDisplayDiv = styled.div`
+`
 
+const TextDiv = styled.div`
+`
 
-
+const CategoryPickerDiv = styled.div`
+`
 
 const Home = () => {
     return (
         <div>
-            <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
+
             <HomePageDiv>
-                <HomePageContent>
-                    <h2>Super Yarn Store</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
-                </HomePageContent>
-                <HomePageContent>
-                    <h2>Super Yarn Company</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
-                </HomePageContent>
+                <ItemDisplayDiv>
+                    <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
+                </ItemDisplayDiv>
+                <TextDiv>
+                    <HomePageContent>
+                        <h2>Super Yarn Store</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
+                            Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
+                            Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                    </HomePageContent>
+                    <HomePageContent>
+                        <h2>Super Yarn Company</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
+                            Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
+                            Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                    </HomePageContent>
+                </TextDiv>
+                <CategoryPickerDiv>
+                    <CategoryPicker />
+                </CategoryPickerDiv>
             </HomePageDiv>
-            <CategoryPicker />
+            
             
         </div>
 
