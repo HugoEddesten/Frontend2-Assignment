@@ -5,32 +5,37 @@ const AboutPageDiv = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 2rem 0;
+    width: 50%;
+    margin: 2rem 0; 
 `
 
 const AboutPageContent = styled.div`
     margin: 0 2rem 2rem 2rem;
     background-color: #F0F0F0;
     padding: 1rem;
-`
+    `
 
 const About = () => {
     return (
         <div>
             <AboutPageDiv>
                     <AboutPageContent>
-                        <h2>Om Oss</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                        <h2>Om oss</h2>
+                        <p>
+Välkommen till Super Yarn Company, en passionerad gemenskap av garnälskare som delar kärleken till kreativitet och handarbete. Grundat år 2024, har vi förvandlat vår entusiasm för garn till en digital oas där du kan upptäcka en färgrik värld av möjligheter. <br /><br />
+
+Vi tror på kraften av handarbete och hur det kan förena människor över hela världen. Vår passion är att erbjuda ett brett utbud av garn av högsta kvalitet, från mjuka ullar till färgglada bomullstrådar, för att inspirera ditt nästa projekt. Varje nystan är noggrant utvalt för att möta våra kunders olika behov och önskemål. <br /><br />
+
+Vi strävar efter att erbjuda garn av högsta kvalitet från ansvarsfulla källor. Vår miljömedvetenhet genomsyrar allt vi gör, och vi arbetar ständigt för att minska vår påverkan på planeten. När du handlar hos oss, kan du vara säker på att ditt val stöder både din kreativitet och en hållbar framtid. <br /><br />
+
+Super Yarn Store är mer än bara en webbshop; det är en plats där likasinnade individer samlas för att dela sina projekt, idéer och erfarenheter. Anslut till vårt gemenskapliga forum, följ med i våra sticka-alongs och virkträffar, och upptäck det fantastiska nätverk av människor som delar din passion. <br /><br />
+
+Vi är här för att stödja dig genom varje steg av din handarbetsresa. Vårt dedikerade team är redo att svara på dina frågor, erbjuda inspiration och se till att din upplevelse hos oss är enastående. Oavsett om du är nybörjare eller erfaren, är Super Yarn Companyplatsen där din kreativitet blomstrar. <br /><br />
+
+Välkommen till vår värld av garn!
+                        </p>
                     </AboutPageContent>
-                    <AboutPageContent>
-                        <h2>Ok</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
-                    </AboutPageContent>
+                    
             </AboutPageDiv>
         </div>
     )

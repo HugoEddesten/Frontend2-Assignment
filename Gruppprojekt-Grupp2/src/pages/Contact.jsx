@@ -5,7 +5,7 @@ const ContactPageDiv = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 50%;
     margin: 2rem 0;
 `
 
@@ -20,17 +20,28 @@ const Contact = () => {
         <div>
             <ContactPageDiv>
                 <ContactPageContent>
-                    <h2>Kontakt</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                    <h2>Kontakta oss</h2>
+                    <p>
+                   
+Välkommen till Super Yarn Stores kontaktsida - din direktlänk till vår passion för garn och ditt kreativa uttryck! <br /><br />
+Vi strävar efter att ge dig den bästa möjliga upplevelsen när det gäller kundtjänst och support. Här finns information om hur du kan nå oss för att få svar på dina frågor eller dela dina tankar. <br /><br />
+
+Behöver du hjälp med en beställning, har frågor om våra produkter eller bara vill prata garn? Vår kundtjänst är här för att hjälpa dig! <br />
+Email: kundtjanst@superyarnstore.com <br />
+Telefon: 08-123&nbsp;45&nbsp;67 <br />
+Arbetstider: Mån-Fre 9:00-18:00 <br /><br />
+
+Vi uppskattar din åsikt och strävar alltid efter att förbättra oss. Om du har feedback eller förslag, tveka inte att kontakta oss. <br />
+Email: feedback@superyarnstore.com <br />
+Följ Oss på Sociala Medier <br />
+Häng med i vårt garncommunity genom att följa oss på sociala medieplattformar. Dela dina projekt och ta del av våra senaste nyheter! <br /><br />
+
+Har du andra frågor eller behöver hjälp med något specifikt? Vi ser fram emot att höra från dig och hjälpa till på alla sätt vi kan! <br /><br />
+
+Tack för att du väljer Super Yarn Store för ditt garnäventyr!
+                    </p>
                 </ContactPageContent>
-                <ContactPageContent>
-                    <h2>Ok</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
-                </ContactPageContent>
+                
             </ContactPageDiv>
         </div>
     )
