@@ -11,14 +11,15 @@ const CartPageDiv = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 80%;
     margin: 2rem 0;
 `
 
 const CartPageContent = styled.div`
     margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
+    background-color: white;
     padding: 1rem;
+    
 `
 
 const CartSum = styled.p`
@@ -53,7 +54,7 @@ const Cart = () => {
             <CartPageDiv>
                 <CartPageContent>
                     <h2>Din kundvagn</h2>
-                    <button class="button productbutton"><a href="./ProductPage">Fortsätt handla</a></button>
+                    <button class="productbutton"><a href="./ProductPage">Fortsätt handla</a></button>
 
                     <CartSum>
                         <CartBox>
@@ -66,11 +67,7 @@ const Cart = () => {
                         <button class="plus_minus_button productbutton" id="plus">+</button>
                         <button id="remove">Ev remove</button>
                         <p class="quantitys_left">Kvar i lager</p>
-                        <a href=""><IoCart /></a>
-                        
-
-
-
+                        <a href=""><IoCart /></a> 
 
                     </CartSum>
 
