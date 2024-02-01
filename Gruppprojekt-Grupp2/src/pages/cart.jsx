@@ -3,6 +3,7 @@ import CartList from "../components/CartList"
 import '../cart.css'
 import SuccessfulCheckout from "./SuccessfulCheckout"
 import { IoCart } from "react-icons/io5"
+import garnnystan from '../assets/garnnystan.jpg'
 
 
 
@@ -26,7 +27,7 @@ const CartSum = styled.p`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #b5cdd7;
+    background-color: white;
     align-items: center;
     width: 100%;
     margin: 2rem 0;
@@ -58,16 +59,16 @@ const Cart = () => {
 
                     <CartSum>
                         <CartBox>
-                            Bild <br />
+                            <img src="../assets/garnnystan" alt="" />
                         </CartBox>
-                        Namn på garn, pris,
+                        Namn på garn
 
                         <button class="plus_minus_button productbutton" id="minus">−</button>
                         <input class="value_button" type="number" value="0" id="input" />
                         <button class="plus_minus_button productbutton" id="plus">+</button>
                         <button id="remove">Ev remove</button>
-                        <p class="quantitys_left">Kvar i lager</p>
-                        <a href=""><IoCart /></a> 
+                        <p class="quantitys_left">Pris</p>
+                        
 
                     </CartSum>
 
