@@ -5,15 +5,15 @@ const AboutPageDiv = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
-    margin: 2rem 0; 
+    width: 100%;
+    margin: 2rem 0;
 `
 
 const AboutPageContent = styled.div`
     margin: 0 2rem 2rem 2rem;
     background-color: #F0F0F0;
     padding: 1rem;
-    `
+`
 
 const About = () => {
     return (
@@ -30,7 +30,7 @@ Vi strävar efter att erbjuda garn av högsta kvalitet från ansvarsfulla källo
 
 Super Yarn Store är mer än bara en webbshop; det är en plats där likasinnade individer samlas för att dela sina projekt, idéer och erfarenheter. Anslut till vårt gemenskapliga forum, följ med i våra sticka-alongs och virkträffar, och upptäck det fantastiska nätverk av människor som delar din passion. <br /><br />
 
-Vi är här för att stödja dig genom varje steg av din handarbetsresa. Vårt dedikerade team är redo att svara på dina frågor, erbjuda inspiration och se till att din upplevelse hos oss är enastående. Oavsett om du är nybörjare eller erfaren, är Super Yarn Companyplatsen där din kreativitet blomstrar. <br /><br />
+Vi är här för att stödja dig genom varje steg av din handarbetsresa. Vårt dedikerade team är redo att svara på dina frågor, erbjuda inspiration och se till att din upplevelse hos oss är enastående. Oavsett om du är nybörjare eller erfaren, är Super Yarn Store platsen där din kreativitet blomstrar. <br /><br />
 
 Välkommen till vår värld av garn!
                         </p>

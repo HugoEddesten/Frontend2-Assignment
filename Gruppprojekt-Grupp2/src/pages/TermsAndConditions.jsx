@@ -20,10 +20,8 @@ const TermsAndConditions = () => {
         <div>
             <TermsAndConditionsPageDiv>
                     <TermsAndConditionsPageContent>
-                        <h2>Köpvillkor</h2>
+                        <h2>Köpvillkor och Leverans</h2>
                         <p>
-<b> Beställning och Betalning</b> <br /><br />
-
 Vi strävar efter att erbjuda korrekt information om våra produkter, inklusive bilder och beskrivningar. Vid eventuella frågor eller förtydliganden, kontakta vår kundtjänst innan du gör din beställning. <br /><br />
 
 Alla priser anges i den valuta som anges på vår webbplats. Priserna inkluderar moms.<br /><br />
