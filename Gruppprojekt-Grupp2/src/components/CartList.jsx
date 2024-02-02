@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CartItem from "./CartItem"
+import ProductItem from "./ProductItem"
 import React from 'react';
 
 function CartList (){
