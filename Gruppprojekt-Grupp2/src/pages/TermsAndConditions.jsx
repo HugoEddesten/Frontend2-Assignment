@@ -2,16 +2,15 @@ import styled from "styled-components"
 
 const TermsAndConditionsPageDiv = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 100%;
     margin: 2rem 0;
 `
 
 const TermsAndConditionsPageContent = styled.div`
-    margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
+    margin: 0 25rem 2rem 25rem;
     padding: 1rem;
 `
 

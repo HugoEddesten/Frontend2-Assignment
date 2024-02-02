@@ -10,8 +10,8 @@ const ReturnsPageDiv = styled.div`
 `
 
 const ReturnsPageContent = styled.div`
-    margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
+    margin: 0 25rem 2rem 25rem;
+    
     padding: 1rem;
 `
 

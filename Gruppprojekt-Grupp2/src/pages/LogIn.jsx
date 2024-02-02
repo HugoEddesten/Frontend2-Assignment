@@ -21,9 +21,9 @@ const LogIn = (props) => {
                 <label htmlFor="password">Lösenord</label>
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="*********" id="password" name="password" />
 
-                <button className="button" type="submit">Logga in</button>
+                <button className="log-button" type="submit">Logga in</button>
             </form>
-            <button className="link-button" onClick={() => props.onFormSwitch('Register')}>Har du inte något konto?<br />Registrera dig här</button>
+            <button className="link-button" onClick={/*() => props.onFormSwitch('Register')*/ event => window.location.href='/Register'}>Har du inte något konto?<br />Registrera dig här</button>
         </div>
     )
 }
