@@ -6,7 +6,6 @@ const DeliveryPageDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 2rem 0;
 `
 
 const DeliveryPageContent = styled.div`

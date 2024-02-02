@@ -2,28 +2,24 @@ import styled from "styled-components"
 import React, { useState } from "react"
 import '../cart.css'
 
-const Cart = (props) => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
-    }
-
+const Cart = () => {
     return (
-        <div className="form-content">
-            <h2>Logga in</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="email">Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-
-                <label htmlFor="password">Lösenord</label>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="*********" id="password" name="password" />
-
-                <button className="log-button" type="submit">Logga in</button>
-            </form>
-            <button className="link-button" onClick={/*() => props.onFormSwitch('Register')*/ event => window.location.href='/Register'}>Har du inte något konto?<br />Registrera dig här</button>
+        <div className="cart-content">
+            <h2>Din kundvagn</h2>
+            <button className="continue-shopping-button" onClick={event => window.location.href='/ProductPage'}>⇦ Fortsätt handla</button>
+                <div className="cart-product">
+                    <img src="src\assets\Temporary1.webp" alt="bild på garn" />
+                    <p>Garnnystan</p>
+                    <input className="number-input" type="number" placeholder="1" />
+                    <p>49kr</p>
+                </div>
+                <div className="cart-product">
+                    <img src="src\assets\Temporary2.webp" alt="bild på garn" />
+                    <p>Garnnystan</p>
+                    <input className="number-input" type="number" placeholder="1" />
+                    <p>39kr</p>
+                </div>
+            <button className="checkout-button" type="submit" onClick={event => window.location.href='/Checkout'}>Till kassan</button>
         </div>
     )
 }

@@ -4,23 +4,21 @@ import "../checkout.css"
 
 const Checkout = () => {
     return (
-        <div className="CheckoutPageDiv">
-            <div className="CheckoutPageContent">
-
+        <div className="checkout-page-content">
             <form action="">
-            <input type="text" id="email" name="email" placeholder="Epostadress" />  <br />               
-            <input type="text" id="firstName" name="username" placeholder="Förnamn" />                        
-            <input type="text" id="lastName" name="username" placeholder="Efternamn" /> <br />
+                <h2>Addressuppgifter</h2>
+                <input type="text" id="email" name="email" placeholder="Epostadress" />  <br />               
+                <input type="text" id="firstName" name="username" placeholder="Förnamn" />                        
+                <input type="text" id="lastName" name="username" placeholder="Efternamn" /> <br />
 
-            <input type="text" id="streetAddress" name="streetAddress" placeholder="Gatunamn" />                        
-            <input type="text" id="postalCde" name="postalCode" placeholder="Postnummer" /> <br />
-
-            <input type="text" id="city" name="city" placeholder="Ort" />
+                <input type="text" id="streetAddress" name="streetAddress" placeholder="Gatunamn" />                        
+                <input type="text" id="postalCde" name="postalCode" placeholder="Postnummer" /> <br />
+                <input type="text" id="city" name="city" placeholder="Ort" />
                 
-                
-                <button><a href="./SuccessfulCheckout">Beställ</a></button>
+                <h2>Frakt</h2>
+                <p>49kr</p>
             </form>
-            </div>
+            <button className="buy-button" type="submit" onClick={event => window.location.href='/SuccessfulCheckout'}>Köp</button>
         </div>
     )
 }
