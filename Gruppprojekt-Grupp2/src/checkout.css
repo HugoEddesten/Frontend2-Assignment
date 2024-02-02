@@ -11,5 +11,10 @@
 .CheckoutPageContent{
     margin: 0 2rem 2rem 2rem;
     background-color: #F0F0F0;
+    width: 500px;
     padding: 1rem;
+}
+
+.radiobutton {
+    margin: 0 1rem 1rem 0;
 }

@@ -1,10 +1,26 @@
 import styled from "styled-components"
 import "../checkout.css"
+import { useState } from "react"
 
 
 const Checkout = () => {
+    const [delivery, setDelivery] = useState('')
+
+    const handleDelivery = (event) => {
+        event.preventDefault()
+
+        const formData = new FormData(event.target.form)
+        
+
+        console.log(formData.get('email'))
+        setDelivery(formData.get('option'))
+    }
+
     return (
         <div className="CheckoutPageDiv">
+            {
+                delivery ? <p>hejhopp {delivery}</p> : null
+            }
             <div className="CheckoutPageContent">
 
             <form action="">
@@ -16,10 +32,50 @@ const Checkout = () => {
             <input type="text" id="postalCde" name="postalCode" placeholder="Postnummer" /> <br />
 
             <input type="text" id="city" name="city" placeholder="Ort" />
+
+
+<br /><br />
+            <label>                        
+                        <input className="radiobutton"  type="radio" name="option" value="beppe"/>
+                        Beppe - världens snabbaste alternativ
+                    </label>
+                    <br />
+
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="skata"/>
+                        Skata - vid leverans av blanka garner
+                    </label>
+                    <br />
+
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="kungsörn"/>
+                        Kungsörn - vid tunga leveranser
+                    </label>
+                    <br />
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="änglabud"/>
+                        Änglabud - en himmelsk leverans
+                    </label>
+                    <br />
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="brevduva"/>
+                       Brevduva - levererar enstaka nystan
+                    </label>
+                    <br />
+
+                    <input type="submit" onClick={handleDelivery}/>
                 
                 
-                <button><a href="./SuccessfulCheckout">Beställ</a></button>
             </form>
+
+            
+            </div>
+            <div className="CheckoutPageContent">
+
+            <form id="radioForm">
+                    
+                </form>
+
             </div>
         </div>
     )
