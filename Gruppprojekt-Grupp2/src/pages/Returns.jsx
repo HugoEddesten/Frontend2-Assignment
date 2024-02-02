@@ -20,7 +20,9 @@ const Returns = () => {
         <div>
             <ReturnsPageDiv>
                     <ReturnsPageContent>
-                        <h2>Returer</h2>
+                    
+                    </ReturnsPageContent>
+                        <h2>Byten och returer</h2>
                         <p>
                             Om du ångrar ditt köp har du rätt att returnera varan inom 14 dagar från mottagningsdatumet. Varan måste returneras i oanvänt skick och i originalförpackning.<br /><br />
 
@@ -30,7 +32,7 @@ const Returns = () => {
                             Email: kundtjanst@superyarnstore.com <br />
                             Telefon: 08-123&nbsp;45&nbsp;67 <br /> <br />
                         </p>
-                    </ReturnsPageContent>
+                    
 
             </ReturnsPageDiv>
         </div>
