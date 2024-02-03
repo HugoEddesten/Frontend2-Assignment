@@ -79,7 +79,7 @@ const Filter = (props) => {
                     onClick={() => props.handler(category)}
                     className={props.selectedFilters.includes(category) ? "buttonActive" : ""}
                 >
-                    {category}
+                    {category.attributes.title}
 
                 </FilterButton>
             ))}

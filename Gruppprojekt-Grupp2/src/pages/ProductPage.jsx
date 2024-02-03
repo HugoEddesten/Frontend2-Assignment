@@ -79,9 +79,12 @@ const Overlay = styled.div`
 
 function ProductPage() {
 
-    const [products, setProducts] = useState([])
-    const [error, setError] = useState(null); 
-    
+    const [products, setProducts] = useState([]);
+    const [productsError, setProductsError] = useState(null); 
+
+    const [categories, setCategories] = useState([]);
+    const [categoryError, setCategoryError] = useState(null); 
+
     const [filteredItems, setFilteredItems] = useState(items);
     const [selectedFilters, setSelectedFilters] = useState([]);
     
@@ -99,6 +102,7 @@ function ProductPage() {
 
 
     const filterButtonClicked = (category) => {
+        console.log("hi");
         
         if (selectedFilters.includes(category)){
             let tempFilters = selectedFilters.filter((filter) => {
@@ -140,9 +144,13 @@ function ProductPage() {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:1300/api/Products?Id=20&populate=*")
+        axios.get("http://localhost:1300/api/Products?populate=*")
             .then(({ data }) => setProducts(data.data))
-            .catch((error) => setError(error));
+            .catch((error) => setProductsError(error));
+
+        axios.get("http://localhost:1300/api/Categories?populate=*")
+            .then(({data}) => setCategories(data.data))
+            .catch(({error}) => setCategoryError(error))
             
     }, []);
 
@@ -156,14 +164,15 @@ function ProductPage() {
     
 
     return (
-        <ProductPageDiv>
-            <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters} />
-            <ProductList products={products} handler={productClicked} />
+        <div>
+            <ProductPageDiv>
+                <Filter handler={filterButtonClicked} filters={categories} selectedFilters={selectedFilters} />
+                <ProductList products={products} handler={productClicked} />
 
-            <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
-            <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>
-        </ProductPageDiv>
-
+                <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
+                <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>
+            </ProductPageDiv>
+        </div>
 
     );
     
