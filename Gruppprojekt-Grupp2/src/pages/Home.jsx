@@ -8,11 +8,12 @@ import axios from 'axios'
 
 const HomePageDiv = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 2rem 0;
+    
+    gap: 1em;
 `
 
 const HomePageContent = styled.div`
@@ -22,12 +23,17 @@ const HomePageContent = styled.div`
 `
 
 const ItemDisplayDiv = styled.div`
+
 `
 
 const TextDiv = styled.div`
+    display: flex;
+    flex-direction: row;
 `
 
 const CategoryPickerDiv = styled.div`
+    width: 100%;
+
 `
 
 const Home = () => {
@@ -35,9 +41,15 @@ const Home = () => {
         <div>
 
             <HomePageDiv>
+                
                 <ItemDisplayDiv>
                     <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
                 </ItemDisplayDiv>
+
+                <CategoryPickerDiv>
+                    <CategoryPicker />
+                </CategoryPickerDiv>
+
                 <TextDiv>
                     <HomePageContent>
                         <h2>Super Yarn Store</h2>
@@ -52,9 +64,7 @@ const Home = () => {
                             Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
                     </HomePageContent>
                 </TextDiv>
-                <CategoryPickerDiv>
-                    <CategoryPicker />
-                </CategoryPickerDiv>
+                
             </HomePageDiv>
             
             
