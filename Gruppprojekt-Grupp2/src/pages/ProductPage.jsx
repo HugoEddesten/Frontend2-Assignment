@@ -7,6 +7,7 @@ import Filter from "../components/Filter"
 import ProductSection from "../components/ProductSection"
 import GetDB from "../services/FileService"
 import axios from "axios"
+import { Route, Routes, useParams } from "react-router-dom"
 
 
 
@@ -79,6 +80,10 @@ const Overlay = styled.div`
 
 function ProductPage() {
 
+    const param = useParams();
+
+
+
     const [products, setProducts] = useState([]);
     const [productsError, setProductsError] = useState(null); 
 
@@ -91,17 +96,8 @@ function ProductPage() {
     const [clickedProduct, setClickedProduct] = useState();
     const [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
 
-    const filters = [];
-    items.forEach((item) => {
-        item.materials.forEach((material) => {
-            if (!filters.includes(material)){
-                filters.push(material);
-            }
-        })
-    });
-
-
     const filterButtonClicked = (category) => {
+
         if (selectedFilters.includes(category)){
             let tempFilters = selectedFilters.filter((filter) => {
                 return filter !== category  
@@ -142,7 +138,8 @@ function ProductPage() {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:1300/api/Products?populate=*")
+        console.log(param.categories);
+        axios.get(`http://localhost:1300/api/Products?filters[categories][title][$eq]=${param.categories}&populate=*`)
             .then(({ data }) => setProducts(data.data))
             .catch((error) => setProductsError(error));
         console.log(products);

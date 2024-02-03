@@ -78,9 +78,8 @@ const Filter = (props) => {
                     key={`filters-${index}`}
                     onClick={() => props.handler(category)}
                     className={props.selectedFilters.includes(category) ? "buttonActive" : ""}
-                >
+                            >
                     {category.attributes.title}
-
                 </FilterButton>
             ))}
             <h3>Pris</h3>
