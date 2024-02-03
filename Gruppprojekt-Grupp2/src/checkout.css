@@ -1,15 +1,28 @@
-.CheckoutPageDiv{
+.checkout-page-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin: 2rem 0;
+    justify-content: center;
+    margin: 1rem 20rem 2rem 20rem;
 }
 
+.buy-button {
+    border: none;
+    background-color: white;
+    padding: .33rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: .5rem;
+    background-color: #f0f0f0;
+    width: 5rem;
+}
 
-.CheckoutPageContent{
-    margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
-    padding: 1rem;
+.buy-button:hover {
+    background-color: #000000;
+    color: white;
+    transition: 0.1s;
+}
+
+.radiobutton {
+    margin: 0 10px 10px 0;
 }

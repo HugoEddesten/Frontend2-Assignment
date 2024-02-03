@@ -1,52 +1,60 @@
-.button{
-    margin-left: 50px;
-    margin-top: 15px;
-    height: 90px;
-    width: 90px;
-
-    color: white;
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 20rem 2rem 20rem;
 }
 
-.button:hover{
-    background-color: green;
+h2 {
+    margin-bottom: .75rem;
 }
 
-.value_button{
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 30px;
-    width: 60px;
-    background-color: lightgreen;
-    text-align: center;
-    border-radius: .33rem;
-}
-
-.plus_minus_button{
-    height: 30px;
-    width: 30px;
-    background-color: lightgray;
-
-}
-
-.quantitys_left{
-    height: 30px;
-    width: 50px;
-    background-color: lightgray;
-    margin-left: 10px;
-}
-
-.productbutton {
+.continue-shopping-button {
+    padding: .5rem;
     border: none;
-    border-radius: .33rem;
-    padding: 0.2em;
-    margin: .2rem 0;
+    border-radius: 1rem;
     cursor: pointer;
-
+    
 }
 
-.productbutton:hover {
-    background-color: #dddddd;
-    transition: .2s;
-
+.continue-shopping-button:hover {
+    background-color: #000000;
+    color: white;
+    transition: 0.1s;
 }
 
+.cart-product {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem; 
+}
+
+.cart-product > img {
+    width: 4rem;
+    margin-right: .33rem;
+}
+
+.cart-product > p {
+    margin-right: .33rem;
+}
+
+.number-input {
+    margin-right: .33rem;
+    width: 2.5rem;
+    background-color: #f0f0f0;;
+}
+
+.checkout-button {
+    border: none;
+    background-color: #f0f0f0;
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #000000;
+    color: white;
+    transition: 0.1s;
+}

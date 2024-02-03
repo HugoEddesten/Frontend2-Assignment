@@ -36,14 +36,14 @@ const Register = (props) => {
                 <input value={name} type="name" placeholder="För- och efternamn" name="name" />
 
                 <label htmlFor="email">Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="din.email@email.com" id="email" name="email" />
 
                 <label htmlFor="password">Lösenord</label>
                 <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="*********" id="password" name="password" />
 
-                <button className="button" type="submit">Skapa konto</button>
+                <button className="log-button" type="submit">Skapa konto</button>
             </form>
-            <button className="link-button" onClick={() => props.onFormSwitch('LogIn')}>Har du redan ett konto?<br />Logga in här</button>
+            <button className="link-button" onClick={/*() => props.onFormSwitch('LogIn')*/ event => window.location.href='/LogIn'}>Har du redan ett konto?<br />Logga in här</button>
         </div>
     )
 }

@@ -68,7 +68,7 @@ const ProductItemText = styled.p`
 
 const AddToCartButton = styled.button`
     border: none;
-    width: 3em;
+    width: 3rem;
     color: green;
     border: solid 1px black;
     border-radius: .33rem;
@@ -80,6 +80,7 @@ const AddToCartButton = styled.button`
         transition: 0.1s;
         background-color: #dddddd;
     }
+    
     &:active {
         color: white;
         background-color: green;

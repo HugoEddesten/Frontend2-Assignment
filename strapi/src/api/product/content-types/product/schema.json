@@ -40,6 +40,9 @@
     },
     "quantity": {
       "type": "integer"
+    },
+    "rowdescription": {
+      "type": "blocks"
     }
   }
 }

@@ -422,6 +422,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     >;
     title: Attribute.String;
     quantity: Attribute.Integer;
+    rowdescription: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

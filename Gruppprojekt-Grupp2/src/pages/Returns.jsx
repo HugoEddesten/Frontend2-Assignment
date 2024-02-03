@@ -6,12 +6,10 @@ const ReturnsPageDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 2rem 0;
 `
 
 const ReturnsPageContent = styled.div`
-    margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
+    margin: 0 25rem 2rem 25rem;
     padding: 1rem;
 `
 
@@ -20,17 +18,17 @@ const Returns = () => {
         <div>
             <ReturnsPageDiv>
                     <ReturnsPageContent>
-                        <h2>Byten</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
-                    </ReturnsPageContent>
-                    <ReturnsPageContent>
-                        <h2>Returer</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
-                    </ReturnsPageContent>
+                        <h2>Byten och returer</h2>
+                        <p>
+                            Om du ångrar ditt köp har du rätt att returnera varan inom 14 dagar från mottagningsdatumet. Varan måste returneras i oanvänt skick och i originalförpackning.<br /><br />
+
+                            Återbetalning behandlas inom rimlig tid efter att vi har mottagit den returnerade varan. Eventuell återbetalning kommer att göras till det ursprungliga betalningsmedlet.<br /><br />
+
+                            För frågor om våra produkter eller andra ärenden, kontakta vår kundtjänst via: <br />
+                            Email: kundtjanst@superyarnstore.com <br />
+                            Telefon: 08-123&nbsp;45&nbsp;67 <br /> <br />
+                        </p>
+                        </ReturnsPageContent>
             </ReturnsPageDiv>
         </div>
     )
