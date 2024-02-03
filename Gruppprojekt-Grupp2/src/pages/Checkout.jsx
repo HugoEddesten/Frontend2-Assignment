@@ -44,21 +44,30 @@ const Checkout = () => {
                     <label>
                         <input className="radiobutton" type="radio" name="option" value="kungsörn"/>
                         Kungsörn - vid tunga leveranser
+                    </label>                 
+                    <br />
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="brevduva"/>
+                       Brevduva - levererar enstaka nystan
+                    </label>
+                    <br />
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="uggla"/>
+                       Uggla - levererar med stor visdom till din exakta adress
                     </label>
                     <br />
                     <label>
                         <input className="radiobutton" type="radio" name="option" value="änglabud"/>
                         Änglabud - en himmelsk leverans
                     </label>
-                    <br />
-                    <label>
-                        <input className="radiobutton" type="radio" name="option" value="brevduva"/>
-                       Brevduva - levererar enstaka nystan
-                    </label>
+                    
             </form>
             <button className="buy-button" type="submit" onClick={event => window.location.href='/SuccessfulCheckout'}>Köp</button>
         </div>
+
+
     )
+
 }
 
 export default Checkout

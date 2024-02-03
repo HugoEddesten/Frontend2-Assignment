@@ -22,3 +22,7 @@
     color: white;
     transition: 0.1s;
 }
+
+.radiobutton {
+    margin: 0 10px 10px 0;
+}
