@@ -20,8 +20,8 @@ const Checkout = () => {
         <div className="checkout-page-content">
             <form action="">
                 <h2>Addressuppgifter</h2>
-                <input type="text" id="email" name="email" placeholder="Epostadress" />  <br />               
-                <input type="text" id="firstName" name="username" placeholder="Förnamn" />                        
+                <input className="form_width" type="text" id="email" name="email" placeholder="Epostadress" />  <br />               
+                <input className="form_name" type="text" id="firstName" name="username" placeholder="Förnamn" />                        
                 <input type="text" id="lastName" name="username" placeholder="Efternamn" /> <br />
 
                 <input type="text" id="streetAddress" name="streetAddress" placeholder="Gatunamn" />                        

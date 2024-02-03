@@ -26,3 +26,13 @@
 .radiobutton {
     margin: 0 10px 10px 0;
 }
+
+.form_width {
+    width: 25em;
+    border: solid red 1px;
+}
+
+.form_name{
+    width: 10em;
+    border: solid red 1px;
+}
