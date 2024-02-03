@@ -102,8 +102,6 @@ function ProductPage() {
 
 
     const filterButtonClicked = (category) => {
-        console.log("hi");
-        
         if (selectedFilters.includes(category)){
             let tempFilters = selectedFilters.filter((filter) => {
                 return filter !== category  
@@ -147,6 +145,7 @@ function ProductPage() {
         axios.get("http://localhost:1300/api/Products?populate=*")
             .then(({ data }) => setProducts(data.data))
             .catch((error) => setProductsError(error));
+        console.log(products);
 
         axios.get("http://localhost:1300/api/Categories?populate=*")
             .then(({data}) => setCategories(data.data))

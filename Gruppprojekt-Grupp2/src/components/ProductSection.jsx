@@ -86,9 +86,9 @@ const ProductSection = (props) => {
             <ProductSectionHeader>{props.product?.attributes?.title}</ProductSectionHeader>
 
             <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
-            <ProductSectionParagraph>{props.product?.attributes.description}</ProductSectionParagraph>
-            
-        
+            {props.product?.attributes.rowdescription.map((paragraph, index) => (
+                <ProductSectionParagraph key={index}>{paragraph.children[0].text}</ProductSectionParagraph>
+            ))}
         </ProductSectionDiv>
     )
 }   
