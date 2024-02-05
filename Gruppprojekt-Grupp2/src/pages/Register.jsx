@@ -1,49 +1,49 @@
 import styled from "styled-components"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth"
+import { auth } from '../firebase-config'
 import '../LoginAndRegisterForm.css'
+import './LogIn'
 
-const RegisterPageDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: 2rem 0;
-    text-align: center;
-`
+function Register() {
+    const [registerEmail, setRegisterEmail] = useState("");
+    const [registerPassword, setRegisterPassword] = useState("");
+    const [registerName, setRegisterName] = useState("");
 
-const RegisterPageContent = styled.div`
-    margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
-    padding: 1rem;
-`
+    const [user, setUser] = useState({})
 
-const Register = (props) => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [name, setName] = useState('')
+    useEffect(() => {
+        onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+        });
+    }, [])
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
+    const register = async () => {
+        try {
+            const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword, registerName);
+            console.log(user);
+        } catch {
+            console.log(error.message);
+        }
     }
 
     return (
         <div className="form-content">
             <h2>Skapa konto</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
+            <form className="login-form">
                 <label htmlFor="name">För- och efternamn</label>
-                <input value={name} type="name" placeholder="För- och efternamn" name="name" />
+                <input type="name" name="name" onChange={(event) => { setRegisterName(event.target.value) }} />
 
                 <label htmlFor="email">Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="din.email@email.com" id="email" name="email" />
+                <input type="email" id="email" name="email" onChange={(event) => { setRegisterEmail(event.target.value) }} />
 
                 <label htmlFor="password">Lösenord</label>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="*********" id="password" name="password" />
+                <input type="password" id="password" name="password" onChange={(event) => { setRegisterPassword(event.target.value) }} />
 
-                <button className="log-button" type="submit">Skapa konto</button>
+                <button className="log-button" onClick={register}>Skapa konto</button>
             </form>
-            <button className="link-button" onClick={/*() => props.onFormSwitch('LogIn')*/ event => window.location.href='/LogIn'}>Har du redan ett konto?<br />Logga in här</button>
+            <button className="link-button" onClick={event => window.location.href = '/LogIn'}>Har du redan ett konto?<br />Logga in här</button>
+            {user ? user.email : "Inte Inloggad"}
         </div>
     )
 }

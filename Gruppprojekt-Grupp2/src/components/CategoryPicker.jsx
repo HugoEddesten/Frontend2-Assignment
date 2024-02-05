@@ -11,7 +11,7 @@ const CategoryPickerDiv = styled.div`
     align-items: center; 
     padding: 4rem;
     padding-top: 2rem;
-    background-color: #b6b6b6;  
+    background-color: #d9d9eb;
     gap: 1em;
     
 `
@@ -21,7 +21,7 @@ const CategoryHeader = styled.h2`
 
 `
 
-const CategoryPicker = ({header}) => {
+const CategoryPicker = ({ header }) => {
 
     const param = useParams();
 
@@ -58,12 +58,11 @@ const CategoryPicker = ({header}) => {
         <CategoryPickerDiv>
             <CategoryHeader>{header}</CategoryHeader>
             <div>
-                {categories.map((category, index) => (
-                   
+                {categories.map((category, index) => (  
                     <Link key={index} className={param.category == category.attributes.title ? "categoryButton buttonActive" : "categoryButton"} to={addCategoryToUrl(category)}>{category.attributes.title}</Link>
                 ))}
             </div>
-            
+
 
 
         </CategoryPickerDiv>
