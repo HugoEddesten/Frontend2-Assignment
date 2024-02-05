@@ -11,7 +11,7 @@ const ItemDisplayDiv = styled.div`
     margin-top: 3em;
     border-radius: 0.5em;
     max-width: max-content;
-    min-width: 25rem;
+    min-width: 25.000001rem;
     h2 {
         padding-top: 1em;
         padding-left: 2em;
