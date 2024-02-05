@@ -43,7 +43,7 @@ const Home = () => {
             <HomePageDiv>
 
                 <ItemDisplayDiv>
-                    <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
+                    <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till salu!&filters[categories][title][$eq]=Garn, garn, garn!&populate=*"/>
                 </ItemDisplayDiv>
 
                 <CategoryPickerDiv>
