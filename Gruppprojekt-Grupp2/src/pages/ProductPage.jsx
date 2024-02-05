@@ -8,6 +8,7 @@ import ProductSection from "../components/ProductSection"
 import GetDB from "../services/FileService"
 import axios from "axios"
 import { Route, Routes, useParams } from "react-router-dom"
+import CategoryPicker from "../components/CategoryPicker"
 
 
 
@@ -56,6 +57,7 @@ const ProductPageDiv = styled.div`
     display: flex;
     flex-direction: row;
     background-color: white;
+    justify-content: center;
     
     padding: 1em;
     width: -moz-fit-content;
@@ -138,30 +140,30 @@ function ProductPage() {
     }
 
     useEffect(() => {
-        console.log(param.categories);
-        axios.get(`http://localhost:1300/api/Products?filters[categories][title][$eq]=${param.categories}&populate=*`)
+        axios.get(`http://localhost:1300/api/Products?filters[categories][title][$in]=${param.category}&populate=*`)
             .then(({ data }) => setProducts(data.data))
             .catch((error) => setProductsError(error));
         console.log(products);
 
-        axios.get("http://localhost:1300/api/Categories?populate=*")
-            .then(({data}) => setCategories(data.data))
-            .catch(({error}) => setCategoryError(error))
-            
-    }, []);
+    }, [param])
 
     useEffect(() => {
-        filterItems();
-    }, [selectedFilters])
+        axios.get("http://localhost:1300/api/Categories?populate=*")
+        .then(({data}) => setCategories(data.data))
+        .catch(({error}) => setCategoryError(error))
+    }, [])
+
 
     
-    console.log(products);
+
     
     
 
     return (
         <div>
+            <CategoryPicker />
             <ProductPageDiv>
+                
                 <Filter handler={filterButtonClicked} filters={categories} selectedFilters={selectedFilters} />
                 <ProductList products={products} handler={productClicked} />
 

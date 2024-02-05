@@ -1,0 +1,29 @@
+.categoryButton {
+    border: none;
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f0f0;
+    border-radius: .33rem;
+    padding: 1em;
+    margin: 2rem 0 0 3rem;
+    cursor: pointer;
+}
+
+.categoryButton:hover {
+    background-color: #cfcfcf;
+    transition: .2s;
+}
+
+.categoryButton.buttonActive {
+    background-color: black;
+    color: white;
+   
+    
+}
+
+.categoryButton:active {
+    background-color: black;
+    color: white;
+}
+
+
