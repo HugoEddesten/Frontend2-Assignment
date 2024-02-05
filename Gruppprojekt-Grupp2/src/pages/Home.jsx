@@ -52,9 +52,8 @@ const Home = () => {
 
                 <HomePageContent>
                     <h2>Super Yarn Store</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                    <p>
+                            Välkommen till Super Yarn Store, en passionerad gemenskap av garnälskare som delar kärleken till kreativitet och handarbete. Grundat i år, 2024, har vi förvandlat vår entusiasm för garn till en digital oas där du kan upptäcka en färgrik värld av möjligheter. </p>
                 </HomePageContent>
             </HomePageDiv>
             
