@@ -9,7 +9,7 @@ function CartList(props){
             
 
            {props.products.map((product, index) => (
-                <ProductItem key={index} product={product} handler={props.handler}/>
+                <CartItem key={index} product={product} handler={props.handler}/>
             ))}
                     
         </CartListDiv>
