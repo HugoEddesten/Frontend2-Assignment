@@ -1,0 +1,21 @@
+.filterButton {
+    border: none;
+    border-radius: .33rem;
+    padding: 0.2em;
+    margin: .2rem 0;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: black;
+    text-decoration: none;
+    
+}
+.filterButton:hover {
+    background-color: #dddddd;
+    transition: .2s;
+}
+
+.filterButton.buttonActive {
+    background-color: black;
+    color: white;
+}
+    

@@ -20,16 +20,15 @@ const Checkout = () => {
         <div className="checkout-page-content">
             <form action="">
                 <h2>Addressuppgifter</h2>
-                <input type="text" id="email" name="email" placeholder="Epostadress" />  <br />               
-                <input type="text" id="firstName" name="username" placeholder="Förnamn" />                        
-                <input type="text" id="lastName" name="username" placeholder="Efternamn" /> <br />
+                <input className="form_width" type="text" id="email" name="email" placeholder="Epostadress" />  <br />               
+                <input className="form_name" type="text" id="firstName" name="username" placeholder="Förnamn" />                        
+                <input className="form_name" type="text" id="lastName" name="username" placeholder="Efternamn" /> <br />
 
-                <input type="text" id="streetAddress" name="streetAddress" placeholder="Gatunamn" />                        
-                <input type="text" id="postalCde" name="postalCode" placeholder="Postnummer" /> <br />
-                <input type="text" id="city" name="city" placeholder="Ort" />
+                <input className="form_name" type="text" id="streetAddress" name="streetAddress" placeholder="Gatunamn" />                        
+                <input className="form_name" type="text" id="postalCde" name="postalCode" placeholder="Postnummer" /> <br />
+                <input className="form_width" type="text" id="city" name="city" placeholder="Ort" />
                 
-                <h2>Frakt</h2>
-                <p>49kr</p>
+                <h2>Frakt: 49 kr</h2>
 
                 <label>                        
                         <input className="radiobutton"  type="radio" name="option" value="beppe"/>
@@ -44,21 +43,30 @@ const Checkout = () => {
                     <label>
                         <input className="radiobutton" type="radio" name="option" value="kungsörn"/>
                         Kungsörn - vid tunga leveranser
+                    </label>                 
+                    <br />
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="brevduva"/>
+                       Brevduva - levererar enstaka nystan
+                    </label>
+                    <br />
+                    <label>
+                        <input className="radiobutton" type="radio" name="option" value="uggla"/>
+                       Uggla - levererar med stor visdom till din exakta adress
                     </label>
                     <br />
                     <label>
                         <input className="radiobutton" type="radio" name="option" value="änglabud"/>
                         Änglabud - en himmelsk leverans
                     </label>
-                    <br />
-                    <label>
-                        <input className="radiobutton" type="radio" name="option" value="brevduva"/>
-                       Brevduva - levererar enstaka nystan
-                    </label>
+                    
             </form>
             <button className="buy-button" type="submit" onClick={event => window.location.href='/SuccessfulCheckout'}>Köp</button>
         </div>
+
+
     )
+
 }
 
 export default Checkout

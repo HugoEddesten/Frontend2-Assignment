@@ -7,6 +7,8 @@ import Filter from "../components/Filter"
 import ProductSection from "../components/ProductSection"
 import GetDB from "../services/FileService"
 import axios from "axios"
+import { Route, Routes, useParams } from "react-router-dom"
+import CategoryPicker from "../components/CategoryPicker"
 
 
 
@@ -55,6 +57,7 @@ const ProductPageDiv = styled.div`
     display: flex;
     flex-direction: row;
     background-color: white;
+    justify-content: center;
     
     padding: 1em;
     width: -moz-fit-content;
@@ -79,27 +82,24 @@ const Overlay = styled.div`
 
 function ProductPage() {
 
-    const [products, setProducts] = useState([])
-    const [error, setError] = useState(null); 
-    
+    const param = useParams();
+
+
+
+    const [products, setProducts] = useState([]);
+    const [productsError, setProductsError] = useState(null); 
+
+    const [categories, setCategories] = useState([]);
+    const [categoryError, setCategoryError] = useState(null); 
+
     const [filteredItems, setFilteredItems] = useState(items);
     const [selectedFilters, setSelectedFilters] = useState([]);
     
     const [clickedProduct, setClickedProduct] = useState();
     const [productSectionIsVisible, setProductSectionIsVisible] = useState(false);
 
-    const filters = [];
-    items.forEach((item) => {
-        item.materials.forEach((material) => {
-            if (!filters.includes(material)){
-                filters.push(material);
-            }
-        })
-    });
-
-
     const filterButtonClicked = (category) => {
-        
+
         if (selectedFilters.includes(category)){
             let tempFilters = selectedFilters.filter((filter) => {
                 return filter !== category  
@@ -140,30 +140,37 @@ function ProductPage() {
     }
 
     useEffect(() => {
-        axios.get("http://localhost:1337/api/Products?Id=20&populate=*")
+        axios.get(`http://localhost:1300/api/Products?filters[categories][title][$in]=${param.category}&populate=*`)
             .then(({ data }) => setProducts(data.data))
-            .catch((error) => setError(error));
-            
-    }, []);
+            .catch((error) => setProductsError(error));
+        console.log(products);
+
+    }, [param])
 
     useEffect(() => {
-        filterItems();
-    }, [selectedFilters])
+        axios.get("http://localhost:1300/api/Categories?populate=*")
+        .then(({data}) => setCategories(data.data))
+        .catch(({error}) => setCategoryError(error))
+    }, [])
+
 
     
-    console.log(products);
+
     
     
 
     return (
-        <ProductPageDiv>
-            <Filter handler={filterButtonClicked} filters={filters} selectedFilters={selectedFilters} />
-            <ProductList products={products} handler={productClicked} />
+        <div>
+            <CategoryPicker />
+            <ProductPageDiv>
+                
+                <Filter handler={filterButtonClicked} filters={categories} selectedFilters={selectedFilters} />
+                <ProductList products={products} handler={productClicked} />
 
-            <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
-            <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>
-        </ProductPageDiv>
-
+                <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
+                <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>
+            </ProductPageDiv>
+        </div>
 
     );
     

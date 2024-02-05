@@ -99,7 +99,7 @@ function ProductItem({product, handler}) {
 
     return (
         <ProductItemDiv onClick={() => handler(product)}>
-            <ProductItemImg src={"http://localhost:1337" + product?.attributes?.image.data.attributes.url}/>
+            <ProductItemImg src={"http://localhost:1300" + product?.attributes?.image.data.attributes.url}/>
             <BottomContentDiv>
                 <ProductInfoDiv>
                     <ProductItemText>{product.attributes?.title}</ProductItemText>

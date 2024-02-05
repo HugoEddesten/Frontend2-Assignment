@@ -12,7 +12,8 @@ const HomePageDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 2rem 0;
+    
+    gap: 1em;
 `
 
 const HomePageContent = styled.div`
@@ -21,29 +22,34 @@ const HomePageContent = styled.div`
     padding: 1rem;
 `
 
-export const items = [
-    { name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-]
+const ItemDisplayDiv = styled.div`
 
+`
 
+const TextDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+`
 
+const CategoryPickerDiv = styled.div`
+    width: 100%;
+
+`
 
 const Home = () => {
     return (
         <div>
-            <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
+
             <HomePageDiv>
+
+                <ItemDisplayDiv>
+                    <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
+                </ItemDisplayDiv>
+
+                <CategoryPickerDiv>
+                    <CategoryPicker header="Våra Produkter"/>
+                </CategoryPickerDiv>
+
                 <HomePageContent>
                     <h2>Super Yarn Store</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
@@ -51,7 +57,7 @@ const Home = () => {
                         Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
                 </HomePageContent>
             </HomePageDiv>
-            <CategoryPicker />
+            
             
         </div>
 

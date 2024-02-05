@@ -22,3 +22,16 @@
     color: white;
     transition: 0.1s;
 }
+
+.radiobutton {
+    margin: 0 10px 10px 0;
+}
+
+.form_width {
+    width: 22.5em;
+}
+
+.form_name{
+    width: 11em;
+    margin-right: 0.5em;
+}
