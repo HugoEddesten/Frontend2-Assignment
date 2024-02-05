@@ -47,7 +47,7 @@ const Home = () => {
                 </ItemDisplayDiv>
 
                 <CategoryPickerDiv>
-                    <CategoryPicker />
+                    <CategoryPicker header="Våra Produkter"/>
                 </CategoryPickerDiv>
 
                 <HomePageContent>
