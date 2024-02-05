@@ -28,12 +28,10 @@
 }
 
 .form_width {
-    width: 20.5em;
-    border: solid red 1px;
+    width: 22.5em;
 }
 
 .form_name{
-    width: 10em;
-    border: solid red 1px;
+    width: 11em;
     margin-right: 0.5em;
 }
