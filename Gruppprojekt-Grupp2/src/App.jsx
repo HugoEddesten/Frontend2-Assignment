@@ -21,7 +21,7 @@ import { createContext, useEffect, useState } from 'react'
 import axios from 'axios'
 
 
-export const CartContext = createContext("");
+export const CartContext = createContext([]);
 
 
 function App() {
@@ -37,7 +37,6 @@ function App() {
         mittAnrop()
     }, [])
     */
-
 
 
     const [currentForm, setCurrentForm] = useState('LogIn');
