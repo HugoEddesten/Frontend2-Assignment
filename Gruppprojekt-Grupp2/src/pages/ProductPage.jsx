@@ -141,6 +141,7 @@ function ProductPage() {
 
     useEffect(() => {
         console.log(param.category);
+        console.log(products);
         let selectedCategories = [];
         if (param.category != null) {
             selectedCategories = param.category.split("&");
