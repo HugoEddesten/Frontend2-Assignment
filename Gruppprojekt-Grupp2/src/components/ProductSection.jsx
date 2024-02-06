@@ -76,19 +76,29 @@ const ProductSection = (props) => {
     const addToCart = (e) => {
         e.stopPropagation();
         console.log(props.product.attributes.title);
-
-       
     }
     
+const renderRowDescription = () => {
+    return(
+        props.product?.attributes.rowdescription.map((paragraph, index) => (
+            <ProductSectionParagraph key={index}>{paragraph.children[0].text}</ProductSectionParagraph>
+        ))
+    )
+}
+
+const renderDescription = () => {
+    return(
+        <ProductSectionParagraph>{props.product?.attributes.description}</ProductSectionParagraph>
+    )
+}
+
     return (
         <ProductSectionDiv className={props.isVisible ? "isVisible" : "isInvisible"}>
-            <ProductSectionImg src={"http://localhost:1337" + props.product?.attributes?.image.data.attributes.url}/>
+            <ProductSectionImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>
             <ProductSectionHeader>{props.product?.attributes?.title}</ProductSectionHeader>
 
             <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
-            <ProductSectionParagraph>{props.product?.attributes.description}</ProductSectionParagraph>
-            
-        
+            {props.product?.attributes.rowdescription == null? renderDescription() : renderRowDescription()} 
         </ProductSectionDiv>
     )
 }   

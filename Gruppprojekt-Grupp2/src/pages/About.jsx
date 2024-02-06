@@ -6,12 +6,10 @@ const AboutPageDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 2rem 0;
 `
 
 const AboutPageContent = styled.div`
-    margin: 0 2rem 2rem 2rem;
-    background-color: #F0F0F0;
+    margin: 0 35rem 2rem 35rem;
     padding: 1rem;
 `
 

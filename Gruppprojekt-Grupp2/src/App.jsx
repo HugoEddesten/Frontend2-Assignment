@@ -7,7 +7,7 @@ import Home from './pages/Home.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import Contact from './pages/Contact.jsx'
 import About from './pages/About.jsx'
-import Cart from './pages/Cart.jsx'
+import Cart from './pages/cart.jsx'
 import Footer from './components/Footer.jsx'
 import Delivery from './pages/Delivery.jsx'
 import TermsAndConditions from './pages/TermsAndConditions.jsx'
@@ -48,7 +48,7 @@ function App() {
                 <NavigationBar />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/ProductPage' element={<ProductPage />} />
+                    <Route path='/ProductPage/:category?/:string?/' element={<ProductPage />} />
                     <Route path='/Contact' element={<Contact />} />
                     <Route path='/About' element={<About />} />
                     <Route path='/Cart' element={<Cart />} />

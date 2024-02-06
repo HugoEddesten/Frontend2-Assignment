@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { HiMenuAlt2 } from "react-icons/hi";
+import { Link } from 'react-router-dom';
+import "../filter.css"
 
 const FilterDiv = styled.div`
     display: flex;
@@ -40,25 +42,7 @@ const FilterDiv = styled.div`
 
 `
 
-const FilterButton = styled.button`
-    border: none;
-    border-radius: .33rem;
-    padding: 0.2em;
-    margin: .2rem 0;
-    cursor: pointer;
-    background-color: #f0f0f0;
 
-    &:hover {
-        background-color: #dddddd;
-        transition: .2s;
-    }
-
-    &.buttonActive {
-        background-color: black;
-        color: white;
-    }
-    
-`
 
 
 const Filter = (props) => {
@@ -72,26 +56,18 @@ const Filter = (props) => {
     return (
         <FilterDiv className={menuIsVisible === true ? "menuButtonActive" : ""}>
             <HiMenuAlt2 className={menuIsVisible === true ? "menuButtonActive menuIcon" : "menuIcon"} onClick={() => toggleMenuButtonActive()} />
-            <h3>Material</h3>
+            <h3>Kategori</h3>
             {props.filters.map((category, index) => (
-                <FilterButton
+                <Link 
                     key={`filters-${index}`}
+                    
+                    to={`/ProductPage/${category.attributes.title}`}
                     onClick={() => props.handler(category)}
-                    className={props.selectedFilters.includes(category) ? "buttonActive" : ""}
-                >
-                    {category}
-
-                </FilterButton>
+                    className={props.selectedFilters.includes(category) ? "filterButton buttonActive" : "filterButton"}
+                            >
+                    {category.attributes.title}
+                </Link>
             ))}
-            <h3>Pris</h3>
-
-
-
-            <h3>Färg</h3>
-            <FilterButton>Blå</FilterButton>
-            <FilterButton>Röd</FilterButton>
-            <FilterButton>Vit</FilterButton>
-            <FilterButton>Svart</FilterButton>
         </FilterDiv>
     )
 

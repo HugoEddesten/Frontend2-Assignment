@@ -8,51 +8,55 @@ import axios from 'axios'
 
 const HomePageDiv = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 2rem 0;
+    
+    gap: 1em;
 `
 
 const HomePageContent = styled.div`
-    margin: 0 2rem;
-    background-color: #F0F0F0;
+    margin: 0 25rem 2rem 25rem;
+    background-color: WHITE;
     padding: 1rem;
 `
 
-export const items = [
-    { name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Massa material", price: 79, materials: ["Akryl", "Ull", "Alpacka", "Polyester"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Alpacka Tunn Kit", price: 59, materials: ["Alpacka"], imgName: Temporary2 },
-    { name: "Bomull Kit", price: 79, materials: ["Bomull"], imgName: Temporary1 },
-    { name: "Ull Tunn Kit", price: 99, materials: ["Ull"], imgName: Temporary2 },
-]
+const ItemDisplayDiv = styled.div`
 
+`
 
+const TextDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+`
 
+const CategoryPickerDiv = styled.div`
+    width: 100%;
+
+`
 
 const Home = () => {
     return (
         <div>
-            <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till%20salu!&populate=*"/>
+
             <HomePageDiv>
+
+                <ItemDisplayDiv>
+                    <ItemDisplay text="Spring Sale" filterURL="Products?filters[categories][title][$eq]=Till salu!&filters[categories][title][$eq]=Garn, garn, garn!&populate=*"/>
+                </ItemDisplayDiv>
+
+                <CategoryPickerDiv>
+                    <CategoryPicker header="Våra Produkter"/>
+                </CategoryPickerDiv>
+
                 <HomePageContent>
                     <h2>Super Yarn Store</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus ex, quibusdam repudiandae, velit impedit quam et ad quia, vel incidunt nobis sequi sunt nostrum quo hic iure ratione eaque deserunt?
-                        Enim dolorem a deleniti facere, officiis ducimus, quod architecto officia veritatis odio alias libero magni non facilis minus totam explicabo? Exercitationem vitae placeat recusandae doloremque praesentium et itaque deserunt tempora?
-                        Repellat vel recusandae magnam nisi beatae, nulla culpa dolorum facere obcaecati voluptatem laborum quo necessitatibus, dolor fugiat exercitationem ullam iusto cum assumenda. Sint dolorum odit impedit quod praesentium! Cupiditate, incidunt.</p>
+                    <p>
+                            Välkommen till Super Yarn Store, en passionerad gemenskap av garnälskare som delar kärleken till kreativitet och handarbete. Grundat i år, 2024, har vi förvandlat vår entusiasm för garn till en digital oas där du kan upptäcka en färgrik värld av möjligheter. </p>
                 </HomePageContent>
-                
             </HomePageDiv>
-            <CategoryPicker />
+            
             
         </div>
 

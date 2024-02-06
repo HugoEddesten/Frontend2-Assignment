@@ -1,12 +1,20 @@
 import styled from "styled-components";
-import CartItem from "./CartItem"
 import React from 'react';
+import CartItem from "./CartItem"
 
-function CartList (){
+function CartList(props){
     return(
         
-    <div>hej</div>
+        <CartListDiv>
+            
+
+           {props.products.map((product, index) => (
+                <CartItem key={index} product={product} handler={props.handler}/>
+            ))}
+                    
+        </CartListDiv>
     )
 }
 
 export default CartList
+

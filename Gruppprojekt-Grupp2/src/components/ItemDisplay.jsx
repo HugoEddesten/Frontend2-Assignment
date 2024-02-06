@@ -5,10 +5,11 @@ import axios from "axios";
 
 const ItemDisplayDiv = styled.div`
     background-color: #F0F0F0;
-    margin-left: 5em;
-    margin-right: 5em;
+
     margin-top: 3em;
     border-radius: 0.5em;
+    max-width: 50vw;
+    min-width: 25.000001rem;
     h2 {
         padding-top: 1em;
         padding-left: 2em;
@@ -22,7 +23,7 @@ const ItemDisplay = ({ text, filterURL }) => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:1337/api/${filterURL}`)
+        axios.get(`http://localhost:1300/api/${filterURL}`)
             .then(({ data }) => setProducts(data.data))
             .catch((error) => setError(error));
             
