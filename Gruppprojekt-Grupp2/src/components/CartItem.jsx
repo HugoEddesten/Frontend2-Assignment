@@ -22,13 +22,13 @@ function CartItem (props){
         <CartItemDiv>
 
             <CartItemImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>&nbsp;
-            <CartItemText> {props.product?.attributes?.title}</CartItemText> &nbsp;
-                <CartItemText> {props.product?.attributes?.quantity}</CartItemText>     &nbsp;           
-                <CartItemText> {props.product?.attributes?.price}</CartItemText>
-                &nbsp;
-                <input type="number" id="quantity" name="quantity" min="1" max={props.product?.attributes?.quantity} />
+            <CartItemText> {props.product?.attributes?.title}</CartItemText> 
+            <CartItemText> {props.product?.attributes?.quantity}</CartItemText>         
+            <CartItemText> {props.product?.attributes?.price}</CartItemText>
+             
+            <input type="number" id="quantity" name="quantity" min="1" max={props.product?.attributes?.quantity} />
 
-                <CartItemText> {props.product?.attributes?.total}</CartItemText>
+            <CartItemText> {props.product?.attributes?.total}</CartItemText>
         </CartItemDiv>
     )
 }

@@ -17,11 +17,11 @@ import Register from './pages/Register.jsx'
 import Checkout from './pages/Checkout.jsx'
 import SuccessfulCheckout from './pages/SuccessfulCheckout.jsx'
 import { Route, Routes } from "react-router-dom"
-import { useEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import axios from 'axios'
 
 
-
+export const CartContext = createContext("");
 
 
 function App() {
@@ -37,6 +37,8 @@ function App() {
         mittAnrop()
     }, [])
     */
+
+
 
     const [currentForm, setCurrentForm] = useState('LogIn');
 
