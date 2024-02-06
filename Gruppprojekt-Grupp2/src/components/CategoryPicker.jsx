@@ -11,6 +11,8 @@ const CategoryPickerDiv = styled.div`
     align-items: center; 
     padding: 4rem;
     padding-top: 2rem;
+    margin-top: 2rem;
+    margin-bottom: .25rem;
     background-color: #d9d9eb;
     gap: 1em;
     

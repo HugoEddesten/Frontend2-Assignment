@@ -2,7 +2,7 @@
     border: none;
     text-decoration: none;
     color: #000000;
-    background-color: #f0f0f0;
+    background-color: white;
     border-radius: .33rem;
     padding: 1em;
     margin: 2rem 0 0 3rem;
@@ -10,7 +10,7 @@
 }
 
 .categoryButton:hover {
-    background-color: #cfcfcf;
+    background-color: #f0f0f0;
     transition: .2s;
 }
 
