@@ -2,23 +2,26 @@ import styled from "styled-components"
 import React from "react"
 
 const CartItemDiv = styled.div`
-flex-direction: row;
-display: flex;
+    display: flex;
+    flex-direction: row;
+    padding: .33rem;
 `
 
 const CartItemImg = styled.img`
-width:50px;
-height:50px;
-
+    width: 5rem;
+    height: 4rem;
+    object-fit: cover;
 `
 
 const CartItemText = styled.p`
+    display: flex;
+    align-items: center;
+    margin-right: .33rem;
+    margin-left: .33rem;
 `
 
-
 function CartItem (props){
-    return(
-        
+    return  (
         <CartItemDiv>
 
             <CartItemImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>&nbsp;
@@ -27,8 +30,7 @@ function CartItem (props){
                 <CartItemText> {props.product?.attributes?.price}</CartItemText>
                 &nbsp;
                 <input type="number" id="quantity" name="quantity" min="1" max={props.product?.attributes?.quantity} />
-
-                <CartItemText> {props.product?.attributes?.total}</CartItemText>
+                <CartItemText>{props.product?.attributes?.total}</CartItemText>
         </CartItemDiv>
     )
 }

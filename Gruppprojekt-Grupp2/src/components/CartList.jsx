@@ -3,16 +3,14 @@ import React from 'react';
 import CartItem from "./CartItem"
 
 const CartListDiv = styled.p`
-flex-direction: column;
-display: flex;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
 `
 
 function CartList(props){
-    return(
-        
+    return (
         <CartListDiv>
-            
-
            {props.products.map((product, index) => (
                 <CartItem key={index} product={product}/>
             ))}
