@@ -13,7 +13,9 @@ const CategoryPickerDiv = styled.div`
     padding-top: 2rem;
     margin-top: 2rem;
     margin-bottom: .25rem;
-    background-color: #d9d9eb;
+    /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 50%, rgba(255,0,52,1) 100%);
     gap: 1em;
     
 `
