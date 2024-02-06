@@ -6,13 +6,12 @@ import axios from "axios";
 const ItemDisplayDiv = styled.div`
     background-color: #F0F0F0;
 
-    margin-top: 3em;
+    margin-top: 2rem;
     border-radius: 0.5em;
     max-width: 50vw;
-    min-width: 25.000001rem;
+    min-width: 70rem;
     h2 {
-        padding-top: 1em;
-        padding-left: 2em;
+        padding-top: 2rem;
     }
 `
 

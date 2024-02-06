@@ -9,7 +9,7 @@ const SuccessfulCheckoutPageDiv = styled.div`
 `
 
 const SuccessfulCheckoutPageContent = styled.div`
-    margin: 0 25rem 2rem 25rem;
+    margin: 0 30rem 2rem 30rem;
     padding: 1rem;
 `
 
@@ -18,7 +18,7 @@ const SuccessfulCheckout = () => {
         <div>
             <SuccessfulCheckoutPageDiv>
                     <SuccessfulCheckoutPageContent>
-                    <h2>Du har bra smak! Lyckad beställning - på egen sida?</h2>
+                    <h2>Du har bra smak!</h2>
                         <p>1000 tack för din beställning!<br />
                             Du kommer höra från oss igen när dina varor har packats och skickats. <br />
                             Ha det bra så länge! <br /><br />
