@@ -28,7 +28,7 @@ const ProductItemDiv = styled.a`
 const ProductItemImg = styled.img`
     padding-bottom: 0.33rem;
     width: 18rem;
-    height: auto;
+    height: 10rem;
     object-fit: cover;
 
 `

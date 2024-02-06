@@ -9,7 +9,7 @@ const ContactPageDiv = styled.div`
 `
 
 const ContactPageContent = styled.div`
-    margin: 0 35rem 2rem 35rem;
+    margin: 0 30rem 2rem 30rem;
     padding: 1rem;
 `
 
