@@ -12,19 +12,9 @@ const CartItems = [];
 const Cart = () => {
     
     const CartProducts = useContext(CartContext);
+    console.log(CartProducts);
 
-
-    const [products, setProducts] = useState ([]); /*ska bort sen*/
-
-    const [error, setError] = useState(null)
-
-    useEffect(() => {/* vi får se om den ska vara kvar*/
     
-        axios.get(`http://localhost:1300/api/Products?populate=*`)
-       .then(({ data }) => setProducts(data.data))
-        .catch((error) => setError(error));
-        console.log(products);
-    }, [])
 
    
 
@@ -36,7 +26,14 @@ const Cart = () => {
             <h2>Din kundvagn</h2>
             <button className="continue-shopping-button" onClick={event => window.location.href='/ProductPage'}>⇦ Fortsätt handla</button>
 
-                <CartList products = {products} />
+                <CartList products = {CartProducts} />
+              
+              if {
+                CartProducts == 0 {
+                    console.log ("Din kundvagn är tom");
+                }
+
+              } 
                
 
 

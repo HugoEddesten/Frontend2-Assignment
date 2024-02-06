@@ -25,7 +25,7 @@ const Contact = () => {
 
                         Behöver du hjälp med en beställning, har frågor om våra produkter eller bara vill prata garn? <br />
                         Vår kundtjänst är här för att hjälpa dig! <br /> <br />
-                        Email: kundtjanst@superyarnstore.com <br />
+                        Email: <a href="mailto:kundtjanst@superyarnstore.se">kundtjanst@superyarnstore.se</a><br />
                         Telefon: 08-123&nbsp;45&nbsp;67 <br />
                         Arbetstider: Mån-Fre 9:00-18:00 <br /><br />
 
