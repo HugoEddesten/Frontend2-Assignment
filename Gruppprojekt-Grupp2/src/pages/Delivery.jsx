@@ -9,7 +9,7 @@ const DeliveryPageDiv = styled.div`
 `
 
 const DeliveryPageContent = styled.div`
-    margin: 0 25rem 2rem 25rem;
+    margin: 0 35rem 2rem 35rem;
     padding: 1rem;
 `
 
@@ -20,9 +20,9 @@ const Delivery = () => {
                     <DeliveryPageContent>
                         <h2>Leverans</h2>
                         <p>
-                            Fraktkostnaden beror på leveransdestination och val av leveransalternativ. Den exakta kostnaden visas vid utcheckningen.<br /><br />
+                            Vår fasta leveranskostnar är 49 kr oavsett leveransalternativ.<br /><br />
 
-                            Vi strävar efter att behandla och skicka din order så snabbt som möjligt. Leveranstiderna kan variera beroende på leveransdestination och valt fraktsätt.<br /><br />
+                            Vi strävar efter att behandla och skicka din order så snabbt som möjligt. Leveranstiderna kan verkligen variera beroende på leveransdestination och valt fraktsätt.<br /><br />
 
                             Kontakta oss omedelbart om det uppstår problem med leveransen eller om du inte har mottagit din order inom den förväntade tidsramen.<br /><br />
                             Email: kundtjanst@superyarnstore.com <br />

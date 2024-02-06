@@ -9,7 +9,7 @@ const ReturnsPageDiv = styled.div`
 `
 
 const ReturnsPageContent = styled.div`
-    margin: 0 25rem 2rem 25rem;
+    margin: 0 35rem 2rem 35rem;
     padding: 1rem;
 `
 
