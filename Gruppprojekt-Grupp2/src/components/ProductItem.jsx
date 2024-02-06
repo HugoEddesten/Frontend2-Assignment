@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import React from "react"
+import React, { useContext } from "react"
 import { IoBagAdd } from "react-icons/io5";
-
+import { CartContext } from "../App";
 
 const ProductItemDiv = styled.a`
     display: flex;
@@ -28,7 +28,7 @@ const ProductItemDiv = styled.a`
 const ProductItemImg = styled.img`
     padding-bottom: 0.33rem;
     width: 18rem;
-    height: auto;
+    height: 10rem;
     object-fit: cover;
 
 `
@@ -89,11 +89,16 @@ const AddToCartButton = styled.button`
 
 
 function ProductItem({product, handler}) {
+    
+    const cartProducts = useContext(CartContext);
 
     const addToCart = (e) => {
         e.stopPropagation();
-        console.log(product.attributes.title);
-        console.log(e);
+        
+        cartProducts.push(product);
+        console.log(cartProducts.length);
+        //console.log(product.attributes.title);
+        //console.log(e);
        
     }
 

@@ -11,6 +11,10 @@ const FilterDiv = styled.div`
     min-width: 10em;
     transition: transform 0.6s;
     padding: .5rem;
+
+    .filterButton {
+        padding: .33rem;
+    }
     
     &.menuButtonActive {
         transform: translateX(-110%);

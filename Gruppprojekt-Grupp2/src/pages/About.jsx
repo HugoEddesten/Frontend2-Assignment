@@ -9,8 +9,14 @@ const AboutPageDiv = styled.div`
 `
 
 const AboutPageContent = styled.div`
-    margin: 0 25rem 2rem 25rem;
+    margin: 0 30rem 2rem 30rem;
     padding: 1rem;
+`
+
+const AboutPageImg = styled.img`
+    width: 25rem;
+    object-fit: cover;
+
 `
 
 const About = () => {
@@ -19,7 +25,9 @@ const About = () => {
             <AboutPageDiv>
                     <AboutPageContent>
                         <h2>Om oss</h2>
+                        <AboutPageImg src="../src/assets/superyarnstore_owners.jpg"></AboutPageImg>
                         <p>
+                   
                             Välkommen till Super Yarn Store, en passionerad gemenskap av garnälskare som delar kärleken till kreativitet och handarbete. Grundat i år, 2024, har vi förvandlat vår entusiasm för garn till en digital oas där du kan upptäcka en färgrik värld av möjligheter. <br /><br />
 
                             Vi tror på kraften av handarbete och hur det kan förena människor över hela världen. Vår passion är att erbjuda ett brett utbud av garn av högsta kvalitet, från mjuka ullar till färgglada bomullstrådar, för att inspirera ditt nästa projekt. Varje nystan är noggrant utvalt för att möta våra kunders olika behov och önskemål. <br /><br />

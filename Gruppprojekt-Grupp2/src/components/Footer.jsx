@@ -6,18 +6,18 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="socials">
-                <a href="https://instagram.com/superyarncompany" target="_blank"><FaInstagram /></a>
-                <a href="https://facebook.com/superyarncompany" target="_blank"><FaFacebook /></a>
-                <a href="https://twitter.com/superyarncompany" target="_blank"><FaTwitter /></a>
-                <a href="https://tiktok.com/superyarncompany" target="_blank"><FaTiktok /></a>
+                <a href="https://instagram.com/superyarnstore" target="_blank"><FaInstagram /></a>
+                <a href="https://facebook.com/superyarnstore" target="_blank"><FaFacebook /></a>
+                <a href="https://twitter.com/superyarnstore" target="_blank"><FaTwitter /></a>
+                <a href="https://tiktok.com/superyarnstore" target="_blank"><FaTiktok /></a>
             </div>
             <ul className="list">
                 <CustomLink to="/Delivery">Leverans</CustomLink>
                 <CustomLink to="/TermsAndConditions">Köpvillkor</CustomLink>
                 <CustomLink to="/Returns">Byten & Returer</CustomLink>
                 <CustomLink to="/Contact">Kontakt</CustomLink>
-                <CustomLink to="/About">Om Super Yarn Company</CustomLink>
-                <p className="copyright">Super Yarn Company</p>
+                <CustomLink to="/About">Om Super Yarn Store</CustomLink>
+                <p className="copyright">Super Yarn Store</p>
             </ul>
         </footer>
     )

@@ -11,7 +11,11 @@ const CategoryPickerDiv = styled.div`
     align-items: center; 
     padding: 4rem;
     padding-top: 2rem;
-    background-color: #d9d9eb;
+    margin-top: 2rem;
+    margin-bottom: .25rem;
+    /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 50%, rgba(255,0,52,1) 100%);
     gap: 1em;
     
 `
@@ -34,13 +38,32 @@ const CategoryPicker = ({ header }) => {
             .catch((error) => setError(error));
     }, []);
 
+    const addCategoryToUrl = (clickedCategory) => {
+        
+        if (param.category?.includes(clickedCategory.attributes.title)) {
+            let categoryList = param.category.split("&");
+            let newCategories = categoryList.filter((category) => clickedCategory =! category);
+            let categoryString = newCategories.join("&");
+            console.log("string: " + categoryString);
+            return "/ProductPage/" + categoryString
+        } else {
+            
+            if (param.category != null) {
+                return "/ProductPage/" + param?.category + "&" + clickedCategory.attributes.title
+            } else {
+                
+                return "/ProductPage/" + clickedCategory.attributes.title
+            }
+        }
+    }
+
+
     return (
         <CategoryPickerDiv>
             <CategoryHeader>{header}</CategoryHeader>
             <div>
-                {categories.map((category, index) => (
-
-                    <Link key={index} className={param.category == category.attributes.title ? "categoryButton buttonActive" : "categoryButton"} to={'/ProductPage/' + category.attributes.title}>{category.attributes.title}</Link>
+                {categories.map((category, index) => (  
+                    <Link key={index} className={param.category == category.attributes.title ? "categoryButton buttonActive" : "categoryButton"} to={addCategoryToUrl(category)}>{category.attributes.title}</Link>
                 ))}
             </div>
 
