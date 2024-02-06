@@ -28,14 +28,9 @@ const Cart = () => {
 
                 <CartList products = {CartProducts} />
               
-              if {
-                CartProducts == 0 {
-                    console.log ("Din kundvagn är tom");
-                }
-
-              } 
-               
-
+              {
+                CartProducts.length < 1 ? <p>Din kundvagn är tom</p> : null
+              }
 
             <button className="checkout-button" type="submit" onClick={event => window.location.href='/Checkout'}>Till kassan</button>
 

@@ -29,7 +29,10 @@ function CartItem (props){
             <CartItemText> {props.product?.attributes?.price} kr</CartItemText>
  
             <input type="number" id="quantity" name="quantity" min="1" max={props.product?.attributes?.quantity} />
-    
+
+
+
+
             <CartItemText> {props.product?.attributes?.quantity} st</CartItemText>    
              
 
@@ -40,3 +43,7 @@ function CartItem (props){
 
 export default CartItem
 
+
+/*<label for="quantityInput">Antal:</label>
+<input type="number" id="quantityInput" />
+<p id="totalPrice">Totalt pris: 0 kr</p>*/
