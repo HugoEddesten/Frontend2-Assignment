@@ -140,10 +140,19 @@ function ProductPage() {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:1300/api/Products?filters[categories][title][$in]=${param.category}&populate=*`)
+        console.log(param.category);
+        let selectedCategories = [];
+        if (param.category != null) {
+            selectedCategories = param.category.split("&");
+        } else {
+            selectedCategories = categories.map((category) => category.attributes.title);
+        }
+        let filtersList = selectedCategories.map((category) => `filters[categories][title][$eq]=${category}`)
+        let filterString = filtersList.join("&")
+        console.log(selectedCategories);
+        axios.get(`http://localhost:1300/api/Products?${filterString}&populate=*`)
             .then(({ data }) => setProducts(data.data))
             .catch((error) => setProductsError(error));
-        console.log(products);
 
     }, [param])
 
@@ -163,9 +172,9 @@ function ProductPage() {
         <div>
             <CategoryPicker />
             <ProductPageDiv>
-                
                 <Filter handler={filterButtonClicked} filters={categories} selectedFilters={selectedFilters} />
-                <ProductList products={products} handler={productClicked} />
+                <ProductList products={products} handler={productClicked}/>
+                
 
                 <ProductSection product={clickedProduct} isVisible={productSectionIsVisible} />
                 <Overlay onClick={() => toggleProductSectionVisibility()} className={productSectionIsVisible ? "isVisible" : ""}/>

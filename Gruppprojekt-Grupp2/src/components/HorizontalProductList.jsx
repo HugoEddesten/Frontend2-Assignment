@@ -8,8 +8,6 @@ const ProductScrollListDiv = styled.div`
     display: flex;
     align-items: center;
     
-    
-    
     position: auto;
     max-width: max-content;
     
@@ -17,7 +15,6 @@ const ProductScrollListDiv = styled.div`
     padding: 1em;
    
     z-index: 0;
-
 `
 
 const ProductsDiv = styled.div`
