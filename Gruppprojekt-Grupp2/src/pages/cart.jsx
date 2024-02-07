@@ -5,16 +5,32 @@ import CartList from "../components/CartList"
 import CartItem from "../components/CartItem"
 import axios from "axios"
 import {CartContext} from "../App"
+import { useNavigate } from "react-router-dom"
 
 
 const CartItems = [];
 
 const Cart = () => {
     
-    const CartProducts = useContext(CartContext);
-    console.log(CartProducts);
+    const cartProducts = useContext(CartContext);
+    console.log(cartProducts);
 
-    
+    const navigate= useNavigate();
+    const reload = () => {
+      navigate();}
+
+    const removeItem = (product) => {
+        
+      console.log(cartProducts);
+      const index = cartProducts.indexOf(product);
+      if (index > -1) { 
+        cartProducts.splice(index, 1);
+      }
+
+        reload ();
+      
+      console.log(cartProducts);
+              };
 
    
 
@@ -26,10 +42,10 @@ const Cart = () => {
             <h2>Din kundvagn</h2>
             <button className="continue-shopping-button" onClick={event => window.location.href='/ProductPage'}>⇦ Fortsätt handla</button>
 
-                <CartList products = {CartProducts} />
+                <CartList products = {cartProducts} handler={removeItem} />
               
               {
-                CartProducts.length < 1 ? <p>Din kundvagn är tom</p> : null
+                cartProducts.length < 1 ? <p>Din kundvagn är tom</p> : null
               }
 
             <button className="checkout-button" type="submit" onClick={event => window.location.href='/Checkout'}>Till kassan</button>
