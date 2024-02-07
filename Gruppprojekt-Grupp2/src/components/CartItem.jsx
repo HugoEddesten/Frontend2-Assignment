@@ -22,15 +22,14 @@ const CartItemText = styled.p`
     margin-right: .33rem;
     margin-left: .33rem;
     width: 10em;
-    padding: 1px;
-    border: red 1px solid;
+    padding: .33rem;
 `
 const CartItemButton = styled.button`
     display: flex;
     align-items: center;
     margin-right: .33rem;
     margin-left: .33rem;
-    border: green 1px solid;
+    width: 4em;
 `
 
 const QuantityInput = styled.input`
@@ -38,7 +37,6 @@ const QuantityInput = styled.input`
     align-items: center;
     margin-right: .33rem;
     margin-left: .33rem;
-    border: black 1px solid;
     width: 4em;
 `
 
@@ -67,18 +65,19 @@ function CartItem (props){
             <CartItemText> Kvar i lager: {props.product?.attributes?.quantity - quantityInput}</CartItemText>
 
             
-            <CartItemText onChange = {handleChange}   type="number" id="totalPrice" name="totalPrice" max={quantityInput}>Kostnad * antal Items</CartItemText>
+            <CartItemText onChange = {handleChange}   type="number" id="totalPrice" name="totalPrice" max={quantityInput}>Kostnad * antal</CartItemText>
 
 
         
 
             
-              <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton>
+              <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton> 
 
         
-               
+         
 
         </CartItemDiv>
+         
     )
 }
 
