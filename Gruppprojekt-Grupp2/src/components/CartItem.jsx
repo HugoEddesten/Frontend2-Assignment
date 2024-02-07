@@ -1,5 +1,7 @@
 import styled from "styled-components"
-import React from "react"
+import React, { useContext, useState } from "react"
+import { Navigate, useNavigate, useSearchParams } from "react-router-dom"
+import { CartContext } from "../App"
 
 const CartItemDiv = styled.div`
     display: flex;
@@ -20,9 +22,35 @@ const CartItemText = styled.p`
     margin-right: .33rem;
     margin-left: .33rem;
 `
+const CartItemButton = styled.button`
+    display: flex;
+    align-items: center;
+    margin-right: .33rem;
+    margin-left: .33rem;
+`
+/*
+const CartList = () => {
+    const history= useHistory();
+    const reload = () => {
+      history(0);
+    }
+  }
+
+*/
+
 
 
 function CartItem (props){
+
+        const [quantityInput, setquanityInput] = useState(0);
+        const handleChange = (event) => {       
+          setquanityInput(event.target.value);
+        };
+
+
+
+
+
     return  (
         <CartItemDiv>
 
@@ -31,19 +59,28 @@ function CartItem (props){
             <CartItemText> {props.product?.attributes?.title}</CartItemText> 
             <CartItemText> {props.product?.attributes?.price} kr</CartItemText>
  
-            <input type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} /> 
+            <input onChange = {handleChange} type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} /> 
+
+
+
+ 
             
-   
-            <CartItemText> {props.product?.attributes?.quantity}</CartItemText>
-            <CartItemText> {props.product?.attributes?.quantityInput} </CartItemText> 
-            
-             
+            <CartItemText> Kvar i lager: {props.product?.attributes?.quantity - quantityInput}</CartItemText>
+
 
 
             <CartItemText> {props.product?.attributes?.totalPrice}</CartItemText>
 
+            <p id="totalPrice">Totalt: 0 </p>
 
-            <p id="totalPrice">Totalt pris: 0 kr</p>
+        
+
+            
+              <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton>
+                  
+        
+               
+
         </CartItemDiv>
     )
 }

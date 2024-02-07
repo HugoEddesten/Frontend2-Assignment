@@ -22,13 +22,11 @@ const SuccessfulCheckout = () => {
                         <p>1000 tack för din beställning!<br />
                             Du kommer höra från oss igen när dina varor har packats och skickats. <br />
                             Ha det bra så länge! <br /><br />
-                            Gladeliga hälsningar från Super Yarn Store <br /><br />
-                            
-                            Roliga/trevliga bilder?<br />
-                            Nåt glatt i alla fall, kanske en selfie på oss tre, för att pigga upp <br /> <br />
-
+                            Gladeliga hälsningar från Super Yarn Store <br /><br />                            
+                           
                              Har du frågor så tveka inte att kontakta oss. <br />
-                             Du kan nå oss på e-postadressen <a href="mailto:kundtjanst@superyarnstore.se">kundtjanst@superyarnstore.se</a> eller via telefon på 08-123&nbsp;45&nbsp;67. Alla vardagar 10.00-12.00, 12.30-16.00.
+                             Du kan nå oss på e-postadressen <a href="mailto:kundtjanst@superyarnstore.se">kundtjanst@superyarnstore.se</a> 
+                             eller via telefon på 08-123&nbsp;45&nbsp;67. Alla vardagar 10.00-12.00, 12.30-16.00.
                             
                             </p>
                     </SuccessfulCheckoutPageContent>
