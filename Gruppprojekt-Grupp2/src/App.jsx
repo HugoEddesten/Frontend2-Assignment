@@ -51,7 +51,7 @@ function App() {
                 <NavigationBar />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/ProductPage/:category?/:string?/' element={<ProductPage />} />
+                    <Route path='/ProductPage/:category?/:id?/' element={<ProductPage />} />
                     <Route path='/Contact' element={<Contact />} />
                     <Route path='/About' element={<About />} />
                     <Route path='/Cart' element={<Cart />} />

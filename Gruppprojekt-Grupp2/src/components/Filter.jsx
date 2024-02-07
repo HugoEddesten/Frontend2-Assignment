@@ -60,18 +60,11 @@ const Filter = (props) => {
     return (
         <FilterDiv className={menuIsVisible === true ? "menuButtonActive" : ""}>
             <HiMenuAlt2 className={menuIsVisible === true ? "menuButtonActive menuIcon" : "menuIcon"} onClick={() => toggleMenuButtonActive()} />
-            <h3>Kategori</h3>
-            {props.filters.map((category, index) => (
-                <Link 
-                    key={`filters-${index}`}
-                    
-                    to={`/ProductPage/${category.attributes.title}`}
-                    onClick={() => props.handler(category)}
-                    className={props.selectedFilters.includes(category) ? "filterButton buttonActive" : "filterButton"}
-                            >
-                    {category.attributes.title}
-                </Link>
-            ))}
+           
+            
+
+            
+            
         </FilterDiv>
     )
 
