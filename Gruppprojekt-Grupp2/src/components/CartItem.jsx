@@ -21,22 +21,26 @@ const CartItemText = styled.p`
     align-items: center;
     margin-right: .33rem;
     margin-left: .33rem;
+    width: 10em;
+    padding: 1px;
+    border: red 1px solid;
 `
 const CartItemButton = styled.button`
     display: flex;
     align-items: center;
     margin-right: .33rem;
     margin-left: .33rem;
+    border: green 1px solid;
 `
-/*
-const CartList = () => {
-    const history= useHistory();
-    const reload = () => {
-      history(0);
-    }
-  }
 
-*/
+const QuantityInput = styled.input`
+    display: flex;
+    align-items: center;
+    margin-right: .33rem;
+    margin-left: .33rem;
+    border: black 1px solid;
+    width: 4em;
+`
 
 
 
@@ -54,30 +58,23 @@ function CartItem (props){
     return  (
         <CartItemDiv>
 
-            <CartItemImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>&nbsp;
+            <CartItemImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>
             
             <CartItemText> {props.product?.attributes?.title}</CartItemText> 
             <CartItemText> {props.product?.attributes?.price} kr</CartItemText>
  
-            <input onChange = {handleChange} type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} /> 
-
-
-
- 
-            
+            <QuantityInput onChange = {handleChange} type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} />             
             <CartItemText> Kvar i lager: {props.product?.attributes?.quantity - quantityInput}</CartItemText>
 
+            
+            <CartItemText onChange = {handleChange}   type="number" id="totalPrice" name="totalPrice" max={quantityInput}>Kostnad * antal Items</CartItemText>
 
-
-            <CartItemText> {props.product?.attributes?.totalPrice}</CartItemText>
-
-            <p id="totalPrice">Totalt: 0 </p>
 
         
 
             
               <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton>
-                  
+
         
                
 

@@ -5,6 +5,7 @@ import CartList from "../components/CartList"
 import CartItem from "../components/CartItem"
 import axios from "axios"
 import {CartContext} from "../App"
+import { useNavigate } from "react-router-dom"
 
 
 const CartItems = [];
@@ -14,6 +15,10 @@ const Cart = () => {
     const cartProducts = useContext(CartContext);
     console.log(cartProducts);
 
+    const navigate= useNavigate();
+    const reload = () => {
+      navigate();}
+
     const removeItem = (product) => {
         
       console.log(cartProducts);
@@ -22,7 +27,8 @@ const Cart = () => {
         cartProducts.splice(index, 1);
       }
 
-      // array = [2, 9]
+        reload ();
+      
       console.log(cartProducts);
               };
 
