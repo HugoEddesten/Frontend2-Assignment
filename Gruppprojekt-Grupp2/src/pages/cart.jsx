@@ -4,7 +4,7 @@ import '../cart.css'
 import CartList from "../components/CartList"
 import CartItem from "../components/CartItem"
 import axios from "axios"
-import {CartContext} from "../App"
+import { CartContext } from "../App"
 import { useNavigate } from "react-router-dom"
 
 
@@ -13,27 +13,31 @@ const CartItems = [];
 const Cart = () => {
     
     const cartProducts = useContext(CartContext);
-    console.log(cartProducts);
 
-    const navigate= useNavigate();
+
+    console.log(cartProducts)
+
+    const navigate = useNavigate();
     const reload = () => {
-      navigate();}
+      navigate();
+    }
+
 
     const removeItem = (product) => {
-        
-      console.log(cartProducts);
       const index = cartProducts.indexOf(product);
-      if (index > -1) { 
+      if (index > -1) {
         cartProducts.splice(index, 1);
       }
-
-        reload ();
+      localStorage.setItem("cart", JSON.stringify(cartProducts.filter((iteratedProduct) => iteratedProduct != product)))
+      reload();
       
-      console.log(cartProducts);
-              };
+      
+    };    
 
-   
-
+    useEffect(() => {
+      reload();
+    }, cartProducts)
+    
 
     return (
         <div className="cart-content">

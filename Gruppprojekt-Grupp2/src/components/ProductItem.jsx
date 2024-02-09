@@ -95,11 +95,26 @@ function ProductItem({product, handler}) {
     const addToCart = (e) => {
         e.stopPropagation();
         
-        cartProducts.push(product);
-        console.log(cartProducts.length);
+       
+        
+        
+        let localStorageCart = localStorage.getItem("cart");
+        let cart = [];
+
+        if ( localStorageCart != null ) { 
+            let cartJsonToArray = JSON.parse(localStorageCart);
+            cartJsonToArray.forEach(localStorageProduct => {
+                cart.push(localStorageProduct);
+            });   
+        }
+        cart.push(product);
+     
+        let cartJson = JSON.stringify(cart);
+        localStorage.setItem("cart", cartJson);
+        
         //console.log(product.attributes.title);
         //console.log(e);
-       
+        cartProducts.push(product);  
     }
 
     return (
