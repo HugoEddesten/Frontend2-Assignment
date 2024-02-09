@@ -61,11 +61,11 @@ function CartItem (props){
             <CartItemText> {props.product?.attributes?.title}</CartItemText> 
             <CartItemText> {props.product?.attributes?.price} kr</CartItemText>
  
-            <QuantityInput onChange = {handleChange} type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} />             
+            <QuantityInput onChange = {handleChange} placeholder={1} type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} />             
             <CartItemText> Kvar i lager: {props.product?.attributes?.quantity - quantityInput}</CartItemText>
 
             
-            <CartItemText onChange = {handleChange}   type="number" id="totalPrice" name="totalPrice" max={quantityInput}>Kostnad * antal</CartItemText>
+            <CartItemText onChange = {handleChange}   type="number" id="totalPrice" name="totalPrice" max={quantityInput}>{props.product?.attributes?.price * quantityInput} kr</CartItemText>
 
 
         

@@ -48,6 +48,8 @@ const Cart = () => {
                 cartProducts.length < 1 ? <p>Din kundvagn är tom</p> : null
               }
 
+              
+
             <button className="checkout-button" type="submit" onClick={event => window.location.href='/Checkout'}>Till kassan</button>
 
         </div>
