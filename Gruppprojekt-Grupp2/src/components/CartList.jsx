@@ -7,7 +7,8 @@ import { CartContext } from "../App"
 const CartListDiv = styled.p`
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    align-items: center;
+    justify-content: center;
 `
 
 const CartListText = styled.p`
@@ -15,34 +16,36 @@ const CartListText = styled.p`
     align-items: right;
     width: 10em;
     padding: .33rem;
-    border: red 1px solid;
+    border: #000000 1px solid;
+    border-radius: .33rem;
+    margin: 1rem 0;
 `
 
 
-function handleChange(event) {    
+function handleChange(event) {
     console.log();
 }
 
 
-function CartList(props){
+function CartList(props) {
 
     const [inTotal, setinTotal] = useState(0);
-    const handleChange = (itemPrice, product) => {   
-        
-    const priceCalculation = inTotal + itemPrice;   
-      setinTotal(priceCalculation);
+    const handleChange = (itemPrice, product) => {
+
+        const priceCalculation = inTotal + itemPrice;
+        setinTotal(priceCalculation);
 
     };
 
 
     return (
         <CartListDiv>
-           {props.products.map((product, index) => (
-                <CartItem onItemTotalChange = {handleChange} key={index} product={product}  handler={props.handler}></CartItem>
-                
+            {props.products.map((product, index) => (
+                <CartItem onItemTotalChange={handleChange} key={index} product={product} handler={props.handler}></CartItem>
+
             ))}
-            
-        <CartListText  onChange = {handleChange}  type="number" id="inTotal" name="inTotal">{inTotal} kr</CartListText>
+
+            <CartListText onChange={handleChange} type="number" id="inTotal" name="inTotal">Totalt: {inTotal} kr</CartListText>
         </CartListDiv>
     )
 }

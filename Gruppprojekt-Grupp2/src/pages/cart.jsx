@@ -41,11 +41,13 @@ const Cart = () => {
             <h2>Din kundvagn</h2>
             <button className="continue-shopping-button" onClick={event => window.location.href = '/ProductPage'}>⇦ Fortsätt handla</button>
 
-            <CartList products={cartProducts} handler={removeItem} />
-
             {
                 cartProducts.length < 1 ? <p>Din kundvagn är tom</p> : null
             }
+
+            <CartList products={cartProducts} handler={removeItem} />
+
+
 
             <button className="checkout-button" type="submit" onClick={event => window.location.href = '/Checkout'}>Till kassan</button>
 
