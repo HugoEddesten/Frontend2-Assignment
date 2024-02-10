@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import React, { useContext, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { Navigate, useNavigate, useSearchParams } from "react-router-dom"
 import { CartContext } from "../App"
 
@@ -44,11 +44,22 @@ const QuantityInput = styled.input`
 
 function CartItem (props){
 
-        const [quantityInput, setquanityInput] = useState(0);
-        const handleChange = (event) => {       
-          setquanityInput(event.target.value);
-        };
+        const [totalPrice, setTotalPrice] = useState(0);
 
+        const [quantityInput, setquantityInput] = useState(0);
+        const handleChange = (event) => {       
+          setquantityInput(event.target.value);          
+        };
+        
+        useEffect(() => {
+            setTotalPrice(quantityInput * props.product.attributes.price);
+         },[quantityInput])
+
+        useEffect(() => {
+          console.log(quantityInput);
+          props.onItemTotalChange(totalPrice);
+        },[totalPrice])
+   
 
 
 
@@ -65,11 +76,11 @@ function CartItem (props){
             <CartItemText> Kvar i lager: {props.product?.attributes?.quantity - quantityInput}</CartItemText>
 
             
-            <CartItemText onChange = {handleChange} type="number" id="totalPrice" name="totalPrice" max={quantityInput}>{props.product?.attributes?.price * quantityInput} kr</CartItemText>
+            <CartItemText type="number" id="totalPrice" name="totalPrice" max={quantityInput}>{totalPrice} kr</CartItemText>
 
 
             
-              <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton> 
+            <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton> 
 
         
               
@@ -83,6 +94,3 @@ function CartItem (props){
 }
 
 export default CartItem
-
-
-
