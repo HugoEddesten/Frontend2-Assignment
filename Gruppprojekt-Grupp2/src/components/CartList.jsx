@@ -13,12 +13,12 @@ const CartListDiv = styled.p`
 const CartListText = styled.p`
     display: flex;
     align-items: right;
-    margin-right: .33rem;
-    margin-left: .33rem;
     width: 10em;
     padding: .33rem;
     border: red 1px solid;
 `
+
+
 
 
 function handleChange(event) {
@@ -40,7 +40,7 @@ function CartList(props){
                 
             ))}
             
-        <CartListText  onChange = {handleChange}  type="number" id="inTotal" name="inTotal"> kr</CartListText>
+        <CartListText  onChange = {handleChange}  type="number" id="inTotal" name="inTotal">inTotal kr</CartListText>
         </CartListDiv>
     )
 }
