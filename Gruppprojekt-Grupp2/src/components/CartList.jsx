@@ -19,31 +19,32 @@ const CartListText = styled.p`
 `
 
 
-
-
-function handleChange(event) {
-    // Your logic for handling the change goes here
+function handleChange(event) {    
     console.log();
 }
 
-function CartList(props){
-    
 
+function CartList(props){
+
+    const [inTotal, setinTotal] = useState(0);
+    const handleChange = (itemPrice, product) => {   
+        
+    const priceCalculation = inTotal + itemPrice;   
+      setinTotal(priceCalculation);
+
+    };
 
 
     return (
         <CartListDiv>
            {props.products.map((product, index) => (
-                <CartItem key={index} product={product}  handler={props.handler}></CartItem>
-
-
+                <CartItem onItemTotalChange = {handleChange} key={index} product={product}  handler={props.handler}></CartItem>
                 
             ))}
             
-        <CartListText  onChange = {handleChange}  type="number" id="inTotal" name="inTotal">inTotal kr</CartListText>
+        <CartListText  onChange = {handleChange}  type="number" id="inTotal" name="inTotal">{inTotal} kr</CartListText>
         </CartListDiv>
     )
 }
 
 export default CartList
-

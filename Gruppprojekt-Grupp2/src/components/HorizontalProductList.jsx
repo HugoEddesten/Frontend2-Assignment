@@ -8,13 +8,18 @@ const ProductScrollListDiv = styled.div`
     display: flex;
     align-items: center;
     
-    position: auto;
+    
     max-width: max-content;
+    
     
     user-select: none;
     padding: 1em;
    
     z-index: 0;
+
+    @media only screen and (max-width: 600px) {
+        max-width: 100%;
+    }
 `
 
 const ProductsDiv = styled.div`

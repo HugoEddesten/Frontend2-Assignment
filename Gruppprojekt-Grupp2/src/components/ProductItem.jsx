@@ -15,13 +15,20 @@ const ProductItemDiv = styled.a`
     -webkit-user-select: none;
     user-select: none;
     padding-bottom: 0.33rem;
-
+    transition: all 0.4s;
 
     &:hover {
         transition: all 0.1s;
         
         cursor: pointer;
         /* transform: scale(1.01); */
+    }
+   
+    @media only screen and (max-width: 600px) {
+        
+        padding: 0;
+        margin: 0;
+        transition: all 0.4s;
     }
 `
 
@@ -30,6 +37,15 @@ const ProductItemImg = styled.img`
     width: 18rem;
     height: 10rem;
     object-fit: cover;
+    transition: all 0.4s;
+
+    @media only screen and (max-width: 600px) {
+        width: 12rem;
+        height: 15rem;
+        padding: 0;
+        margin: 0;
+        transition: all 0.4s;
+    }
 
 `
 
@@ -52,10 +68,11 @@ const ProductItemText = styled.p`
     margin-top: 0.33rem;
     display: flex;
     align-items: flex-end;
+    
     max-height: .67rem;
     color: black;
     font-size: 0.8rem;
-    
+    transition: all 0.4s;
 
     &:hover {
         &.ProductItemDiv{
@@ -63,6 +80,10 @@ const ProductItemText = styled.p`
         }
     }
     
+    @media only screen and (max-width: 600px) {
+        max-height: 1.98rem;
+        transition: all .4s;
+    }
 
 `
 
@@ -73,7 +94,8 @@ const AddToCartButton = styled.button`
     border: solid 1px black;
     border-radius: .33rem;
     padding: 0.2rem;
-    
+    transition: all 0.4s;
+
     &:hover {
         cursor: pointer;
         transform: scale(1.05);
@@ -85,6 +107,13 @@ const AddToCartButton = styled.button`
         color: white;
         background-color: green;
     }
+    @media only screen and (max-width: 600px) {
+        width: 2rem;
+        height: 1rem;
+        padding: 0;
+        margin: 0;
+        transition: all 0.4s;
+    }
 `
 
 
@@ -94,10 +123,7 @@ function ProductItem({product, handler}) {
 
     const addToCart = (e) => {
         e.stopPropagation();
-        
-       
-        
-        
+
         let localStorageCart = localStorage.getItem("cart");
         let cart = [];
 
@@ -108,12 +134,9 @@ function ProductItem({product, handler}) {
             });   
         }
         cart.push(product);
-     
         let cartJson = JSON.stringify(cart);
         localStorage.setItem("cart", cartJson);
         
-        //console.log(product.attributes.title);
-        //console.log(e);
         cartProducts.push(product);  
     }
 

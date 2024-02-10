@@ -14,14 +14,11 @@ const Cart = () => {
 
     const cartProducts = useContext(CartContext);
 
-
-    console.log(cartProducts)
-
     const navigate = useNavigate();
+
     const reload = () => {
         navigate();
     }
-
 
     const removeItem = (product) => {
         const index = cartProducts.indexOf(product);
@@ -30,8 +27,6 @@ const Cart = () => {
         }
         localStorage.setItem("cart", JSON.stringify(cartProducts.filter((iteratedProduct) => iteratedProduct != product)))
         reload();
-
-
     };
 
     useEffect(() => {
