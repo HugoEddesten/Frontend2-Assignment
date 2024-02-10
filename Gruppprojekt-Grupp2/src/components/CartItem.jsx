@@ -27,9 +27,18 @@ const CartItemText = styled.p`
 const CartItemButton = styled.button`
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-right: .33rem;
     margin-left: .33rem;
-    width: 4em;
+    border: none;
+    border-radius: .33rem;
+    width: 4rem;
+    
+    &:hover {
+        background-color: #f0b9b9;
+        transition: .1s;
+        cursor: pointer;
+    }
 `
 
 const QuantityInput = styled.input`
@@ -42,43 +51,43 @@ const QuantityInput = styled.input`
 
 
 
-function CartItem (props){
+function CartItem(props) {
 
-        const [quantityInput, setquanityInput] = useState(0);
-        const handleChange = (event) => {       
-          setquanityInput(event.target.value);
-        };
-
-
+    const [quantityInput, setquanityInput] = useState(0);
+    const handleChange = (event) => {
+        setquanityInput(event.target.value);
+    };
 
 
 
-    return  (
+
+
+    return (
         <CartItemDiv>
 
-            <CartItemImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url}/>
-            
-            <CartItemText> {props.product?.attributes?.title}</CartItemText> 
+            <CartItemImg src={"http://localhost:1300" + props.product?.attributes?.image.data.attributes.url} />
+
+            <CartItemText> {props.product?.attributes?.title}</CartItemText>
             <CartItemText> {props.product?.attributes?.price} kr</CartItemText>
- 
-            <QuantityInput onChange = {handleChange} placeholder={0} type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} />             
+
+            <QuantityInput onChange={handleChange} placeholder={0} type="number" id="quantityInput" name="quantityInput" min="1" max={props.product?.attributes?.quantity} />
             <CartItemText> Kvar i lager: {props.product?.attributes?.quantity - quantityInput}</CartItemText>
 
-            
-            <CartItemText onChange = {handleChange} type="number" id="totalPrice" name="totalPrice" max={quantityInput}>{props.product?.attributes?.price * quantityInput} kr</CartItemText>
+
+            <CartItemText onChange={handleChange} type="number" id="totalPrice" name="totalPrice" max={quantityInput}>{props.product?.attributes?.price * quantityInput} kr</CartItemText>
 
 
-            
-              <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton> 
 
-        
-              
+            <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton>
 
 
-         
+
+
+
+
 
         </CartItemDiv>
-         
+
     )
 }
 

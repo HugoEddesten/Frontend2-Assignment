@@ -2,36 +2,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 1rem 20rem 2rem 20rem;
 }
 
-.buy-button {
-    border: none;
-    background-color: white;
-    padding: .33rem;
-    border-radius: 1rem;
+label {
     cursor: pointer;
-    margin-top: .5rem;
-    background-color: #f0f0f0;
-    width: 5rem;
-}
-
-.buy-button:hover {
-    background-color: #000000;
-    color: white;
-    transition: 0.1s;
 }
 
 .radiobutton {
     margin: 0 1rem 1.5rem 0;
 }
 
-.form_width {
-    width: 22.5em;
+.form_name {
+    width: 100%;
+    margin: .5rem .5rem 0 0;
+    padding: .67rem;
 }
 
-.form_name{
-    width: 11em;
-    margin-right: 0.5em;
+.input-fields {
+    display: flex;
+}
+
+.h2-margin {
+    margin-top: 1.5rem;
+}
+
+.buy-button {
+    border: none;
+    background-color: #E8F0FE;
+    padding: .5rem;
+    border-radius: 1rem;
+    border: 1px solid;
+    cursor: pointer;
+    width: 6rem;
+}
+
+.buy-button:hover {
+    background-color: #000000;
+    color: white;
+    transition: 0.1s;
 }
