@@ -17,8 +17,10 @@ const HomePageDiv = styled.div`
 `
 
 const HomePageContent = styled.div`
-    margin: 0 30rem 2rem 30rem;
+    margin: 0 0 2rem 0;
     background-color: WHITE;
+    width: 70%;
+    max-width: 50rem;
     padding: 1rem;
 `
 

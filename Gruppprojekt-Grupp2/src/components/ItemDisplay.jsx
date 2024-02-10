@@ -8,11 +8,23 @@ const ItemDisplayDiv = styled.div`
 
     margin-top: 2rem;
     border-radius: 0.5em;
-    max-width: 50vw;
-    min-width: 70rem;
+
+    width: 80vw;
+    
     h2 {
         padding-top: 2rem;
     }
+
+    @media only screen and (max-width: 600px) {
+        width: 90vw;
+        font-size: 1em;
+
+        h2 {
+            padding-top: 0.5rem;
+        }
+    }
+
+
 `
 
 const ItemDisplay = ({ text, filterURL }) => {
