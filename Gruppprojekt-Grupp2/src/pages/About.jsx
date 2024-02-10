@@ -16,6 +16,8 @@ const AboutPageContent = styled.div`
 const AboutPageImg = styled.img`
     width: 25rem;
     object-fit: cover;
+    border-radius: .33rem;
+    margin: 3em 0 3em 3em;
 
 `
 

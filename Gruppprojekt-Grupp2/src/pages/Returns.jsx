@@ -25,7 +25,8 @@ const Returns = () => {
                             Återbetalning behandlas inom rimlig tid efter att vi har mottagit den returnerade varan. Eventuell återbetalning kommer att göras till det ursprungliga betalningsmedlet.<br /><br />
 
                             För frågor om våra produkter eller andra ärenden, kontakta vår kundtjänst via: <br />
-                            Email: kundtjanst@superyarnstore.com <br />
+                            Email: <a href="mailto:kundtjanst@superyarnstore.se">kundtjanst@superyarnstore.se</a><br />
+<br />
                             Telefon: 08-123&nbsp;45&nbsp;67 <br /> <br />
                         </p>
                         </ReturnsPageContent>

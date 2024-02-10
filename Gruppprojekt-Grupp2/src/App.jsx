@@ -17,7 +17,7 @@ import Register from './pages/Register.jsx'
 import Checkout from './pages/Checkout.jsx'
 import SuccessfulCheckout from './pages/SuccessfulCheckout.jsx'
 import { Route, Routes } from "react-router-dom"
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 
 
@@ -38,6 +38,7 @@ function App() {
     }, [])
     */
 
+    const cartProducts = useContext(CartContext);
 
     const [currentForm, setCurrentForm] = useState('LogIn');
 
@@ -45,13 +46,29 @@ function App() {
         setCurrentForm(formName);
     }
 
+    useEffect(() => {
+        let localStorageCart = localStorage.getItem("cart");
+        if (localStorageCart != null) {
+            let cartArray = JSON.parse(localStorageCart)
+           
+            if (cartProducts.length == 0) {
+                cartArray.forEach(product => {
+                    cartProducts.push(product);
+                });
+            }
+            
+        }
+        
+        
+    })
+
     return (
         <div>
             <div>
                 <NavigationBar />
                 <Routes>
                     <Route path='/' element={<Home />} />
-                    <Route path='/ProductPage/:category?/:string?/' element={<ProductPage />} />
+                    <Route path='/ProductPage/:category?/:id?/' element={<ProductPage />} />
                     <Route path='/Contact' element={<Contact />} />
                     <Route path='/About' element={<About />} />
                     <Route path='/Cart' element={<Cart />} />
