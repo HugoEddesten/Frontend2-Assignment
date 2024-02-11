@@ -96,7 +96,7 @@ function ProductPage() {
             <CategoryPicker />
             <ProductPageDiv>
 
-                <Filter />
+                
                 <ProductList products={products} handler={productClicked}/>
                 
 

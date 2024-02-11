@@ -59,12 +59,13 @@ const ProductSectionParagraph = styled.p`
 
 const AddToCartButton = styled.button`
     border: none;
-    width: 3em;
+    width: 20em;
     align-self: center;
     color: green;
     border: solid 1px black;
     border-radius: .33rem;
     padding: 0.5rem;
+    background-color: white;
     
     &:hover {
         cursor: pointer;
@@ -122,6 +123,12 @@ const renderDescription = () => {
             <ProductSectionHeader>{product?.attributes?.title}</ProductSectionHeader>
 
             <AddToCartButton onClick={(e) => addToCart(e)}><IoBagAdd /></AddToCartButton>
+            <br/>
+            <ProductSectionHeader>Produktstatus:</ProductSectionHeader>
+            <ProductSectionParagraph>{product?.attributes?.price + " SEK"}</ProductSectionParagraph>
+            <ProductSectionParagraph>{product?.attributes?.quantity + " stycken kvar"}</ProductSectionParagraph>
+            <br/>
+            <ProductSectionHeader>Beskrivning:</ProductSectionHeader>
             {product?.attributes.rowdescription == null? renderDescription() : renderRowDescription()} 
         </ProductSectionDiv>
     )
