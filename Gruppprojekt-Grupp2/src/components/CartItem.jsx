@@ -53,11 +53,15 @@ const QuantityInput = styled.input`
 
 function CartItem(props) {
 
+    const [previousValue, setpreviousValue] = useState (0); //funkar
+
     const [totalPrice, setTotalPrice] = useState(0);
 
     const [quantityInput, setquantityInput] = useState(0);
     const handleChange = (event) => {
-        setquantityInput(event.target.value);
+        setquantityInput (event.target.value);
+        setpreviousValue (quantityInput);
+        console.log(previousValue);
     };
 
     useEffect(() => {
@@ -65,8 +69,17 @@ function CartItem(props) {
     }, [quantityInput])
 
     useEffect(() => {
-        console.log(quantityInput);
-        props.onItemTotalChange(totalPrice);
+        if (quantityInput > 0)
+            {
+                if (previousValue < quantityInput){
+                    props.onItemTotalChange(totalPrice, props.product.attributes.price);
+                }
+                else {
+                    props.onItemTotalChange(totalPrice, - props.product.attributes.price);
+                }
+            }
+
+
     }, [totalPrice])
 
 
@@ -89,7 +102,7 @@ function CartItem(props) {
 
 
 
-            <CartItemButton onClick={() => props.handler(props.product)}>Ta bort</CartItemButton>
+            <CartItemButton onClick={() => {props.handler(props.product, totalPrice)}}>Ta bort</CartItemButton>
 
 
 

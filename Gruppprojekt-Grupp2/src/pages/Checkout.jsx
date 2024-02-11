@@ -1,13 +1,16 @@
 import styled from "styled-components"
 import "../checkout.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import emailjs from '@emailjs/browser';
 
 
 
 const Checkout = () => {
     const navigate = useNavigate();
     const [delivery, setDelivery] = useState('')
+
+    const [email, setEmail] = useState();
 
     const handleDelivery = (event) => {
         event.preventDefault()
@@ -19,6 +22,21 @@ const Checkout = () => {
         setDelivery(formData.get('option'))
     }
 
+    const sendEmail = (event) => {
+        emailjs.send('service_wdklw8u', 'template_pn4trhv', {recipient: email})
+        .then((response) => {
+          console.log('Mejlet skickades:', response);
+        }, (error) => {
+          console.log('Det uppstod ett fel vid skickande av mejlet:', error);
+        });
+  
+
+
+    }
+
+    useEffect(() => {
+        emailjs.init('Ns9Q0CRFLl51pKLq4');
+    },[])
 
     return (
         <div className="checkout-page-content">
@@ -26,7 +44,7 @@ const Checkout = () => {
                 <h2>Addressuppgifter</h2>
 
                 <div className="input-fields">
-                    <input className="form_name" type="text" id="email" name="email" placeholder="Epostadress" />
+                    <input className="form_name" onChange = {(event) => setEmail(event.target.value)} type="text" id="email" name="email" placeholder="Epostadress" />
                 </div>
 
                 <div className="input-fields">
@@ -38,7 +56,7 @@ const Checkout = () => {
                     <input className="form_name" type="text" id="streetAddress" name="streetAddress" placeholder="Gatunamn" />
                     <input className="form_name" type="text" id="city" name="city" placeholder="Ort" />
                     <label htmlFor="postalCode"></label>
-                    <input className="form_name" type="text" id="postalCode" name="postalCode" placeholder="Postnummer" maxlength="5" />
+                    <input className="form_name" type="text" id="postalCode" name="postalCode" placeholder="Postnummer" maxLength="5" />
                 </div>
 
                 <h2 className="h2-margin">Betalning</h2>
@@ -48,12 +66,12 @@ const Checkout = () => {
                 </div>
 
                 <div className="input-fields">
-                    <input className="form_name" type="text" id="cardNumber" name="cardNumber" placeholder="Kortnummer" maxlength="16" />
+                    <input className="form_name" type="text" id="cardNumber" name="cardNumber" placeholder="Kortnummer" maxLength="16" />
                 </div>
 
                 <div className="input-fields">
-                    <input className="form_name" type="text" id="expirationDate" name="expirationDate" placeholder="MM/ÅÅ" maxlength="4" />
-                    <input className="form_name" type="text" id="cvc" name="cvc" placeholder="CVC" maxlength="3" />
+                    <input className="form_name" type="text" id="expirationDate" name="expirationDate" placeholder="MMÅÅ" maxLength="4" />
+                    <input className="form_name" type="text" id="cvc" name="cvc" placeholder="CVC" maxLength="3" />
                 </div>
 
                 <h2 className="h2-margin">Frakt: 49 kr</h2>
@@ -89,7 +107,10 @@ const Checkout = () => {
                 </label>
 
             </form>
-            <button className="buy-button" type="submit" onClick={() => navigate('/SuccessfulCheckout')}>Köp</button>
+            <button className="buy-button" type="submit" onClick={(event) => 
+                { 
+                sendEmail()    
+                navigate('/SuccessfulCheckout')}}>Köp</button>
         </div>
 
 
