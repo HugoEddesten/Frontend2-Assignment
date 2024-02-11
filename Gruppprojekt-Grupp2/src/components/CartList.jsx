@@ -54,13 +54,20 @@ function CartList(props) {
 
     useEffect(() => {
         reload();
-    }, cartProducts)
+    }, [cartProducts])
 
 
     const handleChange = (itemPrice, productPrice) => {
         const updatedTotal = inTotal + productPrice;
         setinTotal(updatedTotal);
+        reload();
     };
+
+    useEffect(() =>{
+        reload();
+    },[inTotal])
+
+    
 
 
     return (
