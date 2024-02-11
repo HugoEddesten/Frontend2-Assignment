@@ -16,23 +16,6 @@ const Cart = () => {
 
     const navigate = useNavigate();
 
-    const reload = () => {
-        navigate();
-    }
-
-    const removeItem = (product) => {
-        const index = cartProducts.indexOf(product);
-        if (index > -1) {
-            cartProducts.splice(index, 1);
-        }
-        localStorage.setItem("cart", JSON.stringify(cartProducts.filter((iteratedProduct) => iteratedProduct != product)))
-        reload();
-    };
-
-    useEffect(() => {
-        reload();
-    }, cartProducts)
-
 
     return (
         <div className="cart-content">
@@ -45,7 +28,7 @@ const Cart = () => {
                 cartProducts.length < 1 ? <p>Din kundvagn är tom</p> : null
             }
 
-            <CartList products={cartProducts} handler={removeItem} />
+            <CartList />
 
 
 
