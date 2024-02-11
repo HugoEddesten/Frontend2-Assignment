@@ -32,7 +32,7 @@ function CartList(props) {
     const [inTotal, setinTotal] = useState(0);
     const handleChange = (itemPrice, product) => {
 
-        const priceCalculation = inTotal + itemPrice;
+        const priceCalculation = itemPrice;
         setinTotal(priceCalculation);
 
     };
@@ -42,10 +42,10 @@ function CartList(props) {
         <CartListDiv>
             {props.products.map((product, index) => (
                 <CartItem onItemTotalChange={handleChange} key={index} product={product} handler={props.handler}></CartItem>
-
             ))}
 
             <CartListText onChange={handleChange} type="number" id="inTotal" name="inTotal">Totalt: {inTotal} kr</CartListText>
+            
         </CartListDiv>
     )
 }

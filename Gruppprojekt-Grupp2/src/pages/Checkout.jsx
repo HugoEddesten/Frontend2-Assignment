@@ -3,6 +3,7 @@ import "../checkout.css"
 import { useState } from "react"
 
 
+
 const Checkout = () => {
     const [delivery, setDelivery] = useState('')
 
@@ -16,6 +17,7 @@ const Checkout = () => {
         setDelivery(formData.get('option'))
     }
 
+    
     return (
         <div className="checkout-page-content">
             <form action="">
