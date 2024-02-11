@@ -1,10 +1,12 @@
 import styled from "styled-components"
 import "../checkout.css"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 
 const Checkout = () => {
+    const navigate = useNavigate();
     const [delivery, setDelivery] = useState('')
 
     const handleDelivery = (event) => {
@@ -17,7 +19,7 @@ const Checkout = () => {
         setDelivery(formData.get('option'))
     }
 
-    
+
     return (
         <div className="checkout-page-content">
             <form action="">
@@ -87,7 +89,7 @@ const Checkout = () => {
                 </label>
 
             </form>
-            <button className="buy-button" type="submit" onClick={event => window.location.href = '/SuccessfulCheckout'}>Köp</button>
+            <button className="buy-button" type="submit" onClick={() => navigate('/SuccessfulCheckout')}>Köp</button>
         </div>
 
 
