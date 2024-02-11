@@ -35,6 +35,8 @@ function CartList(props) {
         const priceCalculation = itemPrice;
         setinTotal(priceCalculation);
 
+        
+
     };
 
 
