@@ -14,10 +14,11 @@ import TermsAndConditions from './pages/TermsAndConditions.jsx'
 import Returns from './pages/Returns.jsx'
 import LogIn from './pages/LogIn.jsx'
 import Register from './pages/Register.jsx'
+import AuthDetails from './AuthDetails.jsx'
 import Checkout from './pages/Checkout.jsx'
 import SuccessfulCheckout from './pages/SuccessfulCheckout.jsx'
 import { Route, Routes } from "react-router-dom"
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 
 
@@ -38,12 +39,29 @@ function App() {
     }, [])
     */
 
+    const cartProducts = useContext(CartContext);
 
     const [currentForm, setCurrentForm] = useState('LogIn');
 
     const toggleForm = (formName) => {
         setCurrentForm(formName);
     }
+
+    useEffect(() => {
+        let localStorageCart = localStorage.getItem("cart");
+        if (localStorageCart != null) {
+            let cartArray = JSON.parse(localStorageCart)
+
+            if (cartProducts.length == 0) {
+                cartArray.forEach(product => {
+                    cartProducts.push(product);
+                });
+            }
+
+        }
+
+
+    })
 
     return (
         <div>
@@ -62,6 +80,7 @@ function App() {
                     <Route path='/Register' element={<Register />} />
                     <Route path='/Checkout' element={<Checkout />} />
                     <Route path='/SuccessfulCheckout' element={<SuccessfulCheckout />} />
+                    <Route path='/AuthDetails' element={<AuthDetails />} />
                 </Routes>
 
                 <Footer />

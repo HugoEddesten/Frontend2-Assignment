@@ -40,11 +40,16 @@ const FilterDiv = styled.div`
         &.menuButtonActive {
         transform: translateX(200%) scale(1.5);
         transition: transform 0.6s;
-    }
+        }
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
         
     }
 
 `
+
 
 
 
@@ -60,8 +65,10 @@ const Filter = (props) => {
     return (
         <FilterDiv className={menuIsVisible === true ? "menuButtonActive" : ""}>
             <HiMenuAlt2 className={menuIsVisible === true ? "menuButtonActive menuIcon" : "menuIcon"} onClick={() => toggleMenuButtonActive()} />
-           
-            
+            <h2>Filter</h2>
+            <button className='filterButton'>Alfabetisk</button>
+            <button className='filterButton'>Billigast Först</button>
+            <button className='filterButton'>Dyrast Först</button>
 
             
             

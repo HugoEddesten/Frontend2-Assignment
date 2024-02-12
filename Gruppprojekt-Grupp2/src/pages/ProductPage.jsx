@@ -16,6 +16,11 @@ const ProductPageDiv = styled.div`
     padding: 1em;
     width: -moz-fit-content;
     width: fit-content;
+    @media only screen and (max-width: 600px) {
+        
+        flex-direction: column;
+        transition: all 0.4s;
+    }
 `
 
 const Overlay = styled.div`
@@ -90,7 +95,8 @@ function ProductPage() {
         <div>
             <CategoryPicker />
             <ProductPageDiv>
-                <Filter />
+
+                
                 <ProductList products={products} handler={productClicked}/>
                 
 

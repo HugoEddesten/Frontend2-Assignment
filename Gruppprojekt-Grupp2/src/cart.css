@@ -14,7 +14,7 @@ h2 {
     border: none;
     border-radius: 1rem;
     cursor: pointer;
-    
+    margin-bottom: 1rem;
 }
 
 .continue-shopping-button:hover {
@@ -27,25 +27,26 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 1rem; 
+    padding: 1rem;
 }
 
-.cart-product > img {
+.cart-product>img {
     width: 4rem;
     margin-right: .33rem;
 }
 
-.cart-product > p {
+.cart-product>p {
     margin-right: .33rem;
 }
 
 .number-input {
     margin-right: .33rem;
     width: 2.5rem;
-    background-color: #f0f0f0;;
+    background-color: #f0f0f0;
 }
 
 .checkout-button {
+    margin-top: .5rem;
     border: none;
     background-color: #f0f0f0;
     padding: .5rem;

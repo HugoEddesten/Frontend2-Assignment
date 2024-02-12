@@ -25,7 +25,8 @@ const Delivery = () => {
                             Vi strävar efter att behandla och skicka din order så snabbt som möjligt. Leveranstiderna kan verkligen variera beroende på leveransdestination och valt fraktsätt.<br /><br />
 
                             Kontakta oss omedelbart om det uppstår problem med leveransen eller om du inte har mottagit din order inom den förväntade tidsramen.<br /><br />
-                            Email: kundtjanst@superyarnstore.com <br />
+                            Email: <a href="mailto:kundtjanst@superyarnstore.se">kundtjanst@superyarnstore.se</a><br />
+ <br />
                             Telefon: 08-123&nbsp;45&nbsp;67 <br /> <br />
                         </p>
                     </DeliveryPageContent>
