@@ -7,7 +7,6 @@ import '../LoginAndRegisterForm.css'
 import './LogIn'
 
 function Register() {
-
     const [registerName, setRegisterName] = useState('')
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('');

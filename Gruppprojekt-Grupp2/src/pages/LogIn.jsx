@@ -23,7 +23,7 @@ function LogIn() {
             const errorMessage = error.message;
             console.log(errorCode, errorMessage)
         });
-}
+    }
 
     return (
         <div className="form-content">
